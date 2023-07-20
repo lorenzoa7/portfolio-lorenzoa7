@@ -10,7 +10,7 @@ export function NavItem({ children, href }: NavitemProps) {
     <Link
       href={href}
       passHref
-      className="uppercase leading-[90%] font-semibold text-white text-lg"
+      className="uppercase leading-[90%] font-semibold text-white text-lg relative after:duration-300 after:absolute after:bg-white after:h-[3px] after:w-0 after:left-0 after:-bottom-3 after:hover:w-full"
     >
       {children}
     </Link>
