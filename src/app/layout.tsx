@@ -1,13 +1,12 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { twMerge } from 'tailwind-merge'
+import { siteConfig } from './config/site'
 import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import { fontMono } from './lib/fonts'
 
 export const metadata: Metadata = {
-  title: 'Lorenzo Aceti | Portfolio',
-  description:
-    "A portfolio of Lorenzo Aceti's work as a full-stack developer and designer.",
+  title: siteConfig.title,
+  description: siteConfig.description,
 }
 
 export default function RootLayout({
@@ -18,7 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} bg-neutral-200 text-neutral-700 container mx-auto`}
+        className={twMerge(
+          'bg-neutral-200 text-neutral-700 mx-auto min-h-screen antialiased font-mono',
+          fontMono.variable,
+        )}
       >
         {children}
       </body>
