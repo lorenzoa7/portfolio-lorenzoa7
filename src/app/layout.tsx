@@ -1,8 +1,8 @@
+import { siteConfig } from '@/config/site'
+import { fontMono } from '@/lib/fonts'
 import type { Metadata } from 'next'
 import { twMerge } from 'tailwind-merge'
-import { siteConfig } from './config/site'
 import './globals.css'
-import { fontMono } from './lib/fonts'
 
 export const metadata: Metadata = {
   title: siteConfig.title,
