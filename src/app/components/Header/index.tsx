@@ -1,10 +1,7 @@
+import { siteConfig } from '@/config/site'
 import { ChevronsDown } from 'lucide-react'
 import { Logo } from '../Logo'
-import { About } from './components/About'
-import Background from './components/Background'
-import { Nav } from './components/Nav'
-
-import { siteConfig } from '@/config/site'
+import { About, Background, Nav } from './components'
 
 export default function Header() {
   return (
