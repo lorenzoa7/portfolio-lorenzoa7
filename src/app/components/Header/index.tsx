@@ -1,7 +1,7 @@
 import { siteConfig } from '@/config/site'
-import { ChevronsDown, FileText, Github, Linkedin } from 'lucide-react'
+import { ChevronsDown } from 'lucide-react'
 import { Logo } from '../Logo'
-import { About, Background, Nav } from './components'
+import { About, Background, FloatingMenu, Nav } from './components'
 
 export default function Header() {
   return (
@@ -40,22 +40,13 @@ export default function Header() {
         <About.Profile />
       </About.Root>
 
-      <div className="flex items-center justify-center gap-20 bg-white rounded-md shadow-2xl absolute bottom-0 left-1/2 -translate-x-1/2 z-10 px-24 py-9">
-        <div className="flex flex-col items-center text-rose-500 gap-3 cursor-pointer">
-          <Github width={45} height={45} />
-          <span className="uppercase text-2xl font-semibold">Github</span>
-        </div>
-
-        <div className="flex flex-col items-center text-rose-500 gap-3 cursor-pointer">
-          <Linkedin width={45} height={45} />
-          <span className="uppercase text-2xl font-semibold">Linkedin</span>
-        </div>
-
-        <div className="flex flex-col items-center text-rose-500 gap-3 cursor-pointer">
-          <FileText width={45} height={45} />
-          <span className="uppercase text-2xl font-semibold">CV</span>
-        </div>
-      </div>
+      <FloatingMenu.Root>
+        {siteConfig.floatingMenu?.map((item) => (
+          <FloatingMenu.Item key={item.title} href={item.href} icon={item.icon}>
+            {item.title}
+          </FloatingMenu.Item>
+        ))}
+      </FloatingMenu.Root>
     </Background>
   )
 }
