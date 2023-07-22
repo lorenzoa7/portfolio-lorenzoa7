@@ -37,7 +37,10 @@ export default function Header() {
           <About.Info.Button icon={ChevronsDown}>scroll down</About.Info.Button>
         </About.Info.Root>
 
-        <About.Profile />
+        <About.Profile
+          imageUrl="/images/photo_badge3.png"
+          imageAlt="A picture of Lorenzo Aceti."
+        />
       </About.Root>
 
       <FloatingMenu.Root>

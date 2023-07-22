@@ -17,7 +17,7 @@ export default function FloatingMenuItem({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex flex-col items-center text-rose-500 gap-3 cursor-pointer"
+      className="flex flex-col items-center text-rose-500 gap-3 cursor-pointer hover:text-rose-900 duration-300 hover:scale-105"
     >
       <Icon width={45} height={45} />
       <span className="uppercase text-2xl font-semibold">{children}</span>
