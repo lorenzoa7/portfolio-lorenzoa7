@@ -10,3 +10,13 @@ export type FloatingMenuItem = {
   icon: ElementType
   href: string
 }
+
+export type Skill = {
+  title: string
+  icon: ElementType
+}
+
+export type Level = {
+  title: string
+  skills: Skill[]
+}
