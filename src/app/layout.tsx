@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={twMerge(
-          'bg-neutral-200 text-neutral-700 mx-auto min-h-screen antialiased font-mono',
+          'bg-neutral-200 text-neutral-700 mx-auto min-h-screen antialiased font-mono overflow-x-hidden overflow-y-scroll',
           fontMono.variable,
         )}
       >
