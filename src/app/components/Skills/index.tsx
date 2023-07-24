@@ -1,4 +1,5 @@
 import { SiTypescript } from 'react-icons/si'
+import { Level } from './components'
 
 export default function Skills() {
   return (
@@ -7,50 +8,32 @@ export default function Skills() {
         Skills
       </h2>
       <div className="px-36 py-16">
-        <div>
-          <h3 className="text-neutral-700 font-semibold text-2xl">Expert</h3>
-          <div className="flex justify-start gap-7 mt-8">
-            <div className="flex flex-col items-center justify-center gap-2 bg-white rounded-lg shadow-2xl text-rose-500 font-semibold w-20 h-20">
-              <SiTypescript size={32} />
+        <Level.Root>
+          <Level.Title>Expert</Level.Title>
+          <Level.Items.Root>
+            <Level.Items.Skill icon={SiTypescript}>
               TypeScript
-            </div>
+            </Level.Items.Skill>
 
-            <div className="flex flex-col items-center justify-center gap-2 bg-white rounded-lg shadow-2xl text-rose-500 font-semibold w-20 h-20">
-              <SiTypescript size={32} />
+            <Level.Items.Skill icon={SiTypescript}>
               JavaScript
-            </div>
+            </Level.Items.Skill>
 
-            <div className="flex flex-col items-center justify-center gap-2 bg-white rounded-lg shadow-2xl text-rose-500 font-semibold w-20 h-20">
-              <SiTypescript size={32} />
-              Python
-            </div>
+            <Level.Items.Skill icon={SiTypescript}>Python</Level.Items.Skill>
 
-            <div className="flex flex-col items-center justify-center gap-2 bg-white rounded-lg shadow-2xl text-rose-500 font-semibold w-20 h-20">
-              <SiTypescript size={32} />
-              React
-            </div>
+            <Level.Items.Skill icon={SiTypescript}>React</Level.Items.Skill>
 
-            <div className="flex flex-col items-center justify-center gap-2 bg-white rounded-lg shadow-2xl text-rose-500 font-semibold w-20 h-20">
-              <SiTypescript size={32} />
-              Next.JS
-            </div>
+            <Level.Items.Skill icon={SiTypescript}>Next.JS</Level.Items.Skill>
 
-            <div className="flex flex-col items-center justify-center gap-2 bg-white rounded-lg shadow-2xl text-rose-500 font-semibold w-20 h-20">
-              <SiTypescript size={32} />
-              Django
-            </div>
+            <Level.Items.Skill icon={SiTypescript}>Django</Level.Items.Skill>
 
-            <div className="flex flex-col items-center justify-center gap-2 bg-white rounded-lg shadow-2xl text-rose-500 font-semibold w-20 h-20">
-              <SiTypescript size={32} />
+            <Level.Items.Skill icon={SiTypescript}>
               TailwindCSS
-            </div>
+            </Level.Items.Skill>
 
-            <div className="flex flex-col items-center justify-center gap-2 bg-white rounded-lg shadow-2xl text-rose-500 font-semibold w-20 h-20">
-              <SiTypescript size={32} />
-              Photoshop
-            </div>
-          </div>
-        </div>
+            <Level.Items.Skill icon={SiTypescript}>Photoshop</Level.Items.Skill>
+          </Level.Items.Root>
+        </Level.Root>
 
         <div></div>
 
