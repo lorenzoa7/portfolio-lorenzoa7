@@ -29,3 +29,13 @@ export type Project = {
   appHref?: string
   repositoryHref?: string
 }
+
+export type PersonalInfo = {
+  title: string
+  icon: ElementType
+}
+
+export type UsefulLink = {
+  icon: ElementType
+  href?: string
+}

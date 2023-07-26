@@ -13,7 +13,12 @@ export default function UsefulLink({
   href = '#',
 }: UsefulLinkProps) {
   return (
-    <Link href={href} className="group">
+    <Link
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group"
+    >
       <Icon
         size={iconSize}
         className="group-hover:text-neutral-300 group-hover:scale-110 duration-150"
