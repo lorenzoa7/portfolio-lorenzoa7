@@ -1,4 +1,4 @@
-import { siteConfig } from '@/config/site'
+import { headerConfig } from '@/config/header'
 import { ChevronsDown } from 'lucide-react'
 import { Logo } from '../Logo'
 import { About, Background, FloatingMenu, Nav } from './components'
@@ -13,7 +13,7 @@ export default function Header() {
         </Logo.Root>
 
         <Nav.Root>
-          {siteConfig.nav?.map((item) => (
+          {headerConfig.nav?.map((item) => (
             <Nav.Item key={item.title} href={item.href}>
               {item.title}
             </Nav.Item>
@@ -44,7 +44,7 @@ export default function Header() {
       </About.Root>
 
       <FloatingMenu.Root>
-        {siteConfig.floatingMenu?.map((item) => (
+        {headerConfig.floatingMenu?.map((item) => (
           <FloatingMenu.Item key={item.title} href={item.href} icon={item.icon}>
             {item.title}
           </FloatingMenu.Item>
