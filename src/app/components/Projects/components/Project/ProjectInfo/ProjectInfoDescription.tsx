@@ -5,5 +5,9 @@ type ProjectInfoDescriptionProps = {
 export default function ProjectInfoDescription({
   children,
 }: ProjectInfoDescriptionProps) {
-  return <p>{children}</p>
+  return (
+    <div className="h-24">
+      <p>{children}</p>
+    </div>
+  )
 }

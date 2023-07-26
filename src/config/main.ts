@@ -109,7 +109,7 @@ export const skillsConfig = {
 }
 
 export const projectsConfig = {
-  featuredProjects: 3,
+  maxFeaturedProjects: 3,
   projects: [
     {
       title: 'Couple Wheel',
@@ -129,6 +129,15 @@ export const projectsConfig = {
       repositoryHref: 'https://github.com/lorenzoa7/portfolio-lorenzoa7',
     },
     {
+      title: 'Df-Analyzer Interface (WIP)',
+      description:
+        'A web application that helps the user to generate their own script code, compatible enough to be used in a powerful analysis tool called Df-Analyzer.',
+      imageHref: '/images/project_dfanalyzer.png',
+      imageAlt: 'The main interface of Compra/Venda app.',
+      appHref: 'https://dfanalyzer.vercel.app/',
+      repositoryHref: 'https://github.com/lorenzoa7/df-analyzer',
+    },
+    {
       title: 'Spring Rest API',
       description:
         'I built a Rest API using Java Spring Boot for five entity classes. Furthermore, everything was documented using Swagger.',
@@ -143,15 +152,6 @@ export const projectsConfig = {
       imageHref: '/images/project_compravenda.png',
       imageAlt: 'The main interface of Compra/Venda app.',
       repositoryHref: 'https://github.com/lorenzoa7/ControleCompraVenda',
-    },
-    {
-      title: 'Df-Analyzer Interface (WIP)',
-      description:
-        'A web application that helps the user to generate their own script code, compatible enough to be used in a powerful analysis tool called Df-Analyzer.',
-      imageHref: '/images/project_dfanalyzer.png',
-      imageAlt: 'The main interface of Compra/Venda app.',
-      appHref: 'https://dfanalyzer.vercel.app/',
-      repositoryHref: 'https://github.com/lorenzoa7/df-analyzer',
     },
     {
       title: 'Get Chem Components Script',

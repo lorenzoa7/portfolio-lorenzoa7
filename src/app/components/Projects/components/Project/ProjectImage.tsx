@@ -14,8 +14,13 @@ export default function ProjectImage({
   height = 180,
 }: ProjectImageProps) {
   return (
-    <>
-      <Image src={src} alt={alt} width={width} height={height} />
-    </>
+    <div className={`relative w-[${width}px] h-[${height}px] overflow-hidden`}>
+      <Image
+        fill
+        src={src}
+        alt={alt}
+        className="object-cover group-hover:scale-125 duration-300 ease-in-out"
+      />
+    </div>
   )
 }

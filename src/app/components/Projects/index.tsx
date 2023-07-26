@@ -1,3 +1,5 @@
+import { projectsConfig } from '@/config/main'
+import { AiFillStar } from 'react-icons/ai'
 import { Project } from './components'
 
 export default function Projects() {
@@ -11,27 +13,35 @@ export default function Projects() {
         <section>
           <h3 className="text-rose-800 font-semibold text-2xl">Featured</h3>
           <div className="flex items-center justify-center gap-8">
-            <Project.Root>
-              <Project.Image
-                src="/images/project_couplewheel.png"
-                alt="A image."
-              />
+            {projectsConfig?.projects
+              ?.slice(0, projectsConfig.maxFeaturedProjects)
+              .map((project) => (
+                <Project.Root key={project.title}>
+                  <div className="absolute -top-5 -right-5 text-yellow-400 rotate-12 group-hover:scale-125 group-hover:text-yellow-500 duration-300">
+                    <AiFillStar size={45} />
+                  </div>
+                  <Project.Image
+                    src={project.imageHref}
+                    alt={project.imageAlt}
+                  />
 
-              <Project.Info.Root>
-                <Project.Info.Title>Project One</Project.Info.Title>
-                <Project.Info.Description>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-                  sed purus iaculis, consequat justo finibus, hendrerit risus.
-                  Sed varius, sapien ac vestibulum condimentum, leo urna tempor
-                  lorem, eget pretium lacus urna nec mi.
-                </Project.Info.Description>
-              </Project.Info.Root>
+                  <Project.Info.Root>
+                    <Project.Info.Title>{project.title}</Project.Info.Title>
+                    <Project.Info.Description>
+                      {project.description}
+                    </Project.Info.Description>
+                  </Project.Info.Root>
 
-              <Project.Links.Root>
-                <Project.Links.App />
-                <Project.Links.Repository />
-              </Project.Links.Root>
-            </Project.Root>
+                  <Project.Links.Root>
+                    {project.appHref && (
+                      <Project.Links.App href={project.appHref} />
+                    )}
+                    {project.repositoryHref && (
+                      <Project.Links.Repository href={project.repositoryHref} />
+                    )}
+                  </Project.Links.Root>
+                </Project.Root>
+              ))}
           </div>
         </section>
 
@@ -39,7 +49,34 @@ export default function Projects() {
           <h3 className="text-rose-800 font-semibold text-2xl">
             More projects
           </h3>
-          <div></div>
+          <div className="flex items-center justify-center gap-8">
+            {projectsConfig?.projects
+              ?.slice(projectsConfig.maxFeaturedProjects)
+              .map((project) => (
+                <Project.Root key={project.title}>
+                  <Project.Image
+                    src={project.imageHref}
+                    alt={project.imageAlt}
+                  />
+
+                  <Project.Info.Root>
+                    <Project.Info.Title>{project.title}</Project.Info.Title>
+                    <Project.Info.Description>
+                      {project.description}
+                    </Project.Info.Description>
+                  </Project.Info.Root>
+
+                  <Project.Links.Root>
+                    {project.appHref && (
+                      <Project.Links.App href={project.appHref} />
+                    )}
+                    {project.repositoryHref && (
+                      <Project.Links.Repository href={project.repositoryHref} />
+                    )}
+                  </Project.Links.Root>
+                </Project.Root>
+              ))}
+          </div>
         </section>
       </div>
     </section>
