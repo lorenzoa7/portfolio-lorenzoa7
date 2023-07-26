@@ -1,8 +1,7 @@
 import Link from 'next/link'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import { MdEmail, MdPhone } from 'react-icons/md'
-import { Logo } from '../Logo'
-import { Personal } from './components'
+import { Credits, Personal } from './components'
 
 export default function Footer() {
   return (
@@ -12,12 +11,7 @@ export default function Footer() {
         <Personal.Info icon={MdPhone}>+55 21 96540-0438</Personal.Info>
       </Personal.Root>
 
-      <section className="flex flex-col items-center gap-1 w-full justify-center">
-        <Logo.Root>
-          <Logo.Symbol size={35} />
-        </Logo.Root>
-        <span>© 2023 - Portfolio - Lorenzo Aceti</span>
-      </section>
+      <Credits logo>© 2023 - Portfolio - Lorenzo Aceti</Credits>
 
       <section className="flex items-center justify-end gap-4 w-full">
         <Link href="#">

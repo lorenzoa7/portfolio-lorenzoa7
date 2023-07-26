@@ -1,4 +1,5 @@
+import Credits from './Credits'
 import { Personal } from './Personal'
 
-export { Personal }
+export { Credits, Personal }
 
