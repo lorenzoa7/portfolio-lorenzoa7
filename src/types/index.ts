@@ -20,3 +20,12 @@ export type Level = {
   title: string
   skills: Skill[]
 }
+
+export type Project = {
+  title: string
+  description: string
+  imageHref: string
+  imageAlt: string
+  appHref?: string
+  repositoryHref?: string
+}
