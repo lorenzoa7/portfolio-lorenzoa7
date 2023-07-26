@@ -1,7 +1,6 @@
-import Link from 'next/link'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import { MdEmail, MdPhone } from 'react-icons/md'
-import { Credits, Personal } from './components'
+import { Credits, Personal, Useful } from './components'
 
 export default function Footer() {
   return (
@@ -13,14 +12,10 @@ export default function Footer() {
 
       <Credits logo>© 2023 - Portfolio - Lorenzo Aceti</Credits>
 
-      <section className="flex items-center justify-end gap-4 w-full">
-        <Link href="#">
-          <AiFillGithub size={24} />
-        </Link>
-        <Link href="#">
-          <AiFillLinkedin size={24} />
-        </Link>
-      </section>
+      <Useful.Root>
+        <Useful.Link icon={AiFillGithub} />
+        <Useful.Link icon={AiFillLinkedin} />
+      </Useful.Root>
     </footer>
   )
 }

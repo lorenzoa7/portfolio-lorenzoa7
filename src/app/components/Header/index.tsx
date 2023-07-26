@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <Background>
       <div className="flex justify-between items-baseline">
-        <Logo.Root>
+        <Logo.Root clickable>
           <Logo.Name />
           <Logo.Symbol />
         </Logo.Root>
