@@ -1,4 +1,5 @@
+import Modal from './Modal'
 import { Project } from './Project'
 
-export { Project }
+export { Modal, Project }
 

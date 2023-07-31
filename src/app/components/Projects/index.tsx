@@ -1,10 +1,11 @@
 import { projectsConfig } from '@/config/main'
 import { AiFillStar } from 'react-icons/ai'
-import { Project } from './components'
+import { Modal, Project } from './components'
 
 export default function Projects() {
   return (
     <section>
+      <Modal />
       <h2 className="uppercase text-neutral-700 text-4xl font-semibold">
         Projects
       </h2>
