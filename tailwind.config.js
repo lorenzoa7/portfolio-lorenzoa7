@@ -7,10 +7,49 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      keyframes: {
+        overlayShow: {
+          from: {
+            opacity: 0,
+          },
+          to: {
+            opacity: 1,
+          },
+        },
+        overlayHide: {
+          from: {
+            opacity: 1,
+          },
+          to: {
+            opacity: 0,
+          },
+        },
+        contentShow: {
+          from: {
+            opacity: 0,
+            transform: 'translate(-50%, -48%) scale(0)',
+          },
+          to: {
+            opacity: 1,
+            transform: 'translate(-50%, -50%) scale(1)',
+          },
+        },
+        contentHide: {
+          from: {
+            opacity: 1,
+            transform: 'translate(-50%, -50%) scale(1)',
+          },
+          to: {
+            opacity: 0,
+            transform: 'translate(-50%, -48%) scale(0)',
+          },
+        },
+      },
+      animation: {
+        overlayShow: 'overlayShow 300ms cubic-bezier(0.16, 1, 0.3, 1)',
+        overlayHide: 'overlayHide 300ms cubic-bezier(0.16, 1, 0.3, 1)',
+        contentShow: 'contentShow 300ms cubic-bezier(0.16, 1, 0.3, 1)',
+        contentHide: 'contentHide 300ms cubic-bezier(0.16, 1, 0.3, 1)',
       },
     },
     fontFamily: {
