@@ -9,7 +9,7 @@ export default function Background({ children }: BackgroundProps) {
         {children}
       </header>
 
-      <div className="w-0 h-0 -mt-[8rem] border-l-[100vw] border-l-transparent border-b-[8rem] border-solid border-b-neutral-200"></div>
+      <div className="w-0 h-0 -mt-[8rem] border-l-[calc(100vw-15px)] border-l-transparent border-b-[8rem] border-solid border-b-neutral-200"></div>
     </div>
   )
 }
