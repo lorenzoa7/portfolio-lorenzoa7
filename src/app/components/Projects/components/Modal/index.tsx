@@ -6,9 +6,9 @@ import { useSearchParams } from 'next/navigation'
 export default function Modal() {
   const searchParams = useSearchParams()
 
-  const search = !!searchParams.get('modal')
+  const showModal = searchParams.has('project')
 
-  if (search)
+  if (showModal)
     return (
       <Link
         href="/"

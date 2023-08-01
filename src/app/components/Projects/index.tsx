@@ -1,6 +1,6 @@
 import { projectsConfig } from '@/config/main'
 import { AiFillStar } from 'react-icons/ai'
-import { Modal, Project } from './components'
+import { Modal, Project, ProjectModal } from './components'
 
 export default function Projects() {
   return (
@@ -17,31 +17,35 @@ export default function Projects() {
             {projectsConfig?.projects
               ?.slice(0, projectsConfig.maxFeaturedProjects)
               .map((project) => (
-                <Project.Root key={project.title}>
-                  <div className="absolute -top-5 -right-5 text-yellow-400 rotate-12 group-hover:scale-125 group-hover:text-yellow-500 duration-300">
-                    <AiFillStar size={45} />
-                  </div>
-                  <Project.Image
-                    src={project.imageHref}
-                    alt={project.imageAlt}
-                  />
+                <ProjectModal key={project.title}>
+                  <Project.Root>
+                    <div className="absolute -top-5 -right-5 text-yellow-400 rotate-12 group-hover:scale-125 group-hover:text-yellow-500 duration-300">
+                      <AiFillStar size={45} />
+                    </div>
+                    <Project.Image
+                      src={project.imageHref}
+                      alt={project.imageAlt}
+                    />
 
-                  <Project.Info.Root>
-                    <Project.Info.Title>{project.title}</Project.Info.Title>
-                    <Project.Info.Description>
-                      {project.description}
-                    </Project.Info.Description>
-                  </Project.Info.Root>
+                    <Project.Info.Root>
+                      <Project.Info.Title>{project.title}</Project.Info.Title>
+                      <Project.Info.Description>
+                        {project.description}
+                      </Project.Info.Description>
+                    </Project.Info.Root>
 
-                  <Project.Links.Root>
-                    {project.appHref && (
-                      <Project.Links.App href={project.appHref} />
-                    )}
-                    {project.repositoryHref && (
-                      <Project.Links.Repository href={project.repositoryHref} />
-                    )}
-                  </Project.Links.Root>
-                </Project.Root>
+                    <Project.Links.Root>
+                      {project.appHref && (
+                        <Project.Links.App href={project.appHref} />
+                      )}
+                      {project.repositoryHref && (
+                        <Project.Links.Repository
+                          href={project.repositoryHref}
+                        />
+                      )}
+                    </Project.Links.Root>
+                  </Project.Root>
+                </ProjectModal>
               ))}
           </div>
         </section>
