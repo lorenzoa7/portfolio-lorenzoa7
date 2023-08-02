@@ -57,28 +57,32 @@ export default function Projects() {
             {projectsConfig?.projects
               ?.slice(projectsConfig.maxFeaturedProjects)
               .map((project) => (
-                <Project.Root key={project.title}>
-                  <Project.Image
-                    src={project.imageHref}
-                    alt={project.imageAlt}
-                  />
+                <ProjectModal key={project.title} project={project}>
+                  <Project.Root>
+                    <Project.Image
+                      src={project.imageHref}
+                      alt={project.imageAlt}
+                    />
 
-                  <Project.Info.Root>
-                    <Project.Info.Title>{project.title}</Project.Info.Title>
-                    <Project.Info.Description>
-                      {project.description}
-                    </Project.Info.Description>
-                  </Project.Info.Root>
+                    <Project.Info.Root>
+                      <Project.Info.Title>{project.title}</Project.Info.Title>
+                      <Project.Info.Description>
+                        {project.description}
+                      </Project.Info.Description>
+                    </Project.Info.Root>
 
-                  <Project.Links.Root>
-                    {project.appHref && (
-                      <Project.Links.App href={project.appHref} />
-                    )}
-                    {project.repositoryHref && (
-                      <Project.Links.Repository href={project.repositoryHref} />
-                    )}
-                  </Project.Links.Root>
-                </Project.Root>
+                    <Project.Links.Root>
+                      {project.appHref && (
+                        <Project.Links.App href={project.appHref} />
+                      )}
+                      {project.repositoryHref && (
+                        <Project.Links.Repository
+                          href={project.repositoryHref}
+                        />
+                      )}
+                    </Project.Links.Root>
+                  </Project.Root>
+                </ProjectModal>
               ))}
           </div>
         </section>
