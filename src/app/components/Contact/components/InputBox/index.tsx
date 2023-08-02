@@ -13,7 +13,7 @@ export default function InputBox({
   icon: Icon,
   placeholder,
   isFocus,
-  iconSize = 14,
+  iconSize = 16,
 }: InputBoxProps) {
   return (
     <div

@@ -4,8 +4,9 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import * as Dialog from '@radix-ui/react-dialog'
 import { FocusEvent, useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { BsFillTriangleFill } from 'react-icons/bs'
 import { FaUser } from 'react-icons/fa'
-import { MdEmail } from 'react-icons/md'
+import { MdEmail, MdPhone } from 'react-icons/md'
 import { z } from 'zod'
 import { Focus } from '../../types'
 import InputBox from '../InputBox'
@@ -79,7 +80,7 @@ export default function ContactModal({ children }: ContactModalProps) {
             <section className="h-full w-full bg-rose-500 rounded-tl-xl rounded-bl-xl py-7">
               <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="flex flex-col gap-9 w-full px-8 mx-auto"
+                className="flex flex-col gap-5 w-full px-8 mx-auto"
               >
                 <InputBox
                   icon={FaUser}
@@ -109,7 +110,7 @@ export default function ContactModal({ children }: ContactModalProps) {
                   />
                 </InputBox>
 
-                <div className="relative h-56">
+                <div className="relative h-56 mt-5">
                   <textarea
                     data-focus={isFocus.message}
                     placeholder="Type your message..."
@@ -128,7 +129,35 @@ export default function ContactModal({ children }: ContactModalProps) {
                 </button>
               </form>
             </section>
-            <section className="h-full w-full bg-white rounded-tr-xl rounded-br-xl"></section>
+            <section className="relative flex flex-col justify-between h-11/12 w-full  rounded-tr-xl rounded-br-xl p-7 text-rose-800">
+              <span className="absolute -left-5 top-1/2 -translate-y-1/2 rotate-90 text-rose-500">
+                <BsFillTriangleFill size={42} />
+              </span>
+              <div className="self-end font-light invisible">
+                <div>
+                  <span>lorenzo.acetii@gmail.com</span>
+                </div>
+                <div>
+                  <span>+55 21 96540-0438</span>
+                </div>
+              </div>
+              <div>
+                <h1 className="font-medium text-6xl">Lets have a talk!</h1>
+                <h2 className="text-xl">
+                  Im open to get your feedback or just to have a chat.
+                </h2>
+              </div>
+              <div className="self-end flex flex-col gap-1 text-lg">
+                <div className="flex gap-3 items-center justify-between">
+                  <span>lorenzo.acetii@gmail.com</span>
+                  <MdEmail size={18} />
+                </div>
+                <div className="flex gap-3 items-center justify-between">
+                  <span>+55 21 96540-0438</span>
+                  <MdPhone size={18} />
+                </div>
+              </div>
+            </section>
           </main>
         </Dialog.Content>
       </Dialog.Portal>
