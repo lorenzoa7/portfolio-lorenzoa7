@@ -93,9 +93,8 @@ export default function ProjectModal({ children, project }: ProjectModalProps) {
                 {project.techKeys.map((techKey, index) => (
                   <div
                     key={index}
-                    className={`relative hover:text-rose-500 duration-300 after:content-['${
-                      techConfig[techKey as keyof TechConfig].title
-                    }'] after:absolute after:-top-6 after:left-1/2 after:-translate-x-1/2 after:font-semibold after:opacity-0 after:translate-y-7 hover:after:translate-y-0 hover:after:opacity-100 after:duration-300`}
+                    data-content={techConfig[techKey as keyof TechConfig].title}
+                    className="relative hover:text-rose-500 duration-300 after:content-[attr(data-content)] after:absolute after:-top-6 after:left-1/2 after:-translate-x-1/2 after:font-semibold after:opacity-0 after:translate-y-7 hover:after:translate-y-0 hover:after:opacity-100 after:duration-300 after:pointer-events-none"
                   >
                     {getIcon(techKey)}
                   </div>
