@@ -2,9 +2,13 @@
 
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as Dialog from '@radix-ui/react-dialog'
+import { FocusEvent, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { FaUser } from 'react-icons/fa'
+import { MdEmail } from 'react-icons/md'
 import { z } from 'zod'
+import { Focus } from '../../types'
+import InputBox from '../InputBox'
 
 type ContactModalProps = {
   children: React.ReactNode
@@ -17,7 +21,11 @@ const schemaForm = z.object({
 })
 
 export default function ContactModal({ children }: ContactModalProps) {
-  const { register, handleSubmit, formState } = useForm({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
     mode: 'onSubmit',
     resolver: zodResolver(schemaForm),
     defaultValues: {
@@ -27,8 +35,33 @@ export default function ContactModal({ children }: ContactModalProps) {
     },
   })
 
-  const { errors } = formState
+  const [isFocus, setIsFocus] = useState<Focus>({
+    fullName: false,
+    email: false,
+    message: false,
+  })
 
+  const handleBlur = (
+    e: FocusEvent<HTMLInputElement | HTMLTextAreaElement, Element>,
+  ) => {
+    if (e.target.value === '') {
+      setIsFocus((state) => ({
+        ...state,
+        [e.target.name]: false,
+      }))
+    }
+  }
+
+  const handleFocus = (
+    e: FocusEvent<HTMLInputElement | HTMLTextAreaElement, Element>,
+  ) => {
+    if (e.target.value === '') {
+      setIsFocus((state) => ({
+        ...state,
+        [e.target.name]: true,
+      }))
+    }
+  }
   const onSubmit = () => {
     console.log('submit')
   }
@@ -40,45 +73,59 @@ export default function ContactModal({ children }: ContactModalProps) {
         <Dialog.Overlay className="fixed inset-0 bg-black/50 backdrop-blur-sm animate-overlayShow data-[state='closed']:animate-overlayHide" />
         <Dialog.Content
           onOpenAutoFocus={(event) => event?.preventDefault()}
-          className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-contentShow data-[state='closed']:animate-contentHide bg-white rounded-xl shadow-2xl mx-auto w-[960px] h-[540px]"
+          className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-contentShow data-[state='closed']:animate-contentHide bg-white rounded-xl shadow-2xl mx-auto w-[960px]"
         >
           <main className="flex w-full h-full rounded-lg">
-            <section className="h-full w-full bg-rose-500 rounded-tl-xl rounded-bl-xl">
+            <section className="h-full w-full bg-rose-500 rounded-tl-xl rounded-bl-xl py-7">
               <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="flex flex-col gap-5 w-full px-8 mx-auto mt-6 "
+                className="flex flex-col gap-9 w-full px-8 mx-auto"
               >
-                <div className="relative grid grid-cols-[7%_93%] mx-0 py-1.5 px-0 border-b-2 border-zinc-200 after:content-[''] after:w-0 after:absolute after:h-0.5  after:bg-rose-800 after:duration-300 after:-bottom-0.5 after:right-2/4 before:content-[''] before:w-0 before:absolute before:h-0.5  before:bg-rose-800 before:duration-300 before:-bottom-0.5 before:left-2/4 group focus-within:before:w-1/2 focus-within:after:w-1/2">
-                  <div className="flex justify-center items-center duration-300 text-white group-focus-within:text-rose-800">
-                    <FaUser size={14} />
-                  </div>
+                <InputBox
+                  icon={FaUser}
+                  placeholder="Full Name"
+                  isFocus={isFocus.fullName}
+                >
+                  <input
+                    type="text"
+                    {...register('fullName', { required: true })}
+                    className="w-full h-full text-xl text-white px-3 py-2 border-none outline-none left-0 top-0 bg-transparent autofill:transition autofill:duration-[600000s] autofill:delay-0"
+                    onFocus={(e) => handleFocus(e)}
+                    onBlur={(e) => handleBlur(e)}
+                  />
+                </InputBox>
 
-                  <div className="relative h-12">
-                    <input
-                      type="text"
-                      placeholder=""
-                      {...register('fullName', { required: true })}
-                      className="absolute w-full h-full text-xl text-white px-3 py-2 border-none outline-none left-0 top-0 bg-transparent autofill:transition autofill:duration-[600000s] autofill:delay-0 peer"
-                    />
-                    <span className="absolute -translate-y-2/4 text-white duration-300 left-2.5 z-10 pointer-events-none text-sm -top-1 group-[:not(:placeholder-shown):focus-within]:text-sm group-[:not(:placeholder-shown):focus-within]:-top-1 peer-placeholder-shown:top-2/4 peer-placeholder-shown:text-lg">
-                      Full Name
-                    </span>
-                  </div>
+                <InputBox
+                  icon={MdEmail}
+                  placeholder="Email"
+                  isFocus={isFocus.email}
+                >
+                  <input
+                    type="text"
+                    {...register('email', { required: true })}
+                    className="absolute w-full h-full text-xl text-white px-3 py-2 border-none outline-none left-0 top-0 bg-transparent autofill:transition autofill:duration-[600000s] autofill:delay-0"
+                    onFocus={(e) => handleFocus(e)}
+                    onBlur={(e) => handleBlur(e)}
+                  />
+                </InputBox>
 
-                  {errors.fullName?.message && (
-                    <span>{errors.fullName?.message}</span>
-                  )}
+                <div className="relative h-56">
+                  <textarea
+                    data-focus={isFocus.message}
+                    placeholder="Type your message..."
+                    {...register('message', { required: true })}
+                    className="absolute w-full h-full text-lg text-white px-3 py-2 border-white border-2 rounded outline-none left-0 top-0 autofill:transition autofill:duration-[600000s] autofill:delay-0 resize-none bg-transparent placeholder:text-white/60 data-[focus=true]:border-rose-800 duration-300"
+                    onFocus={(e) => handleFocus(e)}
+                    onBlur={(e) => handleBlur(e)}
+                  />
                 </div>
 
-                <input type="text" {...register('email', { required: true })} />
-                {errors.email?.message && <span>{errors.email?.message}</span>}
-                <input
-                  type="text"
-                  {...register('message', { required: true })}
-                />
-                {errors.message?.message && (
-                  <span>{errors.message?.message}</span>
-                )}
+                <button
+                  type="submit"
+                  className="relative text-white text-lg py-3 w-fit border-2 border-white rounded-lg self-center px-16 z-10 duration-300 active:text-white active:border-rose-800 hover:text-rose-800 before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-white before:-z-10 before:transition-all before:duration-500 before:origin-left before:ease-in-out before:scale-x-0 before:hover:scale-x-100 before:active:shadow-2xl before:active:bg-rose-800"
+                >
+                  Send Message
+                </button>
               </form>
             </section>
             <section className="h-full w-full bg-white rounded-tr-xl rounded-br-xl"></section>
