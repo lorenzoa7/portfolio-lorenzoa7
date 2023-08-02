@@ -16,7 +16,7 @@ export default function Projects() {
             {projectsConfig?.projects
               ?.slice(0, projectsConfig.maxFeaturedProjects)
               .map((project) => (
-                <ProjectModal key={project.title}>
+                <ProjectModal key={project.title} project={project}>
                   <Project.Root>
                     <div className="absolute -top-5 -right-5 text-yellow-400 rotate-12 group-hover:scale-125 group-hover:text-yellow-500 duration-300">
                       <AiFillStar size={45} />

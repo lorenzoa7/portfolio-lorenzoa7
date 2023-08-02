@@ -1,4 +1,4 @@
-import type { Level, Project, Skill } from '@/types'
+import type { Level, Project, TechConfig as TechConfigType } from '@/types'
 import {
   SiAdobeaftereffects,
   SiAdobephotoshop,
@@ -20,89 +20,109 @@ import {
 import { BiLogoJava } from 'react-icons/bi'
 import { BsDatabase } from 'react-icons/bs'
 
+export const techConfig = {
+  typescript: {
+    title: 'TypeScript',
+    icon: SiTypescript,
+  },
+  javascript: {
+    title: 'JavaScript',
+    icon: SiJavascript,
+  },
+  python: {
+    title: 'Python',
+    icon: SiPython,
+  },
+  react: {
+    title: 'React',
+    icon: SiReact,
+  },
+  nextjs: {
+    title: 'Next.JS',
+    icon: SiNextdotjs,
+  },
+  django: {
+    title: 'Django',
+    icon: SiDjango,
+  },
+  tailwindcss: {
+    title: 'TailwindCSS',
+    icon: SiTailwindcss,
+  },
+  photoshop: {
+    title: 'Photoshop',
+    icon: SiAdobephotoshop,
+  },
+  sql: {
+    title: 'Database - SQL',
+    icon: BsDatabase,
+  },
+  java: {
+    title: 'Java',
+    icon: BiLogoJava,
+  },
+  figma: {
+    title: 'Figma',
+    icon: SiFigma,
+  },
+  premiere: {
+    title: 'Premiere',
+    icon: SiAdobepremierepro,
+  },
+  afterEffects: {
+    title: 'After Effects',
+    icon: SiAdobeaftereffects,
+  },
+  nodejs: {
+    title: 'Node.JS',
+    icon: SiNodedotjs,
+  },
+  nestjs: {
+    title: 'Nest.JS',
+    icon: SiNestjs,
+  },
+  graphql: {
+    title: 'GraphQL',
+    icon: SiGraphql,
+  },
+  prisma: {
+    title: 'Prisma',
+    icon: SiPrisma,
+  },
+} satisfies TechConfigType
+
 export const skillsConfig = {
   levels: [
     {
       title: 'Expert',
       skills: [
-        {
-          title: 'TypeScript',
-          icon: SiTypescript,
-        },
-        {
-          title: 'JavaScript',
-          icon: SiJavascript,
-        },
-        {
-          title: 'Python',
-          icon: SiPython,
-        },
-        {
-          title: 'React',
-          icon: SiReact,
-        },
-        {
-          title: 'Next.JS',
-          icon: SiNextdotjs,
-        },
-        {
-          title: 'Django',
-          icon: SiDjango,
-        },
-        {
-          title: 'TailwindCSS',
-          icon: SiTailwindcss,
-        },
-        {
-          title: 'Photoshop',
-          icon: SiAdobephotoshop,
-        },
-      ] satisfies Skill[],
+        techConfig.typescript,
+        techConfig.javascript,
+        techConfig.python,
+        techConfig.react,
+        techConfig.nextjs,
+        techConfig.django,
+        techConfig.tailwindcss,
+        techConfig.photoshop,
+      ],
     },
     {
       title: 'Competent',
       skills: [
-        {
-          title: 'Database - SQL',
-          icon: BsDatabase,
-        },
-        {
-          title: 'Java',
-          icon: BiLogoJava,
-        },
-        {
-          title: 'Figma',
-          icon: SiFigma,
-        },
-        {
-          title: 'Premiere',
-          icon: SiAdobepremierepro,
-        },
-        {
-          title: 'After Effects',
-          icon: SiAdobeaftereffects,
-        },
+        techConfig.sql,
+        techConfig.java,
+        techConfig.figma,
+        techConfig.premiere,
+        techConfig.afterEffects,
       ],
     },
     {
       title: 'Learning',
       skills: [
-        {
-          title: 'Node.JS',
-          icon: SiNodedotjs,
-        },
-        {
-          title: 'Nest.JS',
-          icon: SiNestjs,
-        },
-        {
-          title: 'GraphQL',
-          icon: SiGraphql,
-        },
-        {
-          title: 'Prisma',
-          icon: SiPrisma,
-        },
+        techConfig.nodejs,
+        techConfig.nestjs,
+        techConfig.graphql,
+        techConfig.prisma,
       ],
     },
   ] satisfies Level[],
@@ -115,10 +135,24 @@ export const projectsConfig = {
       title: 'Couple Wheel',
       description:
         "Couple Wheel is a game to be played in pairs, where both players select activities they would like to do together and spin the wheel to randomly choose one. It's a great game for indecisive couples!",
+      about:
+        "I had the idea to create this project as a Valentine's Day gift for my girlfriend. But as development progressed, I thought about expanding and making a real game for couples to enjoy. It was a great learning experience to build this application and I hope to evolve it even more in the future!",
       imageHref: '/images/project_couplewheel.png',
       imageAlt: 'The main interface of Couple Wheel app.',
       appHref: 'https://couple-wheel.vercel.app/',
       repositoryHref: 'https://github.com/lorenzoa7/couple-wheel',
+      createdAt: 'June 12, 2023',
+      features: [
+        'Add activities to a list and sort them',
+        'Coin system to reroll the drawn activity',
+        'Each time an activity is drawn, the harder it is to be drawn again (weight system)',
+        'Spinning animation',
+        'Translation support (English, Portuguese and Spanish)',
+        'Theme selection for each player',
+        'Export and open a game (local storage)',
+        'Game configuration (play with the default values)',
+      ],
+      techKeys: ['javascript', 'react', 'tailwindcss', 'photoshop'],
     },
     {
       title: 'My Portfolio',
@@ -174,3 +208,4 @@ export const projectsConfig = {
 
 export type SkillsConfig = typeof skillsConfig
 export type ProjectsConfig = typeof projectsConfig
+export type TechConfig = typeof techConfig

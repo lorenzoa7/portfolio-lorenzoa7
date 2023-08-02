@@ -16,10 +16,17 @@ export type Skill = {
   icon: ElementType
 }
 
+export type Technology = {
+  title: string
+  icon: ElementType
+}
+
 export type Level = {
   title: string
-  skills: Skill[]
+  skills: Technology[]
 }
+
+export type TechConfig = Record<string, Technology>
 
 export type Project = {
   title: string
@@ -28,6 +35,10 @@ export type Project = {
   imageAlt: string
   appHref?: string
   repositoryHref?: string
+  createdAt?: string
+  about?: string
+  features?: string[]
+  techKeys?: string[]
 }
 
 export type PersonalInfo = {
