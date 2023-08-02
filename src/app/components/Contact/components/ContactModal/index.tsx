@@ -122,7 +122,7 @@ export default function ContactModal({ children }: ContactModalProps) {
 
                 <button
                   type="submit"
-                  className="relative text-white text-lg py-3 w-fit border-2 border-white rounded-lg self-center px-16 z-10 duration-300 active:text-white active:border-rose-800 hover:text-rose-800 before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-white before:-z-10 before:transition-all before:duration-500 before:origin-left before:ease-in-out before:scale-x-0 before:hover:scale-x-100 before:active:shadow-2xl before:active:bg-rose-800"
+                  className="relative text-white text-lg py-3 w-fit border-2 border-white rounded-lg self-center px-16 z-10 duration-300 active:text-white active:border-rose-800 hover:text-rose-800 before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-white before:-z-10 before:transition-all before:duration-500 before:origin-left before:ease-in-out before:invisible before:scale-x-0 before:hover:scale-x-100 before:active:shadow-2xl before:active:bg-rose-800 before:hover:visible"
                 >
                   Send Message
                 </button>
