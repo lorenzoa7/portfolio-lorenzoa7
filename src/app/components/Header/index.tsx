@@ -1,38 +1,43 @@
+'use client'
+
 import { headerConfig } from '@/config/header'
-import { About, Background, FloatingMenu } from './components'
+import { useEffect, useState } from 'react'
+import { Logo } from '../Logo'
+import { Nav } from './components'
 
 export default function Header() {
+  const [onScroll, setOnScroll] = useState(false)
+
+  const changeOnScroll = () => {
+    if (window.scrollY >= 50) {
+      setOnScroll(true)
+    } else {
+      setOnScroll(false)
+    }
+  }
+  //
+  useEffect(() => {
+    window.addEventListener('scroll', changeOnScroll, true)
+    return () => window.removeEventListener('scroll', changeOnScroll)
+  }, [])
+
   return (
-    <Background>
-      <About.Root>
-        <About.Info.Root>
-          <About.Info.Heading>
-            Full-Stack Developer and Designer
-          </About.Info.Heading>
+    <div
+      data-onscroll={onScroll}
+      className="fixed top-0 left-0 z-50 px-40 py-7 w-full flex justify-between items-baseline duration-500 data-[onscroll=true]:bg-gradient-to-r data-[onscroll=true]:from-rose-800 data-[onscroll=true]:to-rose-500 data-[onscroll=true]:shadow-2xl data-[onscroll=true]:py-3"
+    >
+      <Logo.Root>
+        <Logo.Name />
+        <Logo.Symbol />
+      </Logo.Root>
 
-          <About.Info.Text>
-            Hello, my name is Lorenzo Aceti and I work developing front-end and
-            back-end applications, as well as prototyping intuitive interfaces
-            with my design knowledge. My main goal is to add value through
-            programming creativity.
-          </About.Info.Text>
-
-          <About.Info.Button>scroll down</About.Info.Button>
-        </About.Info.Root>
-
-        <About.Profile
-          imageUrl="/images/photo_badge3.png"
-          imageAlt="A picture of Lorenzo Aceti."
-        />
-      </About.Root>
-
-      <FloatingMenu.Root>
-        {headerConfig.floatingMenu?.map((item) => (
-          <FloatingMenu.Item key={item.title} href={item.href} icon={item.icon}>
+      <Nav.Root>
+        {headerConfig.nav?.map((item) => (
+          <Nav.Item key={item.title} href={item.href}>
             {item.title}
-          </FloatingMenu.Item>
+          </Nav.Item>
         ))}
-      </FloatingMenu.Root>
-    </Background>
+      </Nav.Root>
+    </div>
   )
 }
