@@ -3,7 +3,10 @@ import ContactModal from './components/ContactModal'
 
 export default function Contact() {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 my-40">
+    <section
+      id="contact"
+      className="flex flex-col items-center justify-center gap-4 my-40"
+    >
       <h2 className="text-2xl text-rose-500 uppercase">Do you like my work?</h2>
       <ContactModal>
         <div className="flex items-baseline gap-3 text-8xl text-rose-800 font-semibold cursor-pointer group">

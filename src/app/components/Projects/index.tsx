@@ -4,7 +4,7 @@ import { Project, ProjectModal } from './components'
 
 export default function Projects() {
   return (
-    <section>
+    <section id="projects">
       <h2 className="uppercase text-neutral-700 text-4xl font-semibold">
         Projects
       </h2>

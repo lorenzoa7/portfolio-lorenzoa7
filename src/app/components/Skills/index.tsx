@@ -3,7 +3,7 @@ import { Level } from './components'
 
 export default function Skills() {
   return (
-    <section>
+    <section id="skills">
       <h2 className="uppercase text-neutral-700 text-4xl font-semibold">
         Skills
       </h2>

@@ -5,19 +5,19 @@ export const headerConfig = {
   nav: [
     {
       title: 'About',
-      href: '#',
+      href: '#about',
     },
     {
       title: 'Skills',
-      href: '#',
+      href: '#skills',
     },
     {
       title: 'Projects',
-      href: '#',
+      href: '#projects',
     },
     {
       title: 'Contact',
-      href: '#',
+      href: '#contact',
     },
   ] satisfies NavItem[],
   floatingMenu: [
