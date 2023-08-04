@@ -9,7 +9,7 @@ export default function RealHeader() {
   const [onScroll, setOnScroll] = useState(false)
 
   const changeOnScroll = () => {
-    if (window.scrollY >= 90) {
+    if (window.scrollY >= 50) {
       setOnScroll(true)
     } else {
       setOnScroll(false)
@@ -35,8 +35,8 @@ export default function RealHeader() {
 
   return (
     <div
-      className={`fixed top-0 left-0 z-50 px-40 pt-5 w-full flex justify-between items-baseline duration-300 ${
-        onScroll && 'bg-gradient-to-r from-rose-800 to-rose-500 shadow-2xl py-5'
+      className={`fixed top-0 left-0 z-50 px-40 py-5 w-full flex justify-between items-baseline duration-300 ${
+        onScroll && 'bg-gradient-to-r from-rose-800 to-rose-500 shadow-2xl'
       }`}
     >
       <Logo.Root>
