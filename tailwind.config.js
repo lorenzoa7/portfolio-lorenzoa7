@@ -44,12 +44,27 @@ module.exports = {
             transform: 'translate(-50%, -48%) scale(0)',
           },
         },
+        scroll: {
+          '0%': {
+            opacity: 0,
+            transform: 'rotate(45deg) translate(-2px, -2px)',
+          },
+          '50%': {
+            opacity: 1,
+          },
+          '100%': {
+            opacity: 0,
+            transform: 'rotate(45deg) translate(2px, 2px)',
+          },
+        },
       },
       animation: {
         overlayShow: 'overlayShow 300ms cubic-bezier(0.16, 1, 0.3, 1)',
         overlayHide: 'overlayHide 300ms cubic-bezier(0.16, 1, 0.3, 1)',
         contentShow: 'contentShow 300ms cubic-bezier(0.16, 1, 0.3, 1)',
         contentHide: 'contentHide 300ms cubic-bezier(0.16, 1, 0.3, 1)',
+        scrollOne: 'scroll 1.25s infinite',
+        scrollTwo: 'scroll 1.25s infinite -200ms',
       },
     },
     fontFamily: {

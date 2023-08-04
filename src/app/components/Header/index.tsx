@@ -1,5 +1,4 @@
 import { headerConfig } from '@/config/header'
-import { BiChevronsDown } from 'react-icons/bi'
 import { Logo } from '../Logo'
 import { About, Background, FloatingMenu, Nav } from './components'
 
@@ -34,9 +33,7 @@ export default function Header() {
             programming creativity.
           </About.Info.Text>
 
-          <About.Info.Button icon={BiChevronsDown}>
-            scroll down
-          </About.Info.Button>
+          <About.Info.Button>scroll down</About.Info.Button>
         </About.Info.Root>
 
         <About.Profile
