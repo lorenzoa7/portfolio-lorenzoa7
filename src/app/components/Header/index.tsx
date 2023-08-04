@@ -1,25 +1,9 @@
 import { headerConfig } from '@/config/header'
-import { Logo } from '../Logo'
-import { About, Background, FloatingMenu, Nav } from './components'
+import { About, Background, FloatingMenu } from './components'
 
 export default function Header() {
   return (
     <Background>
-      <div className="flex justify-between items-baseline">
-        <Logo.Root>
-          <Logo.Name />
-          <Logo.Symbol />
-        </Logo.Root>
-
-        <Nav.Root>
-          {headerConfig.nav?.map((item) => (
-            <Nav.Item key={item.title} href={item.href}>
-              {item.title}
-            </Nav.Item>
-          ))}
-        </Nav.Root>
-      </div>
-
       <About.Root>
         <About.Info.Root>
           <About.Info.Heading>

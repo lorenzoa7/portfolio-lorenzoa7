@@ -2,6 +2,7 @@ import { siteConfig } from '@/config/site'
 import { fontMono } from '@/lib/fonts'
 import type { Metadata } from 'next'
 import { twMerge } from 'tailwind-merge'
+import RealHeader from './components/RealHeader'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -22,6 +23,7 @@ export default function RootLayout({
           fontMono.variable,
         )}
       >
+        <RealHeader />
         {children}
       </body>
     </html>
