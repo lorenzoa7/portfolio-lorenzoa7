@@ -6,16 +6,12 @@ import { Logo } from '../Logo'
 import { Nav } from './components'
 
 export default function Header() {
-  const [onScroll, setOnScroll] = useState(false)
+  const [onScroll, setOnScroll] = useState<string | boolean>('')
 
   const changeOnScroll = () => {
-    if (window.scrollY >= 40) {
-      setOnScroll(true)
-    } else {
-      setOnScroll(false)
-    }
+    setOnScroll(window.scrollY >= 40)
   }
-  //
+
   useEffect(() => {
     window.addEventListener('scroll', changeOnScroll, true)
     return () => window.removeEventListener('scroll', changeOnScroll)
@@ -24,7 +20,7 @@ export default function Header() {
   return (
     <div
       data-onscroll={onScroll}
-      className="fixed top-0 left-0 z-50 px-40 py-7 w-full flex justify-between items-baseline duration-500 data-[onscroll=true]:bg-gradient-to-r data-[onscroll=true]:from-rose-800 data-[onscroll=true]:to-rose-500 data-[onscroll=true]:shadow-2xl data-[onscroll=true]:py-3"
+      className="fixed top-0 left-0 z-50 px-40 py-7 w-full flex justify-between items-baseline duration-500 data-[onscroll=true]:bg-gradient-to-r data-[onscroll=true]:from-rose-800 data-[onscroll=true]:to-rose-500 data-[onscroll=true]:shadow-2xl data-[onscroll=true]:py-3 data-[onscroll='']:bg-gradient-to-r data-[onscroll='']:from-rose-800 data-[onscroll='']:to-rose-500 data-[onscroll='']:py-3"
     >
       <Logo.Root>
         <Logo.Name />
