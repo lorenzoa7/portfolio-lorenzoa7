@@ -21,7 +21,7 @@ export default function About() {
         </Profile.Info.Root>
 
         <Profile.Photo
-          imageUrl="/images/photo_badge3.png"
+          imageUrl="/images/profile_photo.jpg"
           imageAlt="A picture of Lorenzo Aceti."
         />
       </Profile.Root>

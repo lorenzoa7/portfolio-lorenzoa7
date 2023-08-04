@@ -9,7 +9,7 @@ export default function Header() {
   const [onScroll, setOnScroll] = useState(false)
 
   const changeOnScroll = () => {
-    if (window.scrollY >= 50) {
+    if (window.scrollY >= 40) {
       setOnScroll(true)
     } else {
       setOnScroll(false)
