@@ -1,15 +1,13 @@
+import Link from 'next/link'
+
 type LogoRootProps = {
   children: React.ReactNode
-  clickable?: boolean
 }
 
-export function LogoRoot({ children, clickable = false }: LogoRootProps) {
+export function LogoRoot({ children }: LogoRootProps) {
   return (
-    <div
-      data-clickable={clickable}
-      className="flex gap-1 items-center w-fit data-[clickable=true]:cursor-pointer"
-    >
+    <Link href="#about" className="flex gap-1 items-center w-fit">
       {children}
-    </div>
+    </Link>
   )
 }
