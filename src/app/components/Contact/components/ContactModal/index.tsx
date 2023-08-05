@@ -77,7 +77,7 @@ export default function ContactModal({ children }: ContactModalProps) {
           className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-contentShow data-[state='closed']:animate-contentHide bg-white rounded-xl shadow-2xl mx-auto w-[960px]"
         >
           <main className="flex w-full h-full rounded-lg">
-            <section className="h-full w-full bg-rose-500 rounded-tl-xl rounded-bl-xl py-7">
+            <section className="h-full w-full bg-amaranth-500 rounded-tl-xl rounded-bl-xl py-7">
               <form
                 onSubmit={handleSubmit(onSubmit)}
                 className="flex flex-col gap-5 w-full px-8 mx-auto"
@@ -115,7 +115,7 @@ export default function ContactModal({ children }: ContactModalProps) {
                     data-focus={isFocus.message}
                     placeholder="Type your message..."
                     {...register('message', { required: true })}
-                    className="absolute w-full h-full text-lg text-white px-3 py-2 border-white border-2 rounded outline-none left-0 top-0 autofill:transition autofill:duration-[600000s] autofill:delay-0 resize-none bg-transparent placeholder:text-white/60 data-[focus=true]:border-rose-800 duration-300"
+                    className="absolute w-full h-full text-lg text-white px-3 py-2 border-white border-2 rounded outline-none left-0 top-0 autofill:transition autofill:duration-[600000s] autofill:delay-0 resize-none bg-transparent placeholder:text-white/60 data-[focus=true]:border-amaranth-800 duration-300"
                     onFocus={(e) => handleFocus(e)}
                     onBlur={(e) => handleBlur(e)}
                   />
@@ -123,14 +123,14 @@ export default function ContactModal({ children }: ContactModalProps) {
 
                 <button
                   type="submit"
-                  className="relative text-white text-lg py-3 w-fit border-2 border-white rounded-lg self-center px-16 z-10 duration-300 active:text-white active:border-rose-800 hover:text-rose-800 before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-white before:-z-10 before:transition-all before:duration-500 before:origin-left before:ease-in-out before:invisible before:scale-x-0 before:hover:scale-x-100 before:active:shadow-2xl before:active:bg-rose-800 before:hover:visible"
+                  className="relative text-white text-lg py-3 w-fit border-2 border-white rounded-lg self-center px-16 z-10 duration-300 active:text-white active:border-amaranth-800 hover:text-amaranth-800 before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-white before:-z-10 before:transition-all before:duration-500 before:origin-left before:ease-in-out before:invisible before:scale-x-0 before:hover:scale-x-100 before:active:shadow-2xl before:active:bg-amaranth-800 before:hover:visible"
                 >
                   Send Message
                 </button>
               </form>
             </section>
-            <section className="relative flex flex-col justify-between h-11/12 w-full  rounded-tr-xl rounded-br-xl p-7 text-rose-800">
-              <span className="absolute -left-5 top-1/2 -translate-y-1/2 rotate-90 text-rose-500">
+            <section className="relative flex flex-col justify-between h-11/12 w-full  rounded-tr-xl rounded-br-xl p-7 text-amaranth-800">
+              <span className="absolute -left-5 top-1/2 -translate-y-1/2 rotate-90 text-amaranth-500">
                 <BsFillTriangleFill size={42} />
               </span>
               <div className="self-end font-light invisible">

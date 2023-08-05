@@ -42,15 +42,15 @@ export default function ProjectModal({ children, project }: ProjectModalProps) {
 
           <main className="flex items-center gap-16">
             <div className="flex flex-col gap-4 w-[680px]">
-              <Dialog.Title className="font-medium text-3xl text-rose-800">
+              <Dialog.Title className="font-medium text-3xl text-amaranth-800">
                 {project.title}
               </Dialog.Title>
-              <p className="text-xl text-rose-500">
+              <p className="text-xl text-amaranth-500">
                 <span className="font-medium">Description: </span>
                 {project.description}
               </p>
               {project.about && (
-                <p className="text-xl text-rose-500">
+                <p className="text-xl text-amaranth-500">
                   <span className="font-medium">About the project: </span>
                   {project.about}
                 </p>
@@ -58,10 +58,10 @@ export default function ProjectModal({ children, project }: ProjectModalProps) {
 
               {project.features && (
                 <>
-                  <span className="text-xl text-rose-500 font-medium">
+                  <span className="text-xl text-amaranth-500 font-medium">
                     Features:
                   </span>
-                  <ul className="pl-10 text-rose-500 list-disc text-lg">
+                  <ul className="pl-10 text-amaranth-500 list-disc text-lg">
                     {project.features.map((feature, index) => (
                       <li key={index}>{feature}</li>
                     ))}
@@ -70,7 +70,7 @@ export default function ProjectModal({ children, project }: ProjectModalProps) {
               )}
 
               {project.createdAt && (
-                <span className="text-base font-semibold text-rose-500">
+                <span className="text-base font-semibold text-amaranth-500">
                   July 31, 2023
                 </span>
               )}
@@ -82,19 +82,19 @@ export default function ProjectModal({ children, project }: ProjectModalProps) {
                 height={438}
                 src={project.imageHref}
                 alt={project.imageAlt}
-                className="object-fill border-rose-500 border-2 rounded"
+                className="object-fill border-amaranth-500 border-2 rounded"
               />
             </div>
           </main>
 
           <div className="flex justify-between items-baseline mt-9">
             {project.techKeys && (
-              <div className="flex items-center gap-5 text-rose-500/80">
+              <div className="flex items-center gap-5 text-amaranth-500/80">
                 {project.techKeys.map((techKey, index) => (
                   <div
                     key={index}
                     data-content={techConfig[techKey as keyof TechConfig].title}
-                    className="relative hover:text-rose-500 duration-300 after:content-[attr(data-content)] after:absolute after:-top-6 after:left-1/2 after:-translate-x-1/2 after:font-semibold after:opacity-0 after:translate-y-7 hover:after:translate-y-0 hover:after:opacity-100 after:duration-300 after:pointer-events-none after:whitespace-nowrap"
+                    className="relative hover:text-amaranth-500 duration-300 after:content-[attr(data-content)] after:absolute after:-top-6 after:left-1/2 after:-translate-x-1/2 after:font-semibold after:opacity-0 after:translate-y-7 hover:after:translate-y-0 hover:after:opacity-100 after:duration-300 after:pointer-events-none after:whitespace-nowrap"
                   >
                     {getIcon(techKey)}
                   </div>
@@ -108,7 +108,7 @@ export default function ProjectModal({ children, project }: ProjectModalProps) {
                   href={project.appHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 bg-rose-500 rounded-lg text-white uppercase text-center py-1 text-xl w-32 hover:bg-rose-800 duration-300"
+                  className="flex items-center justify-center gap-2 bg-amaranth-500 rounded-lg text-white uppercase text-center py-1 text-xl w-32 hover:bg-amaranth-800 duration-300"
                 >
                   <AiOutlineLink size={24} />
                   App
@@ -120,7 +120,7 @@ export default function ProjectModal({ children, project }: ProjectModalProps) {
                   href={project.repositoryHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 bg-rose-500 rounded-lg text-white uppercase text-center py-1 text-xl w-32 hover:bg-rose-800 duration-300"
+                  className="flex items-center justify-center gap-2 bg-amaranth-500 rounded-lg text-white uppercase text-center py-1 text-xl w-32 hover:bg-amaranth-800 duration-300"
                 >
                   <AiOutlineGithub size={24} />
                   Repository

@@ -11,7 +11,7 @@ export default function Projects() {
 
       <div className="flex flex-col gap-10 px-36 py-16">
         <section>
-          <h3 className="text-rose-800 font-semibold text-2xl">Featured</h3>
+          <h3 className="text-amaranth-800 font-semibold text-2xl">Featured</h3>
           <div className="flex items-center justify-center gap-8">
             {projectsConfig?.projects
               ?.slice(0, projectsConfig.maxFeaturedProjects)
@@ -50,7 +50,7 @@ export default function Projects() {
         </section>
 
         <section>
-          <h3 className="text-rose-800 font-semibold text-2xl">
+          <h3 className="text-amaranth-800 font-semibold text-2xl">
             More projects
           </h3>
           <div className="flex items-center justify-center gap-8">
