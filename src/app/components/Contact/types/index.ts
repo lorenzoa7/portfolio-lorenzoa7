@@ -1,5 +1,5 @@
-export type Focus = {
-  fullName: boolean
-  email: boolean
-  message: boolean
+export type ContactData<T> = {
+  fullName: T
+  email: T
+  message: T
 }

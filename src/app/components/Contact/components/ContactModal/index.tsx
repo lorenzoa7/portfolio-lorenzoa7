@@ -8,7 +8,7 @@ import { BsFillTriangleFill } from 'react-icons/bs'
 import { FaUser } from 'react-icons/fa'
 import { MdEmail, MdPhone } from 'react-icons/md'
 import { z } from 'zod'
-import { Focus } from '../../types'
+import { ContactData } from '../../types'
 import InputBox from '../InputBox'
 
 type ContactModalProps = {
@@ -25,7 +25,7 @@ export default function ContactModal({ children }: ContactModalProps) {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isLoading, isSubmitting },
   } = useForm({
     mode: 'onSubmit',
     resolver: zodResolver(schemaForm),
@@ -36,7 +36,7 @@ export default function ContactModal({ children }: ContactModalProps) {
     },
   })
 
-  const [isFocus, setIsFocus] = useState<Focus>({
+  const [isFocus, setIsFocus] = useState<ContactData<boolean>>({
     fullName: false,
     email: false,
     message: false,
@@ -63,8 +63,21 @@ export default function ContactModal({ children }: ContactModalProps) {
       }))
     }
   }
-  const onSubmit = () => {
-    console.log('submit')
+  const onSubmit = async (data: ContactData<string>) => {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    })
+
+    console.log(response.status)
+
+    if (response.status === 200) {
+      console.log('Message sent successfully!')
+    }
+
+    if (response.status === 500) {
+      console.log('Error sending message!')
+    }
   }
 
   return (
