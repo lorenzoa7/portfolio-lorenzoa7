@@ -34,7 +34,7 @@ export const headerConfig = {
     {
       title: 'CV',
       icon: AiFillFilePdf,
-      href: '#',
+      href: '/docs/lorenzo_aceti_cv.pdf',
     },
   ] satisfies FloatingMenuItem[],
 }
