@@ -12,12 +12,6 @@ export default async function ContactAPI(
 
   const user = process.env.EMAIL_USER
 
-  const data = {
-    fullName,
-    email,
-    message,
-  }
-
   const transporter = nodemailer.createTransport({
     host: process.env.EMAIL_HOST,
     port: 465,
@@ -29,15 +23,15 @@ export default async function ContactAPI(
   })
 
   try {
-    const mail = await transporter.sendMail({
+    await transporter.sendMail({
       from: user,
       to: 'lorenzo.acetii@gmail.com',
       replyTo: email,
-      subject: `Contact form submission from ${fullName}`,
+      subject: `Contact form submission from "${fullName}"`,
       html: `
-      <p>Name: ${fullName}</p>
-      <p>Email: ${email}</p>
-      <p>Message: ${message}</p>
+        <p><strong>NAME:</strong> ${fullName}</p>
+        <p><strong>EMAIL:</strong> ${email}</p>
+        <p><strong>MESSAGE:</strong> ${message}</p>
       `,
     })
 
