@@ -2,11 +2,12 @@
 
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as Dialog from '@radix-ui/react-dialog'
-import { FocusEvent, useState } from 'react'
+import { FocusEvent, useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { BsFillTriangleFill } from 'react-icons/bs'
 import { FaUser } from 'react-icons/fa'
 import { MdEmail, MdPhone } from 'react-icons/md'
+import { toast } from 'react-toastify'
 import { z } from 'zod'
 import { ContactData } from '../../types'
 import InputBox from '../InputBox'
@@ -21,11 +22,19 @@ const schemaForm = z.object({
   message: z.string().nonempty('This field is required.'),
 })
 
+const DEFAULT_IS_FOCUS = {
+  fullName: false,
+  email: false,
+  message: false,
+}
+
 export default function ContactModal({ children }: ContactModalProps) {
+  const [open, setOpen] = useState(false)
   const {
     register,
     handleSubmit,
-    formState: { errors, isLoading, isSubmitting },
+    reset,
+    formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm({
     mode: 'onSubmit',
     resolver: zodResolver(schemaForm),
@@ -36,11 +45,7 @@ export default function ContactModal({ children }: ContactModalProps) {
     },
   })
 
-  const [isFocus, setIsFocus] = useState<ContactData<boolean>>({
-    fullName: false,
-    email: false,
-    message: false,
-  })
+  const [isFocus, setIsFocus] = useState<ContactData<boolean>>(DEFAULT_IS_FOCUS)
 
   const handleBlur = (
     e: FocusEvent<HTMLInputElement | HTMLTextAreaElement, Element>,
@@ -64,22 +69,45 @@ export default function ContactModal({ children }: ContactModalProps) {
     }
   }
   const onSubmit = async (data: ContactData<string>) => {
-    const response = await fetch('/api/contact', {
-      method: 'POST',
-      body: JSON.stringify(data),
+    const timeoutPromise = new Promise((_resolve, reject) => {
+      setTimeout(() => {
+        reject(new Error('Promise timed out.'))
+      }, 10000)
     })
 
-    if (response.status === 200) {
-      console.log('Message sent successfully!')
-    }
+    await toast
+      .promise(
+        Promise.race([
+          fetch('/api/contact', {
+            method: 'POST',
+            body: JSON.stringify(data),
+          }),
+          timeoutPromise,
+        ]),
+        {
+          pending: 'Sending message...',
+          success: 'The message has been sent successfully!',
+          error: 'Could not send the message. Please try again.',
+        },
+      )
+      .finally(() => setOpen(false))
+  }
 
-    if (response.status === 500) {
-      console.log('Error sending message!')
+  useEffect(() => {
+    if (isSubmitSuccessful) {
+      reset()
+      setIsFocus(DEFAULT_IS_FOCUS)
     }
+  }, [isSubmitSuccessful, reset])
+
+  const handleOpenChange = () => {
+    setOpen((state) => !state)
+    reset()
+    setIsFocus(DEFAULT_IS_FOCUS)
   }
 
   return (
-    <Dialog.Root>
+    <Dialog.Root open={open} onOpenChange={handleOpenChange}>
       <Dialog.Trigger asChild>{children}</Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-black/50 backdrop-blur-sm animate-overlayShow data-[state='closed']:animate-overlayHide" />
@@ -100,6 +128,7 @@ export default function ContactModal({ children }: ContactModalProps) {
                 >
                   <input
                     type="text"
+                    disabled={isSubmitting}
                     {...register('fullName', { required: true })}
                     className="w-full h-full text-xl text-white px-3 py-2 border-none outline-none left-0 top-0 bg-transparent autofill:transition autofill:duration-[600000s] autofill:delay-0"
                     onFocus={(e) => handleFocus(e)}
@@ -119,6 +148,7 @@ export default function ContactModal({ children }: ContactModalProps) {
                 >
                   <input
                     type="text"
+                    disabled={isSubmitting}
                     {...register('email', { required: true })}
                     className="absolute w-full h-full text-xl text-white px-3 py-2 border-none outline-none left-0 top-0 bg-transparent autofill:transition autofill:duration-[600000s] autofill:delay-0"
                     onFocus={(e) => handleFocus(e)}
@@ -135,6 +165,7 @@ export default function ContactModal({ children }: ContactModalProps) {
                   <textarea
                     data-focus={isFocus.message}
                     placeholder="Type your message..."
+                    disabled={isSubmitting}
                     {...register('message', { required: true })}
                     className="absolute w-full h-full text-lg text-white px-3 py-2 border-white border-2 rounded outline-none left-0 top-0 autofill:transition autofill:duration-[600000s] autofill:delay-0 resize-none bg-transparent placeholder:text-white/60 data-[focus=true]:border-amaranth-800 duration-300"
                     onFocus={(e) => handleFocus(e)}
@@ -149,11 +180,11 @@ export default function ContactModal({ children }: ContactModalProps) {
 
                 <button
                   type="submit"
-                  disabled={isLoading || isSubmitting}
+                  disabled={isSubmitting}
                   className="relative text-white text-lg py-3 w-fit border-2 border-white rounded-lg self-center px-16 z-10 duration-300 active:text-white active:border-amaranth-800 hover:text-amaranth-800 before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-white before:-z-10 before:transition-all before:duration-500 before:origin-left before:ease-in-out before:invisible before:scale-x-0 before:hover:scale-x-100 before:active:shadow-2xl before:active:bg-amaranth-800 before:hover:visible disabled:before:visible disabled:before:scale-x-100 disabled:before:bg-amaranth-800 disabled:text-white disabled:border-amaranth-800"
                 >
-                  {(isLoading || isSubmitting) && 'Submitting...'}
-                  {!(isLoading || isSubmitting) && 'Send Message'}
+                  {isSubmitting && 'Submitting...'}
+                  {!isSubmitting && 'Send Message'}
                 </button>
               </form>
             </section>

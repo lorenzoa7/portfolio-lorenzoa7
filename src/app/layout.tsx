@@ -1,6 +1,8 @@
 import { siteConfig } from '@/config/site'
 import { fontMono } from '@/lib/fonts'
 import type { Metadata } from 'next'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.min.css'
 import { twMerge } from 'tailwind-merge'
 import Header from './components/Header'
 import './globals.css'
@@ -25,6 +27,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <ToastContainer position="bottom-right" />
       </body>
     </html>
   )
