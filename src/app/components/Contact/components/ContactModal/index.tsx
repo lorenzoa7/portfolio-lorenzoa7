@@ -17,7 +17,7 @@ type ContactModalProps = {
 
 const schemaForm = z.object({
   fullName: z.string().nonempty('This field is required.'),
-  email: z.string().email().nonempty('This field is required.'),
+  email: z.string().email('Invalid email.').nonempty('This field is required.'),
   message: z.string().nonempty('This field is required.'),
 })
 
@@ -69,8 +69,6 @@ export default function ContactModal({ children }: ContactModalProps) {
       body: JSON.stringify(data),
     })
 
-    console.log(response.status)
-
     if (response.status === 200) {
       console.log('Message sent successfully!')
     }
@@ -108,6 +106,11 @@ export default function ContactModal({ children }: ContactModalProps) {
                     onBlur={(e) => handleBlur(e)}
                   />
                 </InputBox>
+                {errors.fullName && (
+                  <p className="text-rose-900 font-medium">
+                    {errors.fullName.message}
+                  </p>
+                )}
 
                 <InputBox
                   icon={MdEmail}
@@ -122,6 +125,11 @@ export default function ContactModal({ children }: ContactModalProps) {
                     onBlur={(e) => handleBlur(e)}
                   />
                 </InputBox>
+                {errors.email && (
+                  <p className="text-rose-900 font-medium">
+                    {errors.email.message}
+                  </p>
+                )}
 
                 <div className="relative h-56 mt-5">
                   <textarea
@@ -133,12 +141,19 @@ export default function ContactModal({ children }: ContactModalProps) {
                     onBlur={(e) => handleBlur(e)}
                   />
                 </div>
+                {errors.message && (
+                  <p className="text-rose-900 font-medium">
+                    {errors.message.message}
+                  </p>
+                )}
 
                 <button
                   type="submit"
-                  className="relative text-white text-lg py-3 w-fit border-2 border-white rounded-lg self-center px-16 z-10 duration-300 active:text-white active:border-amaranth-800 hover:text-amaranth-800 before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-white before:-z-10 before:transition-all before:duration-500 before:origin-left before:ease-in-out before:invisible before:scale-x-0 before:hover:scale-x-100 before:active:shadow-2xl before:active:bg-amaranth-800 before:hover:visible"
+                  disabled={isLoading || isSubmitting}
+                  className="relative text-white text-lg py-3 w-fit border-2 border-white rounded-lg self-center px-16 z-10 duration-300 active:text-white active:border-amaranth-800 hover:text-amaranth-800 before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-white before:-z-10 before:transition-all before:duration-500 before:origin-left before:ease-in-out before:invisible before:scale-x-0 before:hover:scale-x-100 before:active:shadow-2xl before:active:bg-amaranth-800 before:hover:visible disabled:before:visible disabled:before:scale-x-100 disabled:before:bg-amaranth-800 disabled:text-white disabled:border-amaranth-800"
                 >
-                  Send Message
+                  {(isLoading || isSubmitting) && 'Submitting...'}
+                  {!(isLoading || isSubmitting) && 'Send Message'}
                 </button>
               </form>
             </section>
