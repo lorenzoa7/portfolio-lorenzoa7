@@ -1,110 +1,29 @@
 'use client'
 
-import { zodResolver } from '@hookform/resolvers/zod'
+import { useContact } from '@/hooks/useContact'
 import * as Dialog from '@radix-ui/react-dialog'
-import { FocusEvent, useEffect, useState } from 'react'
-import { useForm } from 'react-hook-form'
 import { BsFillTriangleFill } from 'react-icons/bs'
 import { FaUser } from 'react-icons/fa'
 import { MdEmail, MdPhone } from 'react-icons/md'
-import { toast } from 'react-toastify'
-import { z } from 'zod'
-import { ContactData } from '../../types'
 import InputBox from '../InputBox'
 
 type ContactModalProps = {
   children: React.ReactNode
 }
 
-const schemaForm = z.object({
-  fullName: z.string().nonempty('This field is required.'),
-  email: z.string().email('Invalid email.').nonempty('This field is required.'),
-  message: z.string().nonempty('This field is required.'),
-})
-
-const DEFAULT_IS_FOCUS = {
-  fullName: false,
-  email: false,
-  message: false,
-}
-
 export default function ContactModal({ children }: ContactModalProps) {
-  const [open, setOpen] = useState(false)
   const {
-    register,
+    errors,
+    handleBlur,
+    handleFocus,
+    handleOpenChange,
     handleSubmit,
-    reset,
-    formState: { errors, isSubmitting, isSubmitSuccessful },
-  } = useForm({
-    mode: 'onSubmit',
-    resolver: zodResolver(schemaForm),
-    defaultValues: {
-      fullName: '',
-      email: '',
-      message: '',
-    },
-  })
-
-  const [isFocus, setIsFocus] = useState<ContactData<boolean>>(DEFAULT_IS_FOCUS)
-
-  const handleBlur = (
-    e: FocusEvent<HTMLInputElement | HTMLTextAreaElement, Element>,
-  ) => {
-    if (e.target.value === '') {
-      setIsFocus((state) => ({
-        ...state,
-        [e.target.name]: false,
-      }))
-    }
-  }
-
-  const handleFocus = (
-    e: FocusEvent<HTMLInputElement | HTMLTextAreaElement, Element>,
-  ) => {
-    if (e.target.value === '') {
-      setIsFocus((state) => ({
-        ...state,
-        [e.target.name]: true,
-      }))
-    }
-  }
-  const onSubmit = async (data: ContactData<string>) => {
-    const timeoutPromise = new Promise((_resolve, reject) => {
-      setTimeout(() => {
-        reject(new Error('Promise timed out.'))
-      }, 10000)
-    })
-
-    await toast
-      .promise(
-        Promise.race([
-          fetch('/api/contact', {
-            method: 'POST',
-            body: JSON.stringify(data),
-          }),
-          timeoutPromise,
-        ]),
-        {
-          pending: 'Sending message...',
-          success: 'The message has been sent successfully!',
-          error: 'Could not send the message. Please try again.',
-        },
-      )
-      .finally(() => setOpen(false))
-  }
-
-  useEffect(() => {
-    if (isSubmitSuccessful) {
-      reset()
-      setIsFocus(DEFAULT_IS_FOCUS)
-    }
-  }, [isSubmitSuccessful, reset])
-
-  const handleOpenChange = () => {
-    setOpen((state) => !state)
-    reset()
-    setIsFocus(DEFAULT_IS_FOCUS)
-  }
+    isFocus,
+    isSubmitting,
+    onSubmit,
+    open,
+    register,
+  } = useContact()
 
   return (
     <Dialog.Root open={open} onOpenChange={handleOpenChange}>
