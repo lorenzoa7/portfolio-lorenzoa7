@@ -3,13 +3,13 @@ import { Logo } from '@/app/components/Logo'
 type CreditsProps = {
   children: React.ReactNode
   logo?: boolean
-  logoSize?: number
+  logoSize?: 'small' | 'medium'
 }
 
 export default function Credits({
   children,
   logo = false,
-  logoSize = 35,
+  logoSize = 'small',
 }: CreditsProps) {
   return (
     <section className="flex flex-col items-center gap-1 w-full justify-center">

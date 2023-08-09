@@ -6,7 +6,7 @@ type LogoRootProps = {
 
 export function LogoRoot({ children }: LogoRootProps) {
   return (
-    <Link href="#about" className="flex gap-1 items-center w-fit">
+    <Link href="#about" className="relative flex gap-1 items-center w-fit">
       {children}
     </Link>
   )
