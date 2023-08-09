@@ -13,6 +13,7 @@ export function LogoSymbol({ size = 45 }: LogoSymbolProps) {
       className="invert"
       width={size}
       height={size}
+      sizes="(max-width: 639px) 10px, 45px"
       priority
     />
   )
