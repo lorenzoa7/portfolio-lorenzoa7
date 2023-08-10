@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <About />
-      <main className="px-40 mt-20 ">
+      <main className="px-40 mt-20 lg:px-20">
         <Skills />
         <Projects />
         <Contact />

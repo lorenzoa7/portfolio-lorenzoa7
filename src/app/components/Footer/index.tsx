@@ -3,7 +3,7 @@ import { Credits, Personal, Useful } from './components'
 
 export default function Footer() {
   return (
-    <footer className="flex justify-between items-end mt-auto w-full h-24 pb-3 bg-gradient-to-r from-amaranth-800 to-amaranth-500 px-40 text-white font-light text-xl">
+    <footer className="flex justify-between items-end mt-auto w-full h-24 pb-3 bg-gradient-to-r from-amaranth-800 to-amaranth-500 px-40 text-white font-light text-xl lg:px-20">
       <Personal.Root>
         {footerConfig?.personalInfo?.map((info) => (
           <Personal.Info key={info.title} icon={info.icon}>

@@ -7,7 +7,7 @@ export default function Skills() {
       <h2 className="uppercase text-neutral-700 text-4xl font-semibold">
         Skills
       </h2>
-      <div className="flex flex-col gap-10 px-36 py-16">
+      <div className="flex flex-col gap-10 px-36 py-16 lg:px-10">
         {skillsConfig.levels?.map((level) => (
           <Level.Root key={level.title}>
             <Level.Title>{level.title}</Level.Title>
