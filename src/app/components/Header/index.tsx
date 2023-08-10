@@ -2,13 +2,11 @@
 
 import { headerConfig } from '@/config/header'
 import { useEffect, useState } from 'react'
-import { useWindowSize } from 'usehooks-ts'
 import { Logo } from '../Logo'
 import { Nav } from './components'
 
 export default function Header() {
   const [onScroll, setOnScroll] = useState<string | boolean>('')
-  const { width, height } = useWindowSize()
 
   const changeOnScroll = () => {
     setOnScroll(window.scrollY >= 40)
