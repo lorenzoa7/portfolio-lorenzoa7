@@ -32,7 +32,7 @@ export default function ContactModal({ children }: ContactModalProps) {
         <Dialog.Overlay className="fixed inset-0 bg-black/50 backdrop-blur-sm animate-overlayShow data-[state='closed']:animate-overlayHide" />
         <Dialog.Content
           onOpenAutoFocus={(event) => event?.preventDefault()}
-          className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-contentShow data-[state='closed']:animate-contentHide bg-white rounded-xl shadow-2xl mx-auto w-[960px]"
+          className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-contentShow data-[state='closed']:animate-contentHide bg-white rounded-xl shadow-2xl mx-auto w-[960px] lg:w-[calc(100vw-40px)] lg:max-h-[calc(100vh-40px)]"
         >
           <main className="flex w-full h-full rounded-lg">
             <section className="h-full w-full bg-amaranth-500 rounded-tl-xl rounded-bl-xl py-7">
@@ -107,8 +107,9 @@ export default function ContactModal({ children }: ContactModalProps) {
                 </button>
               </form>
             </section>
+
             <section className="relative flex flex-col justify-between h-11/12 w-full  rounded-tr-xl rounded-br-xl p-7 text-amaranth-800">
-              <span className="absolute -left-5 top-1/2 -translate-y-1/2 rotate-90 text-amaranth-500">
+              <span className="absolute -left-5 top-1/2 -translate-y-1/2 rotate-90 text-amaranth-500 lg:top-[calc(50%-35px)]">
                 <BsFillTriangleFill size={42} />
               </span>
               <div className="self-end font-light invisible">
@@ -119,10 +120,12 @@ export default function ContactModal({ children }: ContactModalProps) {
                   <span>+55 21 96540-0438</span>
                 </div>
               </div>
-              <div>
-                <h1 className="font-medium text-6xl">Lets have a talk!</h1>
+              <div className="flex flex-col lg:gap-1">
+                <h1 className="font-medium text-6xl lg:text-5xl">
+                  {"Let's have a talk!"}
+                </h1>
                 <h2 className="text-xl">
-                  Im open to get your feedback or just to have a chat.
+                  {"I'm open to get your feedback or just to have a chat."}
                 </h2>
               </div>
               <div className="self-end flex flex-col gap-1 text-lg">
