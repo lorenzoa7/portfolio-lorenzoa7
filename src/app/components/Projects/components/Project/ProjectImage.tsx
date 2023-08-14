@@ -8,7 +8,7 @@ type ProjectImageProps = {
 export default function ProjectImage({ src, alt }: ProjectImageProps) {
   return (
     <div
-      className={`relative w-[300px] h-[180px] overflow-hidden lg:w-[385px]`}
+      className={`relative w-[300px] h-[180px] overflow-hidden lg:w-[385px] sm:w-[260px]`}
     >
       <Image
         fill
