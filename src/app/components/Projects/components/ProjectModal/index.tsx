@@ -40,7 +40,7 @@ export default function ProjectModal({ children, project }: ProjectModalProps) {
             </div>
           </Dialog.Close>
 
-          <main className="flex items-center gap-16 lg:flex-col lg:gap-8 overflow-x-hidden h-full">
+          <main className="flex items-center gap-16 lg:flex-col lg:gap-8 overflow-x-hidden h-full sm:gap-4">
             <div className="flex flex-col gap-4 w-[680px] lg:w-full">
               <Dialog.Title className="font-medium text-3xl text-amaranth-800">
                 {project.title}
@@ -87,9 +87,9 @@ export default function ProjectModal({ children, project }: ProjectModalProps) {
             </div>
           </main>
 
-          <div className="flex justify-between items-baseline mt-9 lg:mt-4">
+          <div className="flex justify-between items-baseline mt-9 lg:mt-4 sm:flex-col sm:gap-8 sm:items-center">
             {project.techKeys && (
-              <div className="flex items-center gap-5 text-amaranth-500/80">
+              <div className="flex items-center gap-5 text-amaranth-500/80 sm:flex-wrap sm:justify-center sm:gap-3">
                 {project.techKeys.map((techKey, index) => (
                   <div
                     key={index}
