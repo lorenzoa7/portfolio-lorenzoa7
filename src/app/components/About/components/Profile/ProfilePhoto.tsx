@@ -14,7 +14,7 @@ export default function ProfilePhoto({
   height = 300,
 }: ProfilePhotoProps) {
   return (
-    <section>
+    <section className="lg:order-first">
       <Image
         priority
         src={imageUrl}
