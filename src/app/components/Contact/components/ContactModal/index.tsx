@@ -35,10 +35,10 @@ export default function ContactModal({ children }: ContactModalProps) {
           className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-contentShow data-[state='closed']:animate-contentHide bg-white rounded-xl shadow-2xl mx-auto w-[960px] lg:w-[calc(100vw-40px)] lg:max-h-[calc(100vh-40px)] xl:-translate-y-[calc(45%)]"
         >
           <main className="flex w-full h-full rounded-lg">
-            <section className="h-full w-full bg-amaranth-500 rounded-tl-xl rounded-bl-xl py-7">
+            <section className="h-full w-full bg-amaranth-500 rounded-tl-xl rounded-bl-xl py-7 sm:rounded-xl">
               <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="flex flex-col gap-5 w-full px-8 mx-auto"
+                className="flex flex-col gap-5 w-full px-8 mx-auto sm:gap-3"
               >
                 <InputBox
                   icon={FaUser}
@@ -108,7 +108,7 @@ export default function ContactModal({ children }: ContactModalProps) {
               </form>
             </section>
 
-            <section className="relative flex flex-col justify-between h-11/12 w-full  rounded-tr-xl rounded-br-xl p-7 text-amaranth-800">
+            <section className="relative flex flex-col justify-between h-11/12 w-full  rounded-tr-xl rounded-br-xl p-7 text-amaranth-800 sm:hidden">
               <span className="absolute -left-5 top-1/2 -translate-y-1/2 rotate-90 text-amaranth-500 lg:top-[calc(50%-35px)]">
                 <BsFillTriangleFill size={42} />
               </span>
