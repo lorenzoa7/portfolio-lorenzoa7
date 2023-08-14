@@ -8,7 +8,7 @@ export default function AboutInfoButton({ children }: AboutInfoButtonProps) {
   return (
     <Link
       href="#skills"
-      className="flex items-center gap-3 lowercase text-xl text-white font-thin cursor-pointer w-fit mt-6 group hover:text-neutral-300 duration-150 lg:invisible lg:pointer-events-none"
+      className="flex items-center gap-3 lowercase text-xl text-white font-thin cursor-pointer w-fit mt-6 group hover:text-neutral-300 duration-150 lg:invisible lg:pointer-events-none xl:mt-0 xl:mb-14"
     >
       {children}
       {/* Arrow down icon animated */}

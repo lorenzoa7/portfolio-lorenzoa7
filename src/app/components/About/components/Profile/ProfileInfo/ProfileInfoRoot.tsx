@@ -4,7 +4,7 @@ type AboutInfoRootProps = {
 
 export default function AboutInfoRoot({ children }: AboutInfoRootProps) {
   return (
-    <section className="flex flex-col gap-8 w-[577px] lg:w-full lg:gap-4">
+    <section className="flex flex-col gap-8 w-[577px] lg:w-full lg:gap-4 xl:w-[400px]">
       {children}
     </section>
   )
