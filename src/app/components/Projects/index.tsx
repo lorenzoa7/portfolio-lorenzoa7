@@ -9,10 +9,10 @@ export default function Projects() {
         Projects
       </h2>
 
-      <div className="flex flex-col gap-10 px-36 py-16 lg:px-10">
+      <div className="flex flex-col gap-10 px-36 py-16 xl:px-10">
         <section>
           <h3 className="text-amaranth-800 font-semibold text-2xl">Featured</h3>
-          <div className="flex items-center justify-center gap-8 lg:flex-wrap">
+          <div className="flex items-center justify-center gap-8 xl:flex-wrap">
             {projectsConfig?.projects
               ?.slice(0, projectsConfig.maxFeaturedProjects)
               .map((project) => (
@@ -53,7 +53,7 @@ export default function Projects() {
           <h3 className="text-amaranth-800 font-semibold text-2xl">
             More projects
           </h3>
-          <div className="flex items-center justify-center gap-8 lg:flex-wrap">
+          <div className="flex items-center justify-center gap-8 xl:flex-wrap">
             {projectsConfig?.projects
               ?.slice(projectsConfig.maxFeaturedProjects)
               .map((project) => (
