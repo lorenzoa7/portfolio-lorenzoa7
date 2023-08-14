@@ -59,7 +59,7 @@ export const techConfig = {
     icon: SiAdobephotoshop,
   },
   databaseSql: {
-    title: 'Database - SQL',
+    title: 'DB - SQL',
     icon: BsDatabase,
   },
   java: {
