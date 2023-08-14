@@ -5,6 +5,7 @@ import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.min.css'
 import { twMerge } from 'tailwind-merge'
 import Header from './components/Header'
+import LanguageSwitcher from './components/LanguageSwitcher'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ export default function RootLayout({
         <Header />
         {children}
         <ToastContainer position="bottom-right" />
+        <LanguageSwitcher />
       </body>
     </html>
   )
