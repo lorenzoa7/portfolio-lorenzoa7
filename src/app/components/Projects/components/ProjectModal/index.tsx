@@ -28,7 +28,7 @@ export default function ProjectModal({ children, project }: ProjectModalProps) {
         <Dialog.Overlay className="fixed inset-0 bg-black/50 backdrop-blur-sm animate-overlayShow data-[state='closed']:animate-overlayHide" />
         <Dialog.Content
           onOpenAutoFocus={(event) => event?.preventDefault()}
-          className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-contentShow data-[state='closed']:animate-contentHide z-50 bg-white px-7 py-5 rounded-xl w-[1280px] mx-auto xl:w-[calc(100vw-40px)] xl:max-h-[calc(100vh-40px)] overflow-y-auto"
+          className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-contentShow data-[state='closed']:animate-contentHide z-50 bg-white px-7 py-5 rounded-xl w-[1280px] mx-auto xl:w-[calc(100vw-40px)] max-h-[calc(100vh-40px)] overflow-y-auto"
         >
           <Dialog.Close asChild>
             <div className="w-fit flex gap-1 self-start mb-6 group cursor-pointer">
@@ -40,7 +40,7 @@ export default function ProjectModal({ children, project }: ProjectModalProps) {
             </div>
           </Dialog.Close>
 
-          <main className="flex items-center gap-16 lg:flex-col lg:gap-8 overflow-x-hidden h-full sm:gap-4">
+          <main className="flex items-center gap-16 lg:flex-col lg:gap-8 overflow-x-hidden h-full sm:gap-4 overflow-y-hidden">
             <div className="flex flex-col gap-4 w-[680px] lg:w-full">
               <Dialog.Title className="font-medium text-3xl text-amaranth-800">
                 {project.title}
