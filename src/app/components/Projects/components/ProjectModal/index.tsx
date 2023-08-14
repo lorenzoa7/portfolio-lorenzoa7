@@ -28,7 +28,7 @@ export default function ProjectModal({ children, project }: ProjectModalProps) {
         <Dialog.Overlay className="fixed inset-0 bg-black/50 backdrop-blur-sm animate-overlayShow data-[state='closed']:animate-overlayHide" />
         <Dialog.Content
           onOpenAutoFocus={(event) => event?.preventDefault()}
-          className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-contentShow data-[state='closed']:animate-contentHide z-50 bg-white px-7 py-5 rounded-xl w-[1280px] mx-auto lg:w-[calc(100vw-40px)] lg:max-h-[calc(100vh-40px)] overflow-y-auto"
+          className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-contentShow data-[state='closed']:animate-contentHide z-50 bg-white px-7 py-5 rounded-xl w-[1280px] mx-auto xl:w-[calc(100vw-40px)] xl:max-h-[calc(100vh-40px)] overflow-y-auto"
         >
           <Dialog.Close asChild>
             <div className="w-fit flex gap-1 self-start mb-6 group cursor-pointer">
