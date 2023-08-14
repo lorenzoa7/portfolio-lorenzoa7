@@ -1,6 +1,6 @@
 export function LogoName() {
   return (
-    <p className="uppercase text-white text-[2rem] sm:text-lg select-none font-semibold sm:invisible sm:w-0">
+    <p className="uppercase text-white text-[2rem] select-none font-semibold">
       Lorenzo
     </p>
   )
