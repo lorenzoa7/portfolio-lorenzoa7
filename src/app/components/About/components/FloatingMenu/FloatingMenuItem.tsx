@@ -5,24 +5,24 @@ type FloatingMenuItemProps = {
   children: React.ReactNode
   href: string
   icon: ElementType
-  iconSize?: number
 }
 
 export default function FloatingMenuItem({
   children,
   href = '#',
   icon: Icon,
-  iconSize = 45,
 }: FloatingMenuItemProps) {
   return (
     <Link
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex flex-col items-center text-amaranth-500 gap-3 cursor-pointer hover:text-amaranth-900 duration-300 hover:scale-105"
+      className="flex flex-col items-center text-amaranth-500 gap-3 cursor-pointer hover:text-amaranth-900 duration-300 hover:scale-105 sm:gap-2"
     >
-      <Icon size={iconSize} />
-      <span className="uppercase text-2xl font-semibold">{children}</span>
+      <Icon className="w-11 h-11 sm:w-9 sm:h-9" />
+      <span className="uppercase text-2xl font-semibold sm:text-xl">
+        {children}
+      </span>
     </Link>
   )
 }

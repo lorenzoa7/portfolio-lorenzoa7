@@ -5,7 +5,7 @@ type BackgroundProps = {
 export default function Background({ children }: BackgroundProps) {
   return (
     <div id="about" className="relative">
-      <div className="bg-gradient-to-r from-amaranth-800 to-amaranth-500 w-full pb-24 px-40 pt-14 lg:px-20 lg:pt-16 xl:pb-32 xl:px-28">
+      <div className="bg-gradient-to-r from-amaranth-800 to-amaranth-500 w-full pb-24 px-40 pt-14 lg:px-20 lg:pt-16 xl:pb-32 xl:px-28 sm:px-10">
         {children}
       </div>
 
