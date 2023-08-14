@@ -32,13 +32,13 @@ export default function ContactModal({ children }: ContactModalProps) {
         <Dialog.Overlay className="fixed inset-0 bg-black/50 backdrop-blur-sm animate-overlayShow data-[state='closed']:animate-overlayHide" />
         <Dialog.Content
           onOpenAutoFocus={(event) => event?.preventDefault()}
-          className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-contentShow data-[state='closed']:animate-contentHide bg-white rounded-xl shadow-2xl mx-auto w-[960px] lg:w-[calc(100vw-40px)] lg:max-h-[calc(100vh-40px)] xl:-translate-y-[calc(45%)]"
+          className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-[calc(45%)] animate-contentShow data-[state='closed']:animate-contentHide bg-white rounded-xl shadow-2xl mx-auto w-[960px] lg:w-[calc(100vw-40px)] lg:max-h-[calc(100vh-40px)]"
         >
           <main className="flex w-full h-full rounded-lg">
             <section className="h-full w-full bg-amaranth-500 rounded-tl-xl rounded-bl-xl py-7 sm:rounded-xl">
               <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="flex flex-col gap-5 w-full px-8 mx-auto sm:gap-3"
+                className="flex flex-col gap-3 w-full px-8 mx-auto"
               >
                 <InputBox
                   icon={FaUser}
