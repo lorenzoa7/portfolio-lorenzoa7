@@ -50,3 +50,9 @@ export type UsefulLink = {
   icon: ElementType
   href?: string
 }
+
+export type LanguageConfig = {
+  name: string
+  flag: string
+  alt: string
+}
