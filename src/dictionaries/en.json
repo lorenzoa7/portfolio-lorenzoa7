@@ -10,5 +10,8 @@
         "profileInfoText": "Hello, my name is Lorenzo Aceti and I work developin front-end and back-end applications, as well as prototyping intuitive interfaces with my design knowledge. My main goal is to add value through programming creativity.",
         "profileInfoButton": "scroll down",
         "profilePhotoAlt": "A picture of Lorenzo Aceti."
+    },
+    "skills": {
+        "title": "Skills"
     }
 }
