@@ -15,7 +15,7 @@ export default function Home({ params: { lang } }: HomeProps) {
       <About lang={lang} />
       <main className="px-40 mt-20 xl:px-20 sm:px-10">
         <Skills lang={lang} />
-        <Projects />
+        <Projects lang={lang} />
         <Contact />
       </main>
 

@@ -12,6 +12,11 @@
         "profilePhotoAlt": "Uma foto de Lorenzo Aceti."
     },
     "skills": {
-        "title": "Habilidades"
+        "title": "Habilidades",
+        "levels": {
+            "expert": "Experiente",
+            "competent": "Competente",
+            "learning": "Aprendendo"
+        }
     }
 }

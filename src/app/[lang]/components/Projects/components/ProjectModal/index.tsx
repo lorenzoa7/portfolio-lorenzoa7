@@ -1,6 +1,7 @@
 'use client'
 
-import { TechConfig, techConfig } from '@/config/main'
+import type { TechConfig } from '@/config/tech'
+import { techConfig } from '@/config/tech'
 import { Project } from '@/types'
 import * as Dialog from '@radix-ui/react-dialog'
 import Image from 'next/image'

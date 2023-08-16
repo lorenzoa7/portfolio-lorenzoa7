@@ -1,8 +1,15 @@
 import { projectsConfig } from '@/config/main'
+import { generateSkillsConfig } from '@/config/skills'
+import { Locale } from '@/i18n-config'
 import { AiFillStar } from 'react-icons/ai'
 import { Project, ProjectModal } from './components'
 
-export default function Projects() {
+type ProjectsProps = {
+  lang: Locale
+}
+
+export default async function Projects({ lang }: ProjectsProps) {
+  const dict = await generateSkillsConfig({ lang })
   return (
     <section id="projects">
       <h2 className="uppercase text-neutral-700 text-4xl font-semibold">
