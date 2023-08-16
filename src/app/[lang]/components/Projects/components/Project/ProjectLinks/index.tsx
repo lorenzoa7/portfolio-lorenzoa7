@@ -1,9 +1,7 @@
-import ProjectLinksApp from './ProjectLinksApp'
-import ProjectLinksRepository from './ProjectLinksRepository'
+import ProjectLinksButton from './ProjectLinksButton'
 import ProjectLinksRoot from './ProjectLinksRoot'
 
 export const ProjectLinks = {
   Root: ProjectLinksRoot,
-  App: ProjectLinksApp,
-  Repository: ProjectLinksRepository,
+  Button: ProjectLinksButton,
 }

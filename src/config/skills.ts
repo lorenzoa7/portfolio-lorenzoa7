@@ -4,12 +4,12 @@ import type { Level } from '@/types'
 import { techConfig } from './tech'
 
 export const generateSkillsConfig = async ({ lang }: { lang: Locale }) => {
-  const dict = await getDictionary(lang)
+  const { skillsSection } = await getDictionary(lang)
   const config = {
-    title: dict.skills.title,
+    title: skillsSection.title,
     levels: [
       {
-        title: dict.skills.levels.expert,
+        title: skillsSection.levels.expert,
         skills: [
           techConfig.typescript,
           techConfig.javascript,
@@ -22,7 +22,7 @@ export const generateSkillsConfig = async ({ lang }: { lang: Locale }) => {
         ],
       },
       {
-        title: dict.skills.levels.competent,
+        title: skillsSection.levels.competent,
         skills: [
           techConfig.databaseSql,
           techConfig.java,
@@ -32,7 +32,7 @@ export const generateSkillsConfig = async ({ lang }: { lang: Locale }) => {
         ],
       },
       {
-        title: dict.skills.levels.learning,
+        title: skillsSection.levels.learning,
         skills: [
           techConfig.nodejs,
           techConfig.nestjs,

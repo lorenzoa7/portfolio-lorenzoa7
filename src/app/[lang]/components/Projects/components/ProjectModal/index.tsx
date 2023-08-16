@@ -1,20 +1,25 @@
 'use client'
 
+import type { Labels } from '@/config/main'
 import type { TechConfig } from '@/config/tech'
 import { techConfig } from '@/config/tech'
-import { Project } from '@/types'
+import { Project as ProjectType } from '@/types'
 import * as Dialog from '@radix-ui/react-dialog'
 import Image from 'next/image'
-import Link from 'next/link'
-import { AiOutlineGithub, AiOutlineLink } from 'react-icons/ai'
 import { GrFormClose } from 'react-icons/gr'
+import { Project } from '../Project'
 
 type ProjectModalProps = {
   children: React.ReactNode
-  project: Project
+  project: ProjectType
+  labels: Labels
 }
 
-export default function ProjectModal({ children, project }: ProjectModalProps) {
+export default function ProjectModal({
+  children,
+  project,
+  labels,
+}: ProjectModalProps) {
   const getIcon = (key: string, size = 28) => {
     const IconComponent = techConfig[key as keyof TechConfig].icon
 
@@ -47,12 +52,12 @@ export default function ProjectModal({ children, project }: ProjectModalProps) {
                 {project.title}
               </Dialog.Title>
               <p className="text-xl text-amaranth-500">
-                <span className="font-medium">Description: </span>
+                <span className="font-medium">{labels.description}: </span>
                 {project.description}
               </p>
               {project.about && (
                 <p className="text-xl text-amaranth-500">
-                  <span className="font-medium">About the project: </span>
+                  <span className="font-medium">{labels.about}: </span>
                   {project.about}
                 </p>
               )}
@@ -60,7 +65,7 @@ export default function ProjectModal({ children, project }: ProjectModalProps) {
               {project.features && (
                 <>
                   <span className="text-xl text-amaranth-500 font-medium">
-                    Features:
+                    {labels.features}:
                   </span>
                   <ul className="pl-10 text-amaranth-500 list-disc text-lg">
                     {project.features.map((feature, index) => (
@@ -72,7 +77,7 @@ export default function ProjectModal({ children, project }: ProjectModalProps) {
 
               {project.createdAt && (
                 <span className="text-base font-semibold text-amaranth-500">
-                  July 31, 2023
+                  {project.createdAt}
                 </span>
               )}
             </div>
@@ -103,31 +108,22 @@ export default function ProjectModal({ children, project }: ProjectModalProps) {
               </div>
             )}
 
-            <div className="flex items-center gap-5">
+            <Project.Links.Root>
               {project.appHref && (
-                <Link
-                  href={project.appHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 bg-amaranth-500 rounded-lg text-white uppercase text-center py-1 text-xl w-32 hover:bg-amaranth-800 duration-300"
-                >
-                  <AiOutlineLink size={24} />
-                  App
-                </Link>
+                <Project.Links.Button href={project.appHref} type="app">
+                  {labels.app}
+                </Project.Links.Button>
               )}
 
               {project.repositoryHref && (
-                <Link
+                <Project.Links.Button
                   href={project.repositoryHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 bg-amaranth-500 rounded-lg text-white uppercase text-center py-1 text-xl w-32 hover:bg-amaranth-800 duration-300"
+                  type="repository"
                 >
-                  <AiOutlineGithub size={24} />
-                  Repository
-                </Link>
+                  {labels.repository}
+                </Project.Links.Button>
               )}
-            </div>
+            </Project.Links.Root>
           </div>
         </Dialog.Content>
       </Dialog.Portal>

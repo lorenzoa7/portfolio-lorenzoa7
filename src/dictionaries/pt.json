@@ -5,18 +5,47 @@
         "projects": "Projetos",
         "contact": "Contato"
     },
-    "about": {
+    "aboutSection": {
         "profileInfoHeading": "Desenvolvedor Full-Stack e Designer",
         "profileInfoText": "Olá, meu nome é Lorenzo Aceti e trabalho desenvolvendo aplicações front-end e back-end, bem como prototipando interfaces intuitivas com meus conhecimentos de design. Meu principal objetivo é gerar valor através da criatividade em programação.",
         "profileInfoButton": "rolar pra baixo",
         "profilePhotoAlt": "Uma foto de Lorenzo Aceti."
     },
-    "skills": {
+    "skillsSection": {
         "title": "Habilidades",
         "levels": {
             "expert": "Experiente",
             "competent": "Competente",
             "learning": "Aprendendo"
+        }
+    },
+    "projectsSection": {
+        "title": "Projetos",
+        "labels": {
+            "description": "Descrição",
+            "about": "Sobre o projeto",
+            "features": "Funcionalidades",
+            "seeMore": "Veja mais",
+            "app": "App",
+            "repository": "Repositório"
+        },
+        "projects": {
+            "coupleWheel": {
+                "title": "Roleta do Casal",
+                "description": "A Roleta do Casal é um jogo para ser jogado em duplas, onde ambos os jogadores selecionam as atividades que gostariam de fazer juntos e giram a roleta para escolher aleatoriamente uma. É um ótimo jogo para casais indecisos!",
+                "about": "Tive a ideia de criar esse projeto como presente de dia dos namorados para minha namorada. Mas, à medida que o desenvolvimento avançava, pensei em expandir e fazer um jogo real para os casais se divertirem. Foi um grande aprendizado construir esse aplicativo e espero evoluí-lo ainda mais no futuro!",
+                "createdAt": "12 de junho de 2023",
+                "features": [
+                    "Adicionar atividades a uma lista e sorteá-las",
+                    "Sistema de moedas para rerolar a atividade sorteada",
+                    "Cada vez que uma atividade é sorteada, mais difícil é de ser sorteada novamente (sistema de pesos)",
+                    "Animação de giro da roleta",
+                    "Suporte à outras línguas (inglês, português e espanhol)",
+                    "Seleção de tema para cada jogador",
+                    "Exportar e abrir um jogo (local storage)",
+                    "Configuração de jogo (brinque com os valores padrões)"
+                  ]
+            }
         }
     }
 }

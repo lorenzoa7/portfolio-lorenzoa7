@@ -5,18 +5,47 @@
         "projects": "Projects",
         "contact": "Contact"
     },
-    "about": {
+    "aboutSection": {
         "profileInfoHeading": "Full-Stack Developer and Designer",
         "profileInfoText": "Hello, my name is Lorenzo Aceti and I work developin front-end and back-end applications, as well as prototyping intuitive interfaces with my design knowledge. My main goal is to add value through programming creativity.",
         "profileInfoButton": "scroll down",
         "profilePhotoAlt": "A picture of Lorenzo Aceti."
     },
-    "skills": {
+    "skillsSection": {
         "title": "Skills",
         "levels": {
             "expert": "Expert",
             "competent": "Competent",
             "learning": "Learning"
+        }
+    },
+    "projectsSection": {
+        "title": "Projects",
+        "labels": {
+            "description": "Description",
+            "about": "About the project",
+            "features": "Features",
+            "seeMore": "See more",
+            "app": "App",
+            "repository": "Repository"
+        },
+        "projects": {
+            "coupleWheel": {
+                "title": "Couple Wheel",
+                "description": "Couple Wheel is a game to be played in pairs, where both players select activities they would like to do together and spin the wheel to randomly choose one. It's a great game for indecisive couples!",
+                "about": "I had the idea to create this project as a Valentine's Day gift for my girlfriend. But, as development progressed, I thought about expanding and making a real game for couples to enjoy. It was a great learning experience to build this application and I hope to evolve it even more in the future!",
+                "createdAt": "June 12, 2023",
+                "features": [
+                    "Add activities to a list and sort them",
+                    "Coin system to reroll the drawn activity",
+                    "Each time an activity is drawn, the harder it is to be drawn again (weight system)",
+                    "Spinning animation",
+                    "Translation support (English, Portuguese and Spanish)",
+                    "Theme selection for each player",
+                    "Export and open a game (local storage)",
+                    "Game configuration (play with the default values)"
+                  ]
+            }
         }
     }
 }

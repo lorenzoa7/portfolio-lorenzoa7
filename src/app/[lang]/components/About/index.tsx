@@ -8,23 +8,25 @@ type AboutProps = {
 }
 
 export default async function About({ lang }: AboutProps) {
-  const { about } = await getDictionary(lang)
+  const { aboutSection } = await getDictionary(lang)
   return (
     <Background>
       <Profile.Root>
         <Profile.Info.Root>
           <Profile.Info.Heading>
-            {about.profileInfoHeading.replace(/-/gm, '-\u2060')}
+            {aboutSection.profileInfoHeading.replace(/-/gm, '-\u2060')}
           </Profile.Info.Heading>
 
-          <Profile.Info.Text>{about.profileInfoText}</Profile.Info.Text>
+          <Profile.Info.Text>{aboutSection.profileInfoText}</Profile.Info.Text>
 
-          <Profile.Info.Button>{about.profileInfoButton}</Profile.Info.Button>
+          <Profile.Info.Button>
+            {aboutSection.profileInfoButton}
+          </Profile.Info.Button>
         </Profile.Info.Root>
 
         <Profile.Photo
           imageUrl="/images/profile_photo.jpg"
-          imageAlt={about.profilePhotoAlt}
+          imageAlt={aboutSection.profilePhotoAlt}
         />
       </Profile.Root>
 

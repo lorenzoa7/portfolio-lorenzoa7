@@ -1,7 +1,17 @@
+import { twMerge } from 'tailwind-merge'
+
 type ProjectLinksRootProps = {
   children: React.ReactNode
+  className?: string
 }
 
-export default function ProjectLinksRoot({ children }: ProjectLinksRootProps) {
-  return <div className="flex gap-5 mt-12 sm:gap-2">{children}</div>
+export default function ProjectLinksRoot({
+  children,
+  className = '',
+}: ProjectLinksRootProps) {
+  return (
+    <div className={twMerge('flex gap-5 items-center sm:gap-2', className)}>
+      {children}
+    </div>
+  )
 }
