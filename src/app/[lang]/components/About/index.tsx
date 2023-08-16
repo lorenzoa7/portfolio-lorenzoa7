@@ -1,28 +1,30 @@
 import { floatingMenuConfig } from '@/config/header'
+import { getDictionary } from '@/get-dictionary'
+import { Locale } from '@/i18n-config'
 import { Background, FloatingMenu, Profile } from './components'
 
-export default function About() {
+type AboutProps = {
+  lang: Locale
+}
+
+export default async function About({ lang }: AboutProps) {
+  const { about } = await getDictionary(lang)
   return (
     <Background>
       <Profile.Root>
         <Profile.Info.Root>
           <Profile.Info.Heading>
-            Full-Stack Developer and Designer
+            {about.profileInfoHeading.replace(/-/gm, '-\u2060')}
           </Profile.Info.Heading>
 
-          <Profile.Info.Text>
-            Hello, my name is Lorenzo Aceti and I work developing front-end and
-            back-end applications, as well as prototyping intuitive interfaces
-            with my design knowledge. My main goal is to add value through
-            programming creativity.
-          </Profile.Info.Text>
+          <Profile.Info.Text>{about.profileInfoText}</Profile.Info.Text>
 
-          <Profile.Info.Button>scroll down</Profile.Info.Button>
+          <Profile.Info.Button>{about.profileInfoButton}</Profile.Info.Button>
         </Profile.Info.Root>
 
         <Profile.Photo
           imageUrl="/images/profile_photo.jpg"
-          imageAlt="A picture of Lorenzo Aceti."
+          imageAlt={about.profilePhotoAlt}
         />
       </Profile.Root>
 

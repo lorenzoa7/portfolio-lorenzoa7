@@ -4,5 +4,11 @@
         "skills": "Habilidades",
         "projects": "Projetos",
         "contact": "Contato"
+    },
+    "about": {
+        "profileInfoHeading": "Desenvolvedor Full-Stack e Designer",
+        "profileInfoText": "Olá, meu nome é Lorenzo Aceti e trabalho desenvolvendo aplicações front-end e back-end, bem como prototipando interfaces intuitivas com meus conhecimentos de design. Meu principal objetivo é gerar valor através da criatividade em programação.",
+        "profileInfoButton": "rolar pra baixo",
+        "profilePhotoAlt": "Uma foto de Lorenzo Aceti."
     }
 }
