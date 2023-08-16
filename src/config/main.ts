@@ -285,32 +285,6 @@ export const projectsConfig = {
       features: ['Standard config', 'React plugin', 'Prettier for ESLint'],
       techKeys: ['javascript'],
     },
-    {
-      title: 'My ESLint Config',
-      description:
-        'A personal ESLint setup package with plugins that I consider essential for my projects.',
-      about:
-        'After testing projects a few times and needing to configure ESLint and the plugins I use from scratch, I found myself faced with the need to create a package of my own to facilitate this process.',
-      imageHref: '/images/project_eslint_config.png',
-      imageAlt: 'A small piece of the package config code.',
-      repositoryHref: 'https://github.com/lorenzoa7/eslint-config-lorenzoa7',
-      createdAt: 'July 18, 2023',
-      features: ['Standard config', 'React plugin', 'Prettier for ESLint'],
-      techKeys: ['javascript'],
-    },
-    {
-      title: 'My ESLint Config',
-      description:
-        'A personal ESLint setup package with plugins that I consider essential for my projects.',
-      about:
-        'After testing projects a few times and needing to configure ESLint and the plugins I use from scratch, I found myself faced with the need to create a package of my own to facilitate this process.',
-      imageHref: '/images/project_eslint_config.png',
-      imageAlt: 'A small piece of the package config code.',
-      repositoryHref: 'https://github.com/lorenzoa7/eslint-config-lorenzoa7',
-      createdAt: 'July 18, 2023',
-      features: ['Standard config', 'React plugin', 'Prettier for ESLint'],
-      techKeys: ['javascript'],
-    },
   ] satisfies Project[],
 }
 
