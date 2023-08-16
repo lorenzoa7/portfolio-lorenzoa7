@@ -22,6 +22,8 @@
     "projectsSection": {
         "title": "Projetos",
         "labels": {
+            "featured": "Em destaque",
+            "moreProjects": "Mais projetos",
             "description": "Descrição",
             "about": "Sobre o projeto",
             "features": "Funcionalidades",
@@ -34,6 +36,7 @@
                 "title": "Roleta do Casal",
                 "description": "A Roleta do Casal é um jogo para ser jogado em duplas, onde ambos os jogadores selecionam as atividades que gostariam de fazer juntos e giram a roleta para escolher aleatoriamente uma. É um ótimo jogo para casais indecisos!",
                 "about": "Tive a ideia de criar esse projeto como presente de dia dos namorados para minha namorada. Mas, à medida que o desenvolvimento avançava, pensei em expandir e fazer um jogo real para os casais se divertirem. Foi um grande aprendizado construir esse aplicativo e espero evoluí-lo ainda mais no futuro!",
+                "imageAlt": "A interface principal do Roleta do Casal.",
                 "createdAt": "12 de junho de 2023",
                 "features": [
                     "Adicionar atividades a uma lista e sorteá-las",
@@ -45,6 +48,78 @@
                     "Exportar e abrir um jogo (local storage)",
                     "Configuração de jogo (brinque com os valores padrões)"
                   ]
+            },
+            "myPortfolio": {
+                "title": "Meu Portfólio",
+                "description": "Usando as últimas novidades do Next.JS 13 e TypeScript, eu construí meu portfólio para mostrar o que eu já fiz e o que eu consigo fazer. Eu recomendo que olhe o repositório do projeto para estudar a maneira que eu gosto de programar!",
+                "about": "Eu construí meu portfólio usando meu conhecimento em UI/UX design e usando uma arquitetura limpa e de de fácil manutenabilidade, já que é uma aplicação que será atualizada constantemente.",
+                "imageAlt": "A interface principal da aplicação do meu portfólio.",
+                "createdAt": "18 de agosto de 2023",
+                "features": [
+                    "Construído utilizando as últimas novidades do Next.JS 13",
+                    "Dialogs e Popovers utilizando componentes do Radix UI",
+                    "Composition Pattern",
+                    "Design da aplicação utilizando Figma",
+                    "Suporte aos idiomas inglês e português"
+                  ]
+            },
+            "dfAnalyzerInterface": {
+                "title": "Interface do Df-Analyzer (WIP)",
+                "description": "Uma aplicação web que ajuda o usuário a gerar seu próprio código de script para ser utilizada no Df-Analyzer, uma poderosa ferramenta de análise.",
+                "about": "Atualmente em estágio de desenvolviment, a Interface do Df-Analyze é um ambicioso projeto, o qual será utilizado por cientistas da computação para facilitar o uso da ferramenta do Df-Analyzer. Nessa aplicação, eu pretendo utilizar as ferramentas de frontend mais robustas para construir um consistente, seguro e amigável software.",
+                "imageAlt": "A interface principal da aplicação do Df-Analyzer.",
+                "createdAt": "Em andamento"
+            },
+            "springRestApi": {
+                "title": "Spring Rest API",
+                "description": "Uma aplicação de API Rest para cinco classes de entidade utilizando Java Spring Boot. Além disso, tudo foi documentado através do Swagger. ",
+                "about": "É um projeto CRUD bem simples, construído com Spring Boot e com as bibliotecas mais modernas disponíveis. Eu criei mais para testar a geração de documentação do Swagger.",
+                "imageAlt": "Um pequeno pedaço de código da API.",
+                "createdAt": "13 de julho de 2023",
+                "features": [
+                    "Uso da biblioteca Project Lombok",
+                    "Cinco classes de entidade",
+                    "CRUD completo (incluindo método PATCH)",
+                    "Banco de dados em memória H2"
+                  ]
+            },
+            "compraVenda": {
+                "title": "Compra/Venda",
+                "description": "Uma aplicação web que permite uma loja ter controle total do registro e monitoramente dos seus produtos, clientes, fornecedores e funcionários.",
+                "about": "É uma aplicação criada basicamente para explorar os Servlets e Java Server Pages (JSP), e também sua importância para a evolução da web, aprimorando assim meu desenvolvimento de sistemas CRUD.",
+                "imageAlt": "A interface principal da aplicação do Compra/Venda.",
+                "createdAt": "04 de agosto de 2022",
+                "features": [
+                    "Sistema CRUD completo com banco de dados MySQL",
+                    "Diagrama de casos de uso",
+                    "Sistema de autenticação",
+                    "Quatro classes de entidade",
+                    "Funcionalidades administrativas"
+                  ]
+            },
+            "getChemComponentsScript": {
+                "title": "Script de Componentes Químicos",
+                "description": "Um script para coletar dinamicamente dados públicos de componentes químicos do NIST e exportar tais dados formatados em arquivos de texto.",
+                "about": "É um script para um uso bem específico, mas me ajudou a entender como criar e usar scripts python para automatizar tarefas longas e repetitivas. O script readAll.py rodou por volta de 4 horas no meu computador para gerar mais de 3000 arquivos de texto formatados.",
+                "imageAlt": "Uma demonstração do script rodando.",
+                "createdAt": "15 de junho de 2023",
+                "features": [
+                    "Consumo de dados de um website externo",
+                    "Formatação de arquivo HTML",
+                    "Geração de arquivos"
+                  ]
+            },
+            "myEslintConfig": {
+                "title": "Minha configuração ESLint",
+                "description": "Um pacote pessoal de configuração do ESLint com os plugins que considero essenciais pros meus projetos.",
+                "about": "Depois de algumas vezes testando projetos e necessitando configurar o ESLint e os plugins que eu uso do zero, eu me encontrei enfrentando a necessidade de criar o meu próprio pacote para facilitar esse processo.",
+                "imageAlt": "Um pequeno pedaço do código do pacote de configuração.",
+                "createdAt": "18 de julho de 2023",
+                "features": [
+                    "Configuração do standard",
+                    "Plugin do react", 
+                    "Prettier para ESLint"
+                ]
             }
         }
     }

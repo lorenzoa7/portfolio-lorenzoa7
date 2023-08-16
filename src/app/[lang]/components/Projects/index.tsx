@@ -17,7 +17,9 @@ export default async function Projects({ lang }: ProjectsProps) {
 
       <div className="flex flex-col gap-10 px-0 py-16 xl:px-10 sm:px-2">
         <section>
-          <h3 className="text-amaranth-800 font-semibold text-2xl">Featured</h3>
+          <h3 className="text-amaranth-800 font-semibold text-2xl">
+            {projectsConfig.labels.featured}
+          </h3>
           <div className="flex items-center justify-center gap-8 flex-wrap">
             {projectsConfig.projects
               .slice(0, projectsConfig.maxFeaturedProjects)
@@ -69,7 +71,7 @@ export default async function Projects({ lang }: ProjectsProps) {
 
         <section>
           <h3 className="text-amaranth-800 font-semibold text-2xl">
-            More projects
+            {projectsConfig.labels.moreProjects}
           </h3>
           <div className="flex items-center justify-center gap-8 flex-wrap">
             {projectsConfig.projects
