@@ -1,4 +1,4 @@
-import { headerConfig } from '@/config/header'
+import { floatingMenuConfig } from '@/config/header'
 import { Background, FloatingMenu, Profile } from './components'
 
 export default function About() {
@@ -27,7 +27,7 @@ export default function About() {
       </Profile.Root>
 
       <FloatingMenu.Root>
-        {headerConfig.floatingMenu?.map((item) => (
+        {floatingMenuConfig?.map((item) => (
           <FloatingMenu.Item key={item.title} href={item.href} icon={item.icon}>
             {item.title}
           </FloatingMenu.Item>

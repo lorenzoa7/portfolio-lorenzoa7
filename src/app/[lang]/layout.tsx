@@ -1,7 +1,9 @@
 import Header from '@/app/[lang]/components/Header'
 import { LanguageSwitcher } from '@/app/[lang]/components/LanguageSwitcher'
 import '@/app/globals.css'
+import { generateNavConfig } from '@/config/header'
 import { siteConfig } from '@/config/site'
+import { Locale } from '@/i18n-config'
 import { fontMono } from '@/lib/fonts'
 import type { Metadata } from 'next'
 import { ToastContainer } from 'react-toastify'
@@ -13,11 +15,18 @@ export const metadata: Metadata = {
   description: siteConfig.description,
 }
 
-export default function RootLayout({
-  children,
-}: {
+type Params = { lang: Locale }
+
+type RootLayoutProps = {
   children: React.ReactNode
-}) {
+  params: Params
+}
+
+export default async function RootLayout({
+  children,
+  params: { lang },
+}: RootLayoutProps) {
+  const navConfig = await generateNavConfig({ lang })
   return (
     <html lang="en" className="!scroll-smooth scroll-py-28">
       <body
@@ -26,7 +35,7 @@ export default function RootLayout({
           fontMono.variable,
         )}
       >
-        <Header />
+        <Header navConfig={navConfig} />
         {children}
         <ToastContainer position="bottom-right" />
         <LanguageSwitcher.Root>

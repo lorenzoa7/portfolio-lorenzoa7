@@ -1,11 +1,15 @@
 'use client'
 
-import { headerConfig } from '@/config/header'
+import type { NavConfig } from '@/config/header'
 import { useEffect, useState } from 'react'
 import { Logo } from '../Logo'
 import { Nav } from './components'
 
-export default function Header() {
+type HeaderProps = {
+  navConfig: NavConfig
+}
+
+export default function Header({ navConfig }: HeaderProps) {
   const [onScroll, setOnScroll] = useState<string | boolean>('')
 
   const changeOnScroll = () => {
@@ -28,7 +32,12 @@ export default function Header() {
       </Logo.Root>
 
       <Nav.Root>
-        {headerConfig.nav?.map((item) => (
+        {/* {headerConfig.nav?.map((item) => (
+          <Nav.Item key={item.title} href={item.href}>
+            {item.title}
+          </Nav.Item>
+        ))} */}
+        {navConfig?.map((item) => (
           <Nav.Item key={item.title} href={item.href}>
             {item.title}
           </Nav.Item>
