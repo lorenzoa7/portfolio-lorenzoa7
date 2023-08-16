@@ -1,12 +1,12 @@
+import Header from '@/app/[lang]/components/Header'
+import { LanguageSwitcher } from '@/app/[lang]/components/LanguageSwitcher'
+import '@/app/globals.css'
 import { siteConfig } from '@/config/site'
 import { fontMono } from '@/lib/fonts'
 import type { Metadata } from 'next'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.min.css'
 import { twMerge } from 'tailwind-merge'
-import Header from './components/Header'
-import { LanguageSwitcher } from './components/LanguageSwitcher'
-import './globals.css'
 
 export const metadata: Metadata = {
   title: siteConfig.title,
