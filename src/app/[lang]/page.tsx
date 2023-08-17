@@ -1,6 +1,7 @@
 import { generateNavConfig } from '@/config/header'
 import { generateLanguageConfig } from '@/config/language'
 import { Locale, i18n } from '@/i18n-config'
+import { ToastContainer } from 'react-toastify'
 import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -45,6 +46,7 @@ export default async function Home({ params: { lang } }: HomeProps) {
           </LanguageSwitcher.Button>
         ))}
       </LanguageSwitcher.Root>
+      <ToastContainer position="bottom-right" />
     </>
   )
 }
