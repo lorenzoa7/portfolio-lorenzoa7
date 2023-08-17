@@ -13,7 +13,7 @@ export default function LanguageSwitcherRoot({
   return (
     <Popover.Root>
       <Popover.Trigger asChild>
-        <button className="fixed bottom-12 left-6 p-2 bg-amaranth-950 text-white font-semibold rounded-lg duration-300 shadow-2xl z-50">
+        <button className="fixed bottom-12 left-6 p-2 bg-amaranth-950 text-white font-semibold rounded-lg duration-300 shadow-2xl z-50 sm:bottom-auto sm:top-5 xl:bottom-28">
           <FaEarthAmericas className="w-5 h-5" />
         </button>
       </Popover.Trigger>
