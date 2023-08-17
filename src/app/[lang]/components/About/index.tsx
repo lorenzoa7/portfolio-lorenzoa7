@@ -1,4 +1,4 @@
-import { floatingMenuConfig } from '@/config/header'
+import { generateFloatingMenuConfig } from '@/config/header'
 import { getDictionary } from '@/get-dictionary'
 import { Locale } from '@/i18n-config'
 import { Background, FloatingMenu, Profile } from './components'
@@ -9,6 +9,7 @@ type AboutProps = {
 
 export default async function About({ lang }: AboutProps) {
   const { aboutSection } = await getDictionary(lang)
+  const floatingMenuConfig = await generateFloatingMenuConfig({ lang })
   return (
     <Background>
       <Profile.Root>

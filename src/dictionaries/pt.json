@@ -5,6 +5,11 @@
         "projects": "Projetos",
         "contact": "Contato"
     },
+    "floatingMenu": {
+        "github": "Github",
+        "linkedin": "Linkedin",
+        "cv": "Currículo"
+    },
     "languages": {
         "en": {
             "name": "Inglês",

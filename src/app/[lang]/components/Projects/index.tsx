@@ -1,4 +1,4 @@
-import { generateProjectsConfig } from '@/config/main'
+import { generateProjectsConfig } from '@/config/projects'
 import { Locale } from '@/i18n-config'
 import { AiFillStar } from 'react-icons/ai'
 import { Project, ProjectModal } from './components'

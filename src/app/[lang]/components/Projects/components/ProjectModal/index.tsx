@@ -1,6 +1,6 @@
 'use client'
 
-import type { Labels } from '@/config/main'
+import type { Labels } from '@/config/projects'
 import type { TechConfig } from '@/config/tech'
 import { techConfig } from '@/config/tech'
 import { Project as ProjectType } from '@/types'
