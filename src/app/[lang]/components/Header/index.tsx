@@ -21,6 +21,18 @@ export default function Header({ navConfig }: HeaderProps) {
     return () => window.removeEventListener('scroll', changeOnScroll)
   }, [])
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault()
+
+    const href = e.currentTarget.href
+    const sectionId = href.replace(/.*#/, '')
+    const sectionElement = document.getElementById(sectionId)
+
+    sectionElement?.scrollIntoView({
+      behavior: 'smooth',
+    })
+  }
+
   return (
     <header
       data-onscroll={onScroll}
@@ -32,13 +44,12 @@ export default function Header({ navConfig }: HeaderProps) {
       </Logo.Root>
 
       <Nav.Root>
-        {/* {headerConfig.nav?.map((item) => (
-          <Nav.Item key={item.title} href={item.href}>
-            {item.title}
-          </Nav.Item>
-        ))} */}
         {navConfig?.map((item) => (
-          <Nav.Item key={item.title} href={item.href}>
+          <Nav.Item
+            key={item.title}
+            href={item.href}
+            onClick={(e) => handleClick(e)}
+          >
             {item.title}
           </Nav.Item>
         ))}
