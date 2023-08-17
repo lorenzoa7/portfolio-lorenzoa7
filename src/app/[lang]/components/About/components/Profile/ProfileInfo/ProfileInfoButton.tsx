@@ -1,7 +1,21 @@
+'use client'
+
 import Link from 'next/link'
 
 type AboutInfoButtonProps = {
   children: React.ReactNode
+}
+
+const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  e.preventDefault()
+
+  const href = e.currentTarget.href
+  const sectionId = href.replace(/.*#/, '')
+  const sectionElement = document.getElementById(sectionId)
+
+  sectionElement?.scrollIntoView({
+    behavior: 'smooth',
+  })
 }
 
 export default function AboutInfoButton({ children }: AboutInfoButtonProps) {
@@ -9,6 +23,7 @@ export default function AboutInfoButton({ children }: AboutInfoButtonProps) {
     <Link
       href="#skills"
       className="flex items-center gap-3 lowercase text-xl text-white font-thin cursor-pointer w-fit mt-6 group hover:text-neutral-300 duration-150 xl:mt-0 xl:mb-14 sm:mb-5"
+      onClick={(e) => handleClick(e)}
     >
       {children}
       {/* Arrow down icon animated */}
