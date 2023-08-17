@@ -27,34 +27,23 @@ export const generateNavConfig = async ({ lang }: { lang: Locale }) => {
   return config
 }
 
-export const generateFloatingMenuConfig = async ({
-  lang,
-}: {
-  lang: Locale
-}) => {
-  const dict = await getDictionary(lang)
-  const config = [
-    {
-      title: dict.floatingMenu.github,
-      icon: AiFillGithub,
-      href: 'https://github.com/lorenzoa7',
-    },
-    {
-      title: dict.floatingMenu.linkedin,
-      icon: AiFillLinkedin,
-      href: 'https://www.linkedin.com/in/lorenzoaceti/',
-    },
-    {
-      title: dict.floatingMenu.cv,
-      icon: AiFillFilePdf,
-      href: '/docs/lorenzo_aceti_cv.pdf',
-    },
-  ] satisfies FloatingMenuItem[]
-
-  return config
-}
+export const floatingMenuConfig = [
+  {
+    title: 'Github',
+    icon: AiFillGithub,
+    href: 'https://github.com/lorenzoa7',
+  },
+  {
+    title: 'Linkedin',
+    icon: AiFillLinkedin,
+    href: 'https://www.linkedin.com/in/lorenzoaceti/',
+  },
+  {
+    title: 'CV',
+    icon: AiFillFilePdf,
+    href: '/docs/lorenzo_aceti_cv.pdf',
+  },
+] satisfies FloatingMenuItem[]
 
 export type NavConfig = Awaited<ReturnType<typeof generateNavConfig>>
-export type FloatingMenuConfig = Awaited<
-  ReturnType<typeof generateFloatingMenuConfig>
->
+export type FloatingMenuConfig = typeof floatingMenuConfig
