@@ -1,14 +1,8 @@
-import { ContactData } from '@/app/components/Contact/types'
-import { NextApiRequest, NextApiResponse } from 'next'
+import { ContactData } from '@/app/[lang]/components/Contact/types'
 import nodemailer from 'nodemailer'
 
-export default async function ContactAPI(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
-  const { fullName, email, message } = (await JSON.parse(
-    req.body,
-  )) as ContactData<string>
+export async function POST(req: Request) {
+  const { fullName, email, message } = (await req.json()) as ContactData<string>
 
   const user = process.env.EMAIL_USER
 
@@ -35,11 +29,14 @@ export default async function ContactAPI(
       `,
     })
 
-    return res.status(200).json({ message: 'success' })
+    return new Response(JSON.stringify({ message: 'success' }), { status: 200 })
   } catch (error) {
     console.error(error)
-    res
-      .status(500)
-      .json({ message: 'Could not send the email. Please try again.' })
+    return new Response(
+      JSON.stringify({
+        message: 'Could not send the email. Please try again.',
+      }),
+      { status: 500 },
+    )
   }
 }

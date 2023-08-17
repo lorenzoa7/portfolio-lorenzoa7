@@ -61,7 +61,7 @@ export const useContact = () => {
     const timeoutPromise = new Promise((_resolve, reject) => {
       setTimeout(() => {
         reject(new Error('Promise timed out.'))
-      }, 20000)
+      }, 30000)
     })
 
     await toast
