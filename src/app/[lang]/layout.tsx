@@ -3,7 +3,7 @@ import { LanguageSwitcher } from '@/app/[lang]/components/LanguageSwitcher'
 import '@/app/globals.css'
 import { generateNavConfig } from '@/config/header'
 import { siteConfig } from '@/config/site'
-import { Locale } from '@/i18n-config'
+import { Locale, i18n } from '@/i18n-config'
 import { fontMono } from '@/lib/fonts'
 import type { Metadata } from 'next'
 import { ToastContainer } from 'react-toastify'
@@ -39,20 +39,21 @@ export default async function RootLayout({
         {children}
         <ToastContainer position="bottom-right" />
         <LanguageSwitcher.Root>
-          {siteConfig.languages.reverse().map((language, index) => (
+          {i18n.locales.map((locale, index) => (
             <LanguageSwitcher.Button
-              key={language.name}
-              flag={language.flag}
-              alt={language.alt}
+              key={locale}
+              flag={siteConfig.languages[locale].flag}
+              alt={siteConfig.languages[locale].alt}
               position={
                 index === 0
                   ? 'first'
-                  : index === siteConfig.languages.length - 1
+                  : index === i18n.locales.length - 1
                   ? 'last'
                   : undefined
               }
+              locale={locale}
             >
-              {language.name}
+              {siteConfig.languages[locale].name}
             </LanguageSwitcher.Button>
           ))}
         </LanguageSwitcher.Root>
