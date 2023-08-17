@@ -5,6 +5,7 @@ import { useContact } from '@/hooks/useContact'
 import * as Dialog from '@radix-ui/react-dialog'
 import { BsFillTriangleFill } from 'react-icons/bs'
 import { FaUser } from 'react-icons/fa'
+import { GrFormClose } from 'react-icons/gr'
 import { MdEmail, MdPhone } from 'react-icons/md'
 import InputBox from '../InputBox'
 
@@ -37,9 +38,15 @@ export default function ContactModal({
         <Dialog.Overlay className="fixed inset-0 bg-black/50 backdrop-blur-sm animate-overlayShow data-[state='closed']:animate-overlayHide" />
         <Dialog.Content
           onOpenAutoFocus={(event) => event?.preventDefault()}
-          className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-[calc(45%)] animate-contentShow data-[state='closed']:animate-contentHide bg-white rounded-xl shadow-2xl mx-auto w-[960px] lg:w-[calc(100vw-40px)] lg:max-h-[calc(100vh-40px)]"
+          className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-[calc(45%)] animate-contentShow data-[state='closed']:animate-contentHide bg-white rounded-xl shadow-2xl mx-auto w-[960px] lg:w-[calc(100vw-40px)] lg:max-h-[calc(100vh-40px)] z-50"
         >
-          <main className="flex w-full h-full rounded-lg">
+          <main className="flex w-full h-full rounded-lg relative">
+            <Dialog.Close asChild>
+              <div className="absolute right-3 top-3 text-amaranth-500 sm:text-white cursor-pointer z-20 duration-300 hover:scale-125">
+                <GrFormClose size={30} />
+              </div>
+            </Dialog.Close>
+
             <section className="h-full w-full bg-amaranth-500 rounded-tl-xl rounded-bl-xl py-7 sm:rounded-xl">
               <form
                 onSubmit={handleSubmit(onSubmit)}
