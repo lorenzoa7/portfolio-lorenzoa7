@@ -1,4 +1,4 @@
-import { ContactData } from '@/app/components/Contact/types'
+import type { ContactData } from '@/app/[lang]/components/Contact/types'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { FocusEvent, useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'

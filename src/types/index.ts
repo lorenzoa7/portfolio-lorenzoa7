@@ -1,3 +1,4 @@
+import type { Locale } from '@/i18n-config'
 import { ElementType } from 'react'
 
 export type NavItem = {
@@ -56,3 +57,5 @@ export type LanguageConfig = {
   flag: string
   alt: string
 }
+
+export type Languages = Record<Locale, LanguageConfig>
