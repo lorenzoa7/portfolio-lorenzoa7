@@ -29,11 +29,14 @@ export default function LanguageSwitcherButton({
     return segments.join('/')
   }
 
+  const isActive = pathName?.split('/')[1] === locale
+
   return (
     <Link
       href={redirectedPathName(locale)}
       data-position={position}
-      className="flex items-center gap-5 cursor-pointer bg-amaranth-900 hover:bg-amaranth-950 py-3 px-4 shadow-2xl data-[position='first']:rounded-t-lg data-[position='last']:rounded-b-lg"
+      data-active={isActive}
+      className="flex items-center gap-5 cursor-pointer bg-amaranth-900 hover:bg-amaranth-950 py-3 px-4 shadow-2xl data-[position='first']:rounded-t-lg data-[position='last']:rounded-b-lg data-[active=true]:bg-amaranth-950 duration-300"
     >
       <Image src={flag} alt={alt} width={20} height={20} />
       {children}
