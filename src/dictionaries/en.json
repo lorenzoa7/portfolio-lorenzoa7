@@ -122,5 +122,17 @@
                 ]
             }
         }
+    },
+    "contactSection": {
+        "question": "Do you like my work?",
+        "letsTalk": "Let's have a talk",
+        "description": "I'm open to get your feedback or just to have a chat.",
+        "form": {
+            "fullName": "Full Name",
+            "email": "E-mail",
+            "message": "Type your message...",
+            "submit": "Send Message",
+            "submitting": "Submitting..."
+        }
     }
 }

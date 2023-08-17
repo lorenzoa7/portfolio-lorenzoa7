@@ -1,5 +1,6 @@
 'use client'
 
+import { Dictionary } from '@/get-dictionary'
 import { useContact } from '@/hooks/useContact'
 import * as Dialog from '@radix-ui/react-dialog'
 import { BsFillTriangleFill } from 'react-icons/bs'
@@ -9,9 +10,13 @@ import InputBox from '../InputBox'
 
 type ContactModalProps = {
   children: React.ReactNode
+  contactSection: Dictionary['contactSection']
 }
 
-export default function ContactModal({ children }: ContactModalProps) {
+export default function ContactModal({
+  children,
+  contactSection,
+}: ContactModalProps) {
   const {
     errors,
     handleBlur,
@@ -42,7 +47,7 @@ export default function ContactModal({ children }: ContactModalProps) {
               >
                 <InputBox
                   icon={FaUser}
-                  placeholder="Full Name"
+                  placeholder={contactSection.form.fullName}
                   isFocus={isFocus.fullName}
                 >
                   <input
@@ -62,7 +67,7 @@ export default function ContactModal({ children }: ContactModalProps) {
 
                 <InputBox
                   icon={MdEmail}
-                  placeholder="Email"
+                  placeholder={contactSection.form.email}
                   isFocus={isFocus.email}
                 >
                   <input
@@ -83,7 +88,7 @@ export default function ContactModal({ children }: ContactModalProps) {
                 <div className="relative h-56 mt-5">
                   <textarea
                     data-focus={isFocus.message}
-                    placeholder="Type your message..."
+                    placeholder={contactSection.form.message}
                     disabled={isSubmitting}
                     {...register('message', { required: true })}
                     className="absolute w-full h-full text-lg text-white px-3 py-2 border-white border-2 rounded outline-none left-0 top-0 autofill:transition autofill:duration-[600000s] autofill:delay-0 resize-none bg-transparent placeholder:text-white/60 data-[focus=true]:border-amaranth-800 duration-300"
@@ -102,8 +107,8 @@ export default function ContactModal({ children }: ContactModalProps) {
                   disabled={isSubmitting}
                   className="relative text-white text-lg py-3 w-fit border-2 border-white rounded-lg self-center px-16 z-10 duration-300 active:text-white active:border-amaranth-800 hover:text-amaranth-800 before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-white before:-z-10 before:transition-all before:duration-500 before:origin-left before:ease-in-out before:invisible before:scale-x-0 before:hover:scale-x-100 before:active:shadow-2xl before:active:bg-amaranth-800 before:hover:visible disabled:before:visible disabled:before:scale-x-100 disabled:before:bg-amaranth-800 disabled:text-white disabled:border-amaranth-800"
                 >
-                  {isSubmitting && 'Submitting...'}
-                  {!isSubmitting && 'Send Message'}
+                  {isSubmitting && contactSection.form.submitting}
+                  {!isSubmitting && contactSection.form.submit}
                 </button>
               </form>
             </section>
@@ -122,11 +127,9 @@ export default function ContactModal({ children }: ContactModalProps) {
               </div>
               <div className="flex flex-col lg:gap-1">
                 <h1 className="font-medium text-6xl lg:text-5xl">
-                  {"Let's have a talk!"}
+                  {contactSection.letsTalk}!
                 </h1>
-                <h2 className="text-xl">
-                  {"I'm open to get your feedback or just to have a chat."}
-                </h2>
+                <h2 className="text-xl">{contactSection.description}</h2>
               </div>
               <div className="self-end flex flex-col gap-1 text-lg">
                 <div className="flex gap-3 items-center justify-between">

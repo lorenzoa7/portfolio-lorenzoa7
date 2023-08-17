@@ -122,5 +122,17 @@
                 ]
             }
         }
+    },
+    "contactSection": {
+        "question": "Gosta do meu trabalho?",
+        "letsTalk": "Vamos conversar",
+        "description": "Estou aberto para receber seu feedback ou apenas ter um bate-papo.",
+        "form": {
+            "fullName": "Nome Completo",
+            "email": "E-mail",
+            "message": "Escreva sua mensagem...",
+            "submit": "Enviar Mensagem",
+            "submitting": "Enviando..."
+        }
     }
 }
