@@ -15,6 +15,7 @@ import {
   SiNestjs,
   SiNextdotjs,
   SiNodedotjs,
+  SiNpm,
   SiOpenai,
   SiPandas,
   SiPrisma,
@@ -127,6 +128,10 @@ export const techConfig = {
   pandas: {
     title: 'Pandas',
     icon: SiPandas,
+  },
+  npm: {
+    title: 'NPM',
+    icon: SiNpm,
   },
 } satisfies TechConfigType
 

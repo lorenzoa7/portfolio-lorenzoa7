@@ -113,7 +113,7 @@ export const generateProjectsConfig = async ({ lang }: { lang: Locale }) => {
         repositoryHref: 'https://github.com/lorenzoa7/eslint-config-lorenzoa7',
         createdAt: projectsSection.projects.myEslintConfig.createdAt,
         features: projectsSection.projects.myEslintConfig.features,
-        techKeys: ['javascript'],
+        techKeys: ['javascript', 'npm'],
       },
     ] satisfies Project[],
   }

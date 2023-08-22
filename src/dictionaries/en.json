@@ -129,7 +129,8 @@
                 "features": [
                     "Standard config",
                     "React plugin", 
-                    "Prettier for ESLint"
+                    "Prettier for ESLint",
+                    "Tailwind for ESLint"
                 ]
             },
             "aiChatbot": {
