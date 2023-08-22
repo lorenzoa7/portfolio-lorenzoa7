@@ -4,6 +4,6 @@ type NavRootProps = {
 
 export function NavRoot({ children }: NavRootProps) {
   return (
-    <ul className="flex items-center gap-5 list-none lg:hidden">{children}</ul>
+    <ul className="flex list-none items-center gap-5 lg:hidden">{children}</ul>
   )
 }

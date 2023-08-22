@@ -21,7 +21,7 @@ export default function UsefulLink({
     >
       <Icon
         size={iconSize}
-        className="group-hover:text-neutral-300 group-hover:scale-110 duration-150"
+        className="duration-150 group-hover:scale-110 group-hover:text-neutral-300"
       />
     </Link>
   )

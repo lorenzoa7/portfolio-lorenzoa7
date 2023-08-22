@@ -22,14 +22,14 @@ export default function AboutInfoButton({ children }: AboutInfoButtonProps) {
   return (
     <Link
       href="#skills"
-      className="flex items-center gap-3 lowercase text-xl text-white font-thin cursor-pointer w-fit mt-6 group hover:text-neutral-300 duration-150 xl:mt-0 xl:mb-14 sm:mb-5"
+      className="group mt-6 flex w-fit cursor-pointer items-center gap-3 text-xl font-thin lowercase text-white duration-150 hover:text-neutral-300 xl:mb-14 xl:mt-0 sm:mb-5"
       onClick={(e) => handleClick(e)}
     >
       {children}
       {/* Arrow down icon animated */}
       <div>
-        <span className="block w-2 h-2 border-b-2 border-r-2 border-white rotate-45 -m-[4px] animate-scrollOne group-hover:border-neutral-300 duration-150"></span>
-        <span className="block w-2 h-2 border-b-2 border-r-2 border-white rotate-45 -m-[4px] animate-scrollTwo group-hover:border-neutral-300 duration-150"></span>
+        <span className="m-[-4px] block h-2 w-2 rotate-45 animate-scrollOne border-b-2 border-r-2 border-white duration-150 group-hover:border-neutral-300"></span>
+        <span className="m-[-4px] block h-2 w-2 rotate-45 animate-scrollTwo border-b-2 border-r-2 border-white duration-150 group-hover:border-neutral-300"></span>
       </div>
     </Link>
   )

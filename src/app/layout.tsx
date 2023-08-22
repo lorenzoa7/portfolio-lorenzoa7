@@ -16,7 +16,7 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className="!scroll-smooth scroll-py-28">
+    <html lang="en" className="scroll-py-28 !scroll-smooth">
       <body
         className={twMerge(
           'bg-neutral-200 text-neutral-700 mx-auto min-h-screen antialiased font-mono overflow-x-hidden',

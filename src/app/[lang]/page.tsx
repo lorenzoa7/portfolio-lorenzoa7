@@ -21,7 +21,7 @@ export default async function Home({ params: { lang } }: HomeProps) {
     <>
       <Header navConfig={navConfig} />
       <About lang={lang} />
-      <main className="px-40 mt-20 xl:px-20 sm:px-10">
+      <main className="mt-20 px-40 xl:px-20 sm:px-10">
         <Skills lang={lang} />
         <Projects lang={lang} />
         <Contact lang={lang} />

@@ -11,7 +11,7 @@ export function NavItem({ children, href, onClick }: NavitemProps) {
     <li>
       <Link
         href={href}
-        className="uppercase font-semibold text-white text-lg relative after:duration-300 after:absolute after:bg-white after:h-[3px] after:w-0 after:left-0 after:-bottom-3 after:hover:w-full"
+        className="relative text-lg font-semibold uppercase text-white after:absolute after:-bottom-3 after:left-0 after:h-[3px] after:w-0 after:bg-white after:duration-300 after:hover:w-full"
         onClick={onClick}
       >
         {children}

@@ -4,7 +4,7 @@ type LevelItemsRootProps = {
 
 export default function LevelItemsRoot({ children }: LevelItemsRootProps) {
   return (
-    <div className="flex justify-center gap-7 mt-6 text-amaranth-500 group font-semibold text-lg flex-wrap sm:text-base sm:font-bold">
+    <div className="group mt-6 flex flex-wrap justify-center gap-7 text-lg font-semibold text-amaranth-500 sm:text-base sm:font-bold">
       {children}
     </div>
   )

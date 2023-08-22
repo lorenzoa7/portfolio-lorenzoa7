@@ -4,7 +4,7 @@ type AboutInfoHeadingProps = {
 
 export default function AboutInfoHeading({ children }: AboutInfoHeadingProps) {
   return (
-    <h1 className="text-7xl text-white font-medium pt-7 lg:text-5xl xl:text-6xl xl:pt-0">
+    <h1 className="pt-7 text-7xl font-medium text-white xl:pt-0 xl:text-6xl lg:text-5xl">
       {children}
     </h1>
   )

@@ -35,22 +35,22 @@ export default function ContactModal({
     <Dialog.Root open={open} onOpenChange={handleOpenChange}>
       <Dialog.Trigger asChild>{children}</Dialog.Trigger>
       <Dialog.Portal>
-        <Dialog.Overlay className="fixed inset-0 bg-black/50 backdrop-blur-sm animate-overlayShow data-[state='closed']:animate-overlayHide" />
+        <Dialog.Overlay className="fixed inset-0 animate-overlayShow bg-black/50 backdrop-blur-sm data-[state='closed']:animate-overlayHide" />
         <Dialog.Content
           onOpenAutoFocus={(event) => event?.preventDefault()}
-          className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-[calc(45%)] animate-contentShow data-[state='closed']:animate-contentHide bg-white rounded-xl shadow-2xl mx-auto w-[960px] lg:w-[calc(100vw-40px)] lg:max-h-[calc(100vh-40px)] z-50"
+          className="fixed left-1/2 top-1/2 z-50 mx-auto w-[960px] -translate-x-1/2 translate-y-[calc(calc(45%)*-1)] animate-contentShow rounded-xl bg-white shadow-2xl data-[state='closed']:animate-contentHide lg:max-h-[calc(100vh-40px)] lg:w-[calc(100vw-40px)]"
         >
-          <main className="flex w-full h-full rounded-lg relative">
+          <main className="relative flex h-full w-full rounded-lg">
             <Dialog.Close asChild>
-              <div className="absolute right-3 top-3 text-amaranth-500 sm:text-white cursor-pointer z-20 duration-300 hover:scale-125">
+              <div className="absolute right-3 top-3 z-20 cursor-pointer text-amaranth-500 duration-300 hover:scale-125 sm:text-white">
                 <GrFormClose size={30} />
               </div>
             </Dialog.Close>
 
-            <section className="h-full w-full bg-amaranth-500 rounded-tl-xl rounded-bl-xl py-7 sm:rounded-xl">
+            <section className="h-full w-full rounded-l-xl bg-amaranth-500 py-7 sm:rounded-xl">
               <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="flex flex-col gap-3 w-full px-8 mx-auto"
+                className="mx-auto flex w-full flex-col gap-3 px-8"
               >
                 <InputBox
                   icon={FaUser}
@@ -61,13 +61,13 @@ export default function ContactModal({
                     type="text"
                     disabled={isSubmitting}
                     {...register('fullName', { required: true })}
-                    className="w-full h-full text-xl text-white px-3 py-2 border-none outline-none left-0 top-0 bg-transparent autofill:transition autofill:duration-[600000s] autofill:delay-0"
+                    className="left-0 top-0 h-full w-full border-none bg-transparent px-3 py-2 text-xl text-white outline-none autofill:transition autofill:delay-0 autofill:duration-[600000s]"
                     onFocus={(e) => handleFocus(e)}
                     onBlur={(e) => handleBlur(e)}
                   />
                 </InputBox>
                 {errors.fullName && (
-                  <p className="text-rose-900 font-medium">
+                  <p className="font-medium text-rose-900">
                     {errors.fullName.message}
                   </p>
                 )}
@@ -81,30 +81,30 @@ export default function ContactModal({
                     type="text"
                     disabled={isSubmitting}
                     {...register('email', { required: true })}
-                    className="absolute w-full h-full text-xl text-white px-3 py-2 border-none outline-none left-0 top-0 bg-transparent autofill:transition autofill:duration-[600000s] autofill:delay-0"
+                    className="absolute left-0 top-0 h-full w-full border-none bg-transparent px-3 py-2 text-xl text-white outline-none autofill:transition autofill:delay-0 autofill:duration-[600000s]"
                     onFocus={(e) => handleFocus(e)}
                     onBlur={(e) => handleBlur(e)}
                   />
                 </InputBox>
                 {errors.email && (
-                  <p className="text-rose-900 font-medium">
+                  <p className="font-medium text-rose-900">
                     {errors.email.message}
                   </p>
                 )}
 
-                <div className="relative h-56 mt-5">
+                <div className="relative mt-5 h-56">
                   <textarea
                     data-focus={isFocus.message}
                     placeholder={contactSection.form.message}
                     disabled={isSubmitting}
                     {...register('message', { required: true })}
-                    className="absolute w-full h-full text-lg text-white px-3 py-2 border-white border-2 rounded outline-none left-0 top-0 autofill:transition autofill:duration-[600000s] autofill:delay-0 resize-none bg-transparent placeholder:text-white/60 data-[focus=true]:border-amaranth-800 duration-300"
+                    className="absolute left-0 top-0 h-full w-full resize-none rounded border-2 border-white bg-transparent px-3 py-2 text-lg text-white outline-none duration-300 placeholder:text-white/60 autofill:transition autofill:delay-0 autofill:duration-[600000s] data-[focus=true]:border-amaranth-800"
                     onFocus={(e) => handleFocus(e)}
                     onBlur={(e) => handleBlur(e)}
                   />
                 </div>
                 {errors.message && (
-                  <p className="text-rose-900 font-medium">
+                  <p className="font-medium text-rose-900">
                     {errors.message.message}
                   </p>
                 )}
@@ -112,7 +112,7 @@ export default function ContactModal({
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="relative text-white text-lg py-3 w-fit border-2 border-white rounded-lg self-center px-16 z-10 duration-300 active:text-white active:border-amaranth-800 hover:text-amaranth-800 before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-white before:-z-10 before:transition-all before:duration-500 before:origin-left before:ease-in-out before:invisible before:scale-x-0 before:hover:scale-x-100 before:active:shadow-2xl before:active:bg-amaranth-800 before:hover:visible disabled:before:visible disabled:before:scale-x-100 disabled:before:bg-amaranth-800 disabled:text-white disabled:border-amaranth-800"
+                  className="relative z-10 w-fit self-center rounded-lg border-2 border-white px-16 py-3 text-lg text-white duration-300 before:invisible before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-left before:scale-x-0 before:bg-white before:transition-all before:duration-500 before:ease-in-out hover:text-amaranth-800 before:hover:visible before:hover:scale-x-100 active:border-amaranth-800 active:text-white before:active:bg-amaranth-800 before:active:shadow-2xl disabled:border-amaranth-800 disabled:text-white disabled:before:visible disabled:before:scale-x-100 disabled:before:bg-amaranth-800"
                 >
                   {isSubmitting && contactSection.form.submitting}
                   {!isSubmitting && contactSection.form.submit}
@@ -120,11 +120,11 @@ export default function ContactModal({
               </form>
             </section>
 
-            <section className="relative flex flex-col justify-between h-11/12 w-full  rounded-tr-xl rounded-br-xl p-7 text-amaranth-800 sm:hidden">
+            <section className="relative flex w-full flex-col justify-between  rounded-r-xl p-7 text-amaranth-800 sm:hidden">
               <span className="absolute -left-5 top-1/2 -translate-y-1/2 rotate-90 text-amaranth-500 lg:top-[calc(50%-35px)]">
                 <BsFillTriangleFill size={42} />
               </span>
-              <div className="self-end font-light invisible">
+              <div className="invisible self-end font-light">
                 <div>
                   <span>lorenzo.acetii@gmail.com</span>
                 </div>
@@ -133,17 +133,17 @@ export default function ContactModal({
                 </div>
               </div>
               <div className="flex flex-col lg:gap-1">
-                <h1 className="font-medium text-6xl lg:text-5xl">
+                <h1 className="text-6xl font-medium lg:text-5xl">
                   {contactSection.letsTalk}!
                 </h1>
                 <h2 className="text-xl">{contactSection.description}</h2>
               </div>
-              <div className="self-end flex flex-col gap-1 text-lg">
-                <div className="flex gap-3 items-center justify-between">
+              <div className="flex flex-col gap-1 self-end text-lg">
+                <div className="flex items-center justify-between gap-3">
                   <span>lorenzo.acetii@gmail.com</span>
                   <MdEmail size={18} />
                 </div>
-                <div className="flex gap-3 items-center justify-between">
+                <div className="flex items-center justify-between gap-3">
                   <span>+55 21 96540-0438</span>
                   <MdPhone size={18} />
                 </div>

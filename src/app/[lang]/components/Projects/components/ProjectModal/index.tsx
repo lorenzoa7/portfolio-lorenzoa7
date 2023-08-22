@@ -31,24 +31,24 @@ export default function ProjectModal({
     <Dialog.Root>
       <Dialog.Trigger asChild>{children}</Dialog.Trigger>
       <Dialog.Portal>
-        <Dialog.Overlay className="fixed inset-0 bg-black/50 backdrop-blur-sm animate-overlayShow data-[state='closed']:animate-overlayHide" />
+        <Dialog.Overlay className="fixed inset-0 animate-overlayShow bg-black/50 backdrop-blur-sm data-[state='closed']:animate-overlayHide" />
         <Dialog.Content
           onOpenAutoFocus={(event) => event?.preventDefault()}
-          className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-contentShow data-[state='closed']:animate-contentHide z-50 bg-white px-7 py-5 rounded-xl w-[1280px] mx-auto xl:w-[calc(100vw-40px)] max-h-[calc(100vh-40px)] overflow-y-auto"
+          className="fixed left-1/2 top-1/2 z-50 mx-auto max-h-[calc(100vh-40px)] w-[1280px] -translate-x-1/2 -translate-y-1/2 animate-contentShow overflow-y-auto rounded-xl bg-white px-7 py-5 data-[state='closed']:animate-contentHide xl:w-[calc(100vw-40px)]"
         >
           <Dialog.Close asChild>
-            <div className="w-fit flex gap-1 self-start mb-6 group cursor-pointer">
-              <div className="rounded-full w-3 h-3 bg-red-500 duration-150 group-hover:scale-[2.0] flex items-center justify-center">
-                <GrFormClose className="opacity-0 group-hover:opacity-100 duration-150" />
+            <div className="group mb-6 flex w-fit cursor-pointer gap-1 self-start">
+              <div className="flex h-3 w-3 items-center justify-center rounded-full bg-red-500 duration-150 group-hover:scale-[2.0]">
+                <GrFormClose className="opacity-0 duration-150 group-hover:opacity-100" />
               </div>
-              <div className="rounded-full w-3 h-3 bg-yellow-500 duration-150 group-hover:opacity-0"></div>
-              <div className="rounded-full w-3 h-3 bg-green-500 duration-150 group-hover:opacity-0"></div>
+              <div className="h-3 w-3 rounded-full bg-yellow-500 duration-150 group-hover:opacity-0"></div>
+              <div className="h-3 w-3 rounded-full bg-green-500 duration-150 group-hover:opacity-0"></div>
             </div>
           </Dialog.Close>
 
-          <main className="flex items-center gap-16 lg:flex-col lg:gap-8 overflow-x-hidden h-full sm:gap-4 overflow-y-hidden">
-            <div className="flex flex-col gap-4 w-[680px] lg:w-full">
-              <Dialog.Title className="font-medium text-3xl text-amaranth-800">
+          <main className="flex h-full items-center gap-16 overflow-hidden lg:flex-col lg:gap-8 sm:gap-4">
+            <div className="flex w-[680px] flex-col gap-4 lg:w-full">
+              <Dialog.Title className="text-3xl font-medium text-amaranth-800">
                 {project.title}
               </Dialog.Title>
               <p className="text-xl text-amaranth-500">
@@ -64,10 +64,10 @@ export default function ProjectModal({
 
               {project.features && (
                 <>
-                  <span className="text-xl text-amaranth-500 font-medium">
+                  <span className="text-xl font-medium text-amaranth-500">
                     {labels.features}:
                   </span>
-                  <ul className="pl-10 text-amaranth-500 list-disc text-lg">
+                  <ul className="list-disc pl-10 text-lg text-amaranth-500">
                     {project.features.map((feature, index) => (
                       <li key={index}>{feature}</li>
                     ))}
@@ -82,25 +82,25 @@ export default function ProjectModal({
               )}
             </div>
 
-            <div className="relative w-[480px] h-[270px] overflow-hidden lg:order-first">
+            <div className="relative h-[270px] w-[480px] overflow-hidden lg:order-first">
               <Image
                 width={909}
                 height={438}
                 src={project.imageHref}
                 alt={project.imageAlt}
-                className="object-fill border-amaranth-500 border-2 rounded"
+                className="rounded border-2 border-amaranth-500 object-fill"
               />
             </div>
           </main>
 
-          <div className="flex justify-between items-baseline mt-9 lg:mt-4 sm:flex-col sm:gap-8 sm:items-center">
+          <div className="mt-9 flex items-baseline justify-between lg:mt-4 sm:flex-col sm:items-center sm:gap-8">
             {project.techKeys && (
               <div className="flex items-center gap-5 text-amaranth-500/80 sm:flex-wrap sm:justify-center sm:gap-3">
                 {project.techKeys.map((techKey, index) => (
                   <div
                     key={index}
                     data-content={techConfig[techKey as keyof TechConfig].title}
-                    className="relative hover:text-amaranth-500 duration-300 after:content-[attr(data-content)] after:absolute after:-top-6 after:left-1/2 after:-translate-x-1/2 after:font-semibold after:opacity-0 after:translate-y-7 hover:after:translate-y-0 hover:after:opacity-100 after:duration-300 after:pointer-events-none after:whitespace-nowrap"
+                    className="relative duration-300 after:pointer-events-none after:absolute after:-top-6 after:left-1/2 after:-translate-x-1/2 after:translate-y-7 after:whitespace-nowrap after:font-semibold after:opacity-0 after:duration-300 after:content-[attr(data-content)] hover:text-amaranth-500 hover:after:translate-y-0 hover:after:opacity-100"
                   >
                     {getIcon(techKey)}
                   </div>

@@ -17,10 +17,10 @@ export default function FloatingMenuItem({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex flex-col items-center text-amaranth-500 gap-3 cursor-pointer hover:text-amaranth-900 duration-300 hover:scale-105 sm:gap-2"
+      className="flex cursor-pointer flex-col items-center gap-3 text-amaranth-500 duration-300 hover:scale-105 hover:text-amaranth-900 sm:gap-2"
     >
-      <Icon className="w-11 h-11 sm:w-9 sm:h-9" />
-      <span className="uppercase text-2xl font-semibold sm:text-xl">
+      <Icon className="h-11 w-11 sm:h-9 sm:w-9" />
+      <span className="text-2xl font-semibold uppercase sm:text-xl">
         {children}
       </span>
     </Link>

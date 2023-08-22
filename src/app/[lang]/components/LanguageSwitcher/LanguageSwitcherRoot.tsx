@@ -13,8 +13,8 @@ export default function LanguageSwitcherRoot({
   return (
     <Popover.Root>
       <Popover.Trigger asChild>
-        <button className="fixed bottom-12 left-6 p-2 bg-amaranth-950 text-white font-semibold rounded-lg duration-300 shadow-2xl z-50 sm:bottom-auto sm:top-5 xl:bottom-28">
-          <FaEarthAmericas className="w-5 h-5" />
+        <button className="fixed bottom-12 left-6 z-50 rounded-lg bg-amaranth-950 p-2 font-semibold text-white shadow-2xl duration-300 xl:bottom-28 sm:bottom-auto sm:top-5">
+          <FaEarthAmericas className="h-5 w-5" />
         </button>
       </Popover.Trigger>
       <Popover.Portal>
@@ -22,9 +22,9 @@ export default function LanguageSwitcherRoot({
           side="top"
           sideOffset={10}
           align="start"
-          className="animate-overlayShow data-[state='closed']:animate-overlayHide z-50"
+          className="z-50 animate-overlayShow data-[state='closed']:animate-overlayHide"
         >
-          <div className="w-36 font-semibold text-white text-lg">
+          <div className="w-36 text-lg font-semibold text-white">
             {children}
           </div>
         </Popover.Content>

@@ -22,7 +22,7 @@ export function LogoRoot({ children }: LogoRootProps) {
   return (
     <Link
       href="#about"
-      className="relative flex gap-1 items-center w-fit"
+      className="relative flex w-fit items-center gap-1"
       onClick={(e) => handleClick(e)}
     >
       {children}

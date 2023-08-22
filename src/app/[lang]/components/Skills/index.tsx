@@ -10,7 +10,7 @@ export default async function Skills({ lang }: SkillsProps) {
   const skillsConfig = await generateSkillsConfig({ lang })
   return (
     <section id="skills">
-      <h2 className="uppercase text-neutral-700 text-4xl font-semibold">
+      <h2 className="text-4xl font-semibold uppercase text-neutral-700">
         {skillsConfig.title}
       </h2>
       <div className="flex flex-col gap-10 px-36 py-16 xl:px-10 sm:px-2">

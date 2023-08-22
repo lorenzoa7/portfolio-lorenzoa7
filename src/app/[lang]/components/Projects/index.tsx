@@ -11,16 +11,16 @@ export default async function Projects({ lang }: ProjectsProps) {
   const projectsConfig = await generateProjectsConfig({ lang })
   return (
     <section id="projects">
-      <h2 className="uppercase text-neutral-700 text-4xl font-semibold">
+      <h2 className="text-4xl font-semibold uppercase text-neutral-700">
         {projectsConfig.title}
       </h2>
 
       <div className="flex flex-col gap-10 px-0 py-16 xl:px-10 sm:px-2">
         <section>
-          <h3 className="text-amaranth-800 font-semibold text-2xl">
+          <h3 className="text-2xl font-semibold text-amaranth-800">
             {projectsConfig.labels.featured}
           </h3>
-          <div className="flex items-center justify-center gap-8 flex-wrap">
+          <div className="flex flex-wrap items-center justify-center gap-8">
             {projectsConfig.projects
               .slice(0, projectsConfig.maxFeaturedProjects)
               .map((project) => (
@@ -30,7 +30,7 @@ export default async function Projects({ lang }: ProjectsProps) {
                   labels={projectsConfig.labels}
                 >
                   <Project.Root>
-                    <div className="absolute -top-5 -right-5 text-yellow-400 rotate-12 group-hover:scale-125 group-hover:text-yellow-500 duration-300">
+                    <div className="absolute -right-5 -top-5 rotate-12 text-yellow-400 duration-300 group-hover:scale-125 group-hover:text-yellow-500">
                       <AiFillStar size={45} />
                     </div>
                     <Project.Image
@@ -70,10 +70,10 @@ export default async function Projects({ lang }: ProjectsProps) {
         </section>
 
         <section>
-          <h3 className="text-amaranth-800 font-semibold text-2xl">
+          <h3 className="text-2xl font-semibold text-amaranth-800">
             {projectsConfig.labels.moreProjects}
           </h3>
-          <div className="flex items-center justify-center gap-8 flex-wrap">
+          <div className="flex flex-wrap items-center justify-center gap-8">
             {projectsConfig.projects
               .slice(projectsConfig.maxFeaturedProjects)
               .map((project) => (

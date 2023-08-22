@@ -36,7 +36,7 @@ export default function LanguageSwitcherButton({
       href={redirectedPathName(locale)}
       data-position={position}
       data-active={isActive}
-      className="flex items-center gap-5 cursor-pointer bg-amaranth-900 hover:bg-amaranth-950 py-3 px-4 shadow-2xl data-[position='first']:rounded-t-lg data-[position='last']:rounded-b-lg data-[active=true]:bg-amaranth-950 duration-300"
+      className="flex cursor-pointer items-center gap-5 bg-amaranth-900 px-4 py-3 shadow-2xl duration-300 hover:bg-amaranth-950 data-[position='first']:rounded-t-lg data-[position='last']:rounded-b-lg data-[active=true]:bg-amaranth-950"
     >
       <Image src={flag} alt={alt} width={20} height={20} />
       {children}

@@ -4,7 +4,7 @@ type ProjectInfoMoreProps = {
 
 export default function ProjectInfoMore({ children }: ProjectInfoMoreProps) {
   return (
-    <span className="text-neutral-700 font-semibold underline underline-offset-4 cursor-pointer self-end hover:text-neutral-500 duration-150 mt-10">
+    <span className="mt-10 cursor-pointer self-end font-semibold text-neutral-700 underline underline-offset-4 duration-150 hover:text-neutral-500">
       {children}
     </span>
   )

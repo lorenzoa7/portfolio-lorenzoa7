@@ -4,7 +4,7 @@ type AboutInfoTextProps = {
 
 export default function AboutInfoText({ children }: AboutInfoTextProps) {
   return (
-    <p className="text-xl text-white leading-tight w-10/12 text-justify xl:w-full">
+    <p className="w-10/12 text-justify text-xl leading-tight text-white xl:w-full">
       {children}
     </p>
   )

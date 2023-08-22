@@ -12,7 +12,7 @@ export default function Credits({
   logoSize = 'small',
 }: CreditsProps) {
   return (
-    <section className="flex flex-col items-center gap-1 w-full justify-center sm:order-last sm:mt-2 font-semibold">
+    <section className="flex w-full flex-col items-center justify-center gap-1 font-semibold sm:order-last sm:mt-2">
       {logo && (
         <Logo.Root>
           <Logo.Symbol size={logoSize} />

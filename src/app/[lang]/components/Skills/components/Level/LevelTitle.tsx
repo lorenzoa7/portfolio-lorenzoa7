@@ -4,6 +4,6 @@ type LevelTitleProps = {
 
 export default function LevelTitle({ children }: LevelTitleProps) {
   return (
-    <h3 className="text-amaranth-800 font-semibold text-2xl">{children}</h3>
+    <h3 className="text-2xl font-semibold text-amaranth-800">{children}</h3>
   )
 }

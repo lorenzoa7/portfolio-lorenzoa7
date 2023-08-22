@@ -17,7 +17,7 @@ export default function ProjectLinksButton({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center justify-center gap-2 bg-amaranth-500 rounded-lg text-white uppercase text-center py-1 text-xl w-36 hover:bg-amaranth-800 duration-300 lg:w-40 sm:w-32 sm:text-lg"
+      className="flex w-36 items-center justify-center gap-2 rounded-lg bg-amaranth-500 py-1 text-center text-xl uppercase text-white duration-300 hover:bg-amaranth-800 lg:w-40 sm:w-32 sm:text-lg"
     >
       {type === 'app' && <AiOutlineLink size={24} />}
       {type === 'repository' && <AiOutlineGithub size={24} />}

@@ -21,7 +21,7 @@ export default function ProfilePhoto({
         alt={imageAlt}
         width={width}
         height={height}
-        className="border-white border-8 border-double p-3 rounded-xl"
+        className="rounded-xl border-8 border-double border-white p-3"
       />
     </section>
   )

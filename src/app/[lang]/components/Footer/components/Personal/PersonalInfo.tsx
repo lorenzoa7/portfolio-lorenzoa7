@@ -10,8 +10,8 @@ export default function PersonalInfo({
   icon: Icon,
 }: PersonalInfoProps) {
   return (
-    <div className="flex gap-3 items-center lg:gap-2">
-      <Icon className="w-7 h-7 lg:w-5 lg:h-5" />
+    <div className="flex items-center gap-3 lg:gap-2">
+      <Icon className="h-7 w-7 lg:h-5 lg:w-5" />
       <span>{children}</span>
     </div>
   )
