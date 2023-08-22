@@ -102,7 +102,7 @@ export const generateProjectsConfig = async ({ lang }: { lang: Locale }) => {
           'https://github.com/lorenzoa7/get-chem-components-script',
         createdAt: projectsSection.projects.getChemComponentsScript.createdAt,
         features: projectsSection.projects.getChemComponentsScript.features,
-        techKeys: ['python'],
+        techKeys: ['python', 'pandas'],
       },
       {
         title: projectsSection.projects.myEslintConfig.title,

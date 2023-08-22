@@ -116,7 +116,8 @@
                 "features": [
                     "Consumption of data from an external website",
                     "HTML file formatting",
-                    "File generation"
+                    "File generation",
+                    "Data manipulation with Pandas"
                   ]
             },
             "myEslintConfig": {

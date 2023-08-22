@@ -16,6 +16,7 @@ import {
   SiNextdotjs,
   SiNodedotjs,
   SiOpenai,
+  SiPandas,
   SiPrisma,
   SiPython,
   SiReact,
@@ -122,6 +123,10 @@ export const techConfig = {
   vercelTools: {
     title: 'Vercel Tools',
     icon: SiVercel,
+  },
+  pandas: {
+    title: 'Pandas',
+    icon: SiPandas,
   },
 } satisfies TechConfigType
 
