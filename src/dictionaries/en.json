@@ -130,6 +130,20 @@
                     "React plugin", 
                     "Prettier for ESLint"
                 ]
+            },
+            "aiChatbot": {
+                "title": "AI Chatbot",
+                "description": "AI Chatbot is a simple, but effective, AI-powered companion that talks to you about anything, using the power of OpenAI API and Vercel SDK!",
+                "about": "I've always been a very curious person about artificial intelligence and, since the ChatGPT boom, I thought about studying a little more about this topic that is so popular. So, using the OpenAI paid API and the Vercel AI SDK library, I built this simple experiment that opened my horizons to thinking about even more complex products with the help of AI.",
+                "imageAlt": "The main interface of AI Chatbot app.",
+                "createdAt": "August 21, 2023",
+                "features": [
+                    "Built with the help of shadcn/ui components",
+                    "Streaming messages",
+                    "Route handler for OpenAI API",
+                    "Auto resizable input",
+                    "Loading state to prevent request submission while streaming messages"
+                ]
             }
         }
     },

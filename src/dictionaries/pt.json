@@ -130,6 +130,20 @@
                     "Plugin do react", 
                     "Prettier para ESLint"
                 ]
+            },
+            "aiChatbot": {
+                "title": "AI Chatbot",
+                "description": "O AI Chatbot é um companheiro inteligente simples, mas eficaz, que fala com você sobre qualquer coisa, usando o poder da OpenAI API e Vercel SDK!",
+                "about": "Sempre fui uma pessoa muito curiosa acerca das inteligências artificiais e, desde o boom do ChatGPT, pensava em estudar um pouco mais sobre esse tema que está tão em alta. Então, utilizando a API paga do OpenAI e a biblioteca da Vercel AI SDK, construí esse simples experimento que abriu meus horizontes para pensar em produtos ainda mais complexos com a ajuda da AI.",
+                "imageAlt": "A interface principal da aplicação do AI Chatbot.",
+                "createdAt": "21 de agosto de 2023",
+                "features": [
+                    "Construído com a ajuda dos componentes do shadcn/ui",
+                    "Streaming messages",
+                    "Route handler para a API da OpenAI",
+                    "Input com redimensionamento automático",
+                    "Estado de loading para prevenir o envio de requests durante o streaming de mensagens"
+                ]
             }
         }
     },

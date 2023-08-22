@@ -15,6 +15,7 @@ import {
   SiNestjs,
   SiNextdotjs,
   SiNodedotjs,
+  SiOpenai,
   SiPrisma,
   SiPython,
   SiReact,
@@ -22,6 +23,7 @@ import {
   SiSwagger,
   SiTailwindcss,
   SiTypescript,
+  SiVercel,
 } from 'react-icons/si'
 
 export const techConfig = {
@@ -112,6 +114,14 @@ export const techConfig = {
   mysql: {
     title: 'MySQL',
     icon: SiMysql,
+  },
+  openai: {
+    title: 'OpenAI',
+    icon: SiOpenai,
+  },
+  vercelTools: {
+    title: 'Vercel Tools',
+    icon: SiVercel,
   },
 } satisfies TechConfigType
 
