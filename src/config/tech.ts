@@ -126,3 +126,5 @@ export const techConfig = {
 } satisfies TechConfigType
 
 export type TechConfig = typeof techConfig
+
+export type TechKeys = keyof TechConfig

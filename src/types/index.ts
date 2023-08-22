@@ -1,3 +1,4 @@
+import { TechKeys } from '@/config/tech'
 import type { Locale } from '@/i18n-config'
 import { ElementType } from 'react'
 
@@ -39,7 +40,7 @@ export type Project = {
   createdAt?: string
   about?: string
   features?: string[]
-  techKeys?: string[]
+  techKeys?: TechKeys[]
 }
 
 export type PersonalInfo = {
