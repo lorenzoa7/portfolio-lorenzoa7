@@ -1,4 +1,4 @@
-import { ContactData } from '@/app/[lang]/components/Contact/types'
+import type { ContactData } from '@/app/[lang]/interface/Contact/types'
 import nodemailer from 'nodemailer'
 
 export async function POST(req: Request) {
