@@ -1,4 +1,4 @@
-import { Logo } from '@/app/[lang]/components/Logo'
+import { Logo } from '@/components/Logo'
 
 type CreditsProps = {
   children: React.ReactNode

@@ -2,7 +2,7 @@
 
 import type { NavConfig } from '@/config/header'
 import { useEffect, useState } from 'react'
-import { Logo } from '../Logo'
+import { Logo } from '../../../../components/Logo'
 import { Nav } from './components'
 
 type HeaderProps = {
