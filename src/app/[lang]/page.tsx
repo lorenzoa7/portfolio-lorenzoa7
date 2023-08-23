@@ -3,12 +3,12 @@ import { generateLanguageConfig } from '@/config/language'
 import { Locale, i18n } from '@/i18n-config'
 import { ToastContainer } from 'react-toastify'
 import { LanguageSwitcher } from '../../components/LanguageSwitcher'
-import About from './components/About'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import Header from './components/Header'
-import Projects from './components/Projects'
-import Skills from './components/Skills'
+import About from './interface/About'
+import Contact from './interface/Contact'
+import Footer from './interface/Footer'
+import Header from './interface/Header'
+import Projects from './interface/Projects'
+import Skills from './interface/Skills'
 
 type HomeProps = {
   params: { lang: Locale }
