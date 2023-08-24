@@ -36,15 +36,15 @@ export default function ProjectModal({
           onOpenAutoFocus={(event) => event?.preventDefault()}
           className="fixed left-1/2 top-1/2 z-50 mx-auto max-h-[calc(100vh-40px)] w-[1280px] -translate-x-1/2 -translate-y-1/2 animate-contentShow overflow-y-auto rounded-xl bg-white px-7 py-5 data-[state='closed']:animate-contentHide xl:w-[calc(100vw-40px)]"
         >
-          <Dialog.Close asChild>
-            <div className="group mb-6 flex w-fit cursor-pointer gap-1 self-start">
-              <div className="flex h-3 w-3 items-center justify-center rounded-full bg-red-500 duration-150 group-hover:scale-[2.0]">
-                <GrFormClose className="opacity-0 duration-150 group-hover:opacity-100" />
+          <div className="mb-6 flex w-fit gap-1 self-start">
+            <Dialog.Close asChild>
+              <div className="mr-1.5 flex h-3 w-3 scale-[2] cursor-pointer items-center justify-center rounded-full bg-red-500 duration-300 hover:bg-red-600">
+                <GrFormClose />
               </div>
-              <div className="h-3 w-3 rounded-full bg-yellow-500 duration-150 group-hover:opacity-0"></div>
-              <div className="h-3 w-3 rounded-full bg-green-500 duration-150 group-hover:opacity-0"></div>
-            </div>
-          </Dialog.Close>
+            </Dialog.Close>
+            <div className="h-3 w-3 rounded-full bg-stone-300"></div>
+            <div className="h-3 w-3 rounded-full bg-stone-300"></div>
+          </div>
 
           <main className="flex h-full items-center gap-16 overflow-hidden lg:flex-col lg:gap-8 sm:gap-4">
             <div className="flex w-[680px] flex-col gap-4 lg:w-full">
