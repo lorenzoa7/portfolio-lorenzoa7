@@ -10,23 +10,15 @@ export const generateProjectsConfig = async ({ lang }: { lang: Locale }) => {
     maxFeaturedProjects: 3,
     projects: [
       {
-        title:
-          projectsSection.projects.scriptInstrumentationForDfAnalyzer.title,
-        description:
-          projectsSection.projects.scriptInstrumentationForDfAnalyzer
-            .description,
-        about:
-          projectsSection.projects.scriptInstrumentationForDfAnalyzer.about,
-        imageHref: '/images/project_dfanalyzer.png',
-        imageAlt:
-          projectsSection.projects.scriptInstrumentationForDfAnalyzer.imageAlt,
-        appHref: 'https://dfanalyzer-instrumentation.vercel.app',
-        repositoryHref:
-          'https://github.com/lorenzoa7/script-instrumentation-for-dfanalyzer',
-        createdAt:
-          projectsSection.projects.scriptInstrumentationForDfAnalyzer.createdAt,
-        features:
-          projectsSection.projects.scriptInstrumentationForDfAnalyzer.features,
+        title: projectsSection.projects.dfParser.title,
+        description: projectsSection.projects.dfParser.description,
+        about: projectsSection.projects.dfParser.about,
+        imageHref: '/images/project_dfparser.png',
+        imageAlt: projectsSection.projects.dfParser.imageAlt,
+        appHref: 'https://dfparser.vercel.app',
+        repositoryHref: 'https://github.com/lorenzoa7/df-parser',
+        createdAt: projectsSection.projects.dfParser.createdAt,
+        features: projectsSection.projects.dfParser.features,
         techKeys: [
           'typescript',
           'nextjs',
