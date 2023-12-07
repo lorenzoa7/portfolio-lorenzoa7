@@ -73,12 +73,19 @@
                     "Suporte aos idiomas inglês e português"
                   ]
             },
-            "dfAnalyzerInterface": {
-                "title": "Interface do Df-Analyzer (WIP)",
-                "description": "Uma aplicação web que ajuda o usuário a gerar seu próprio código de script para ser utilizada no Df-Analyzer, uma poderosa ferramenta de análise.",
-                "about": "Atualmente em estágio de desenvolviment, a Interface do Df-Analyze é um ambicioso projeto, o qual será utilizado por cientistas da computação para facilitar o uso da ferramenta do Df-Analyzer. Nessa aplicação, eu pretendo utilizar as ferramentas de frontend mais robustas para construir um consistente, seguro e amigável software.",
-                "imageAlt": "A interface principal da aplicação do Df-Analyzer.",
-                "createdAt": "Em andamento"
+            "scriptInstrumentationForDfAnalyzer": {
+                "title": "Instrumentação de Scripts para DfAnalyzer",
+                "description": "Uma aplicação web que auxilia o usuário a instrumentar um script para a ferramenta Df-Analyzer, que é utilizada para capturar proveniência em dataflow, no contexto de aplicações científicas. O usuário é guiado através de um fluxo de etapas até a geração do código final.",
+                "about": "Esta aplicação é um ambicioso projeto, o qual está sendo utilizado por cientistas da computação para facilitar o uso da ferramenta Df-Analyzer. Nessa aplicação, eu utilizo as ferramentas de frontend mais robustas para construir um consistente, seguro e amigável software.",
+                "imageAlt": "A interface principal da aplicação de instrumentação de scripts para DfAnalyzer.",
+                "createdAt": "31 de outubro de 2023",
+                "features": [
+                    "Geração de código Python instrumentado para DfAnalyzer",
+                    "Formulários complexos criados com react-hook-form e zod",
+                    "Fluxo de etapas bem definido para auxiliar o usuário",
+                    "Possibilidade de baixar o script instrumentado ao final",
+                    "Captura de variáveis de código para auxiliar na associação com atributos dos conjuntos de dados"
+                  ]
             },
             "springRestApi": {
                 "title": "Spring Rest API",

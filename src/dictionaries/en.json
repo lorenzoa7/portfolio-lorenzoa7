@@ -73,12 +73,19 @@
                     "English and portuguese languages support"
                   ]
             },
-            "dfAnalyzerInterface": {
-                "title": "Df-Analyzer Interface (WIP)",
-                "description": "A web application that helps the user to generate their own script code, compatible enough to be used in a powerful analysis tool called Df-Analyzer.",
-                "about": "Currently in the development stage, the Df-Analyzer Interface is an ambitious project, which will be used by computer scientists to facilitate the use of the Df-Analyzer tool. In this application, I intend to use the most robust frontend tools to build a consistent, secure and user-friendly software.",
-                "imageAlt": "The main interface of Df-Analyzer app.",
-                "createdAt": "Work in progress"
+            "scriptInstrumentationForDfAnalyzer": {
+                "title": "Script Instrumentation for DfAnalyzer",
+                "description": "A web application that helps the user to instrument a script for the Df-Analyzer tool, which is used to capture provenance in dataflow, in the context of scientific applications. The user is guided through a flow of steps until the final code is generated.",
+                "about": "The Script Instrumentation for DfAnalyzer is an ambitious project, which is being used by computer scientists to facilitate the use of the Df-Analyzer tool. In this application, I used the most robust frontend tools to build a consistent, secure and user-friendly software.",
+                "imageAlt": "The main interface of Script Instrumentation for DfAnalyzer app.",
+                "createdAt": "October 31, 2023",
+                "features": [
+                    "Generation of instrumented Python code for DfAnalyzer",
+                    "Complex forms created with react-hook-form and zod",
+                    "Well-defined flow of steps to assist the user",
+                    "Possibility to download the instrumented script at the end",
+                    "Capture of code variables to assist in association with dataset attributes"
+                  ]
             },
             "springRestApi": {
                 "title": "Spring Rest API",

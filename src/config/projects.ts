@@ -59,15 +59,31 @@ export const generateProjectsConfig = async ({ lang }: { lang: Locale }) => {
         ],
       },
       {
-        title: projectsSection.projects.dfAnalyzerInterface.title,
-        description: projectsSection.projects.dfAnalyzerInterface.description,
-        about: projectsSection.projects.dfAnalyzerInterface.about,
+        title:
+          projectsSection.projects.scriptInstrumentationForDfAnalyzer.title,
+        description:
+          projectsSection.projects.scriptInstrumentationForDfAnalyzer
+            .description,
+        about:
+          projectsSection.projects.scriptInstrumentationForDfAnalyzer.about,
         imageHref: '/images/project_dfanalyzer.png',
-        imageAlt: projectsSection.projects.dfAnalyzerInterface.imageAlt,
-        appHref: 'https://dfanalyzer.vercel.app/',
-        repositoryHref: 'https://github.com/lorenzoa7/df-analyzer',
-        createdAt: projectsSection.projects.dfAnalyzerInterface.createdAt,
-        techKeys: ['typescript', 'nextjs', 'react', 'tailwindcss'],
+        imageAlt:
+          projectsSection.projects.scriptInstrumentationForDfAnalyzer.imageAlt,
+        appHref: 'https://dfanalyzer-instrumentation.vercel.app',
+        repositoryHref:
+          'https://github.com/lorenzoa7/script-instrumentation-for-dfanalyzer',
+        createdAt:
+          projectsSection.projects.scriptInstrumentationForDfAnalyzer.createdAt,
+        features:
+          projectsSection.projects.scriptInstrumentationForDfAnalyzer.features,
+        techKeys: [
+          'typescript',
+          'nextjs',
+          'react',
+          'tailwindcss',
+          'reactHookForm',
+          'zod',
+        ],
       },
       {
         title: projectsSection.projects.springRestApi.title,

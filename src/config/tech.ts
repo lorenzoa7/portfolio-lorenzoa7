@@ -1,6 +1,7 @@
 import type { TechConfig as TechConfigType } from '@/types'
 import { BiLogoJava } from 'react-icons/bi'
 import { BsDatabase } from 'react-icons/bs'
+
 import {
   SiAdobeaftereffects,
   SiAdobephotoshop,
@@ -21,11 +22,13 @@ import {
   SiPrisma,
   SiPython,
   SiReact,
+  SiReacthookform,
   SiSpringboot,
   SiSwagger,
   SiTailwindcss,
   SiTypescript,
   SiVercel,
+  SiZod,
 } from 'react-icons/si'
 
 export const techConfig = {
@@ -132,6 +135,14 @@ export const techConfig = {
   npm: {
     title: 'NPM',
     icon: SiNpm,
+  },
+  reactHookForm: {
+    title: 'React Hook Form',
+    icon: SiReacthookform,
+  },
+  zod: {
+    title: 'Zod',
+    icon: SiZod,
   },
 } satisfies TechConfigType
 
