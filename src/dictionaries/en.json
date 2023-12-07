@@ -74,8 +74,8 @@
                   ]
             },
             "dfParser": {
-                "title": "DfParser: Script Instrumentation for DfAnalyzer",
-                "description": "A web application that helps the user to instrument a script for the Df-Analyzer tool, which is used to capture provenance in dataflow, in the context of scientific applications.",
+                "title": "DfParser",
+                "description": "A web application that helps the user to instrument a script for the Df-Analyzer tool, which is used to capture provenance in dataflow, in the context of scientific applications. The user is guided through a flow of steps until the final code is generated.",
                 "about": "The Script Instrumentation for DfAnalyzer is an ambitious project, which is being used by computer scientists to facilitate the use of the Df-Analyzer tool. In this application, I used the most robust frontend tools to build a consistent, secure and user-friendly software.",
                 "imageAlt": "The main interface of DfParser app.",
                 "createdAt": "October 31, 2023",

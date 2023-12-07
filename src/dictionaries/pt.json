@@ -74,8 +74,8 @@
                   ]
             },
             "dfParser": {
-                "title": "DfParser: Instrumentação de Scripts para DfAnalyzer",
-                "description": "Uma aplicação web que auxilia o usuário a instrumentar um script para a ferramenta Df-Analyzer, que é utilizada para capturar proveniência em dataflow, no contexto de aplicações científicas.",
+                "title": "DfParser",
+                "description": "Uma aplicação web que auxilia o usuário a instrumentar um script para a ferramenta Df-Analyzer, que é utilizada para capturar proveniência em dataflow, no contexto de aplicações científicas. O usuário é guiado através de um fluxo de etapas até a geração do código final.",
                 "about": "Esta aplicação é um ambicioso projeto, o qual está sendo utilizado por cientistas da computação para facilitar o uso da ferramenta Df-Analyzer. Nessa aplicação, eu utilizo as ferramentas de frontend mais robustas para construir um consistente, seguro e amigável software.",
                 "imageAlt": "A interface principal da aplicação DfParser.",
                 "createdAt": "31 de outubro de 2023",
