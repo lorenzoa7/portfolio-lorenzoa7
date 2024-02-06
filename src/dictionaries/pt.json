@@ -87,6 +87,20 @@
                     "Captura de variáveis de código para auxiliar na associação com atributos dos conjuntos de dados"
                   ]
             },
+            "pocketTrader": {
+                "title": "Future's Pocket Trader (W.I.P.)",
+                "description": "Uma aplicação desktop que conecta à sua conta da Binance para auxiliar o usuário à realizar mais tarefas no mercado de futuros, como a criação de múltiplas ordens em cascata percentual (ordens divididas) e a visualização do total posicionado.",
+                "about": "O Future's Pocket Trader é um projeto que eu estou desenvolvendo para suprir uma necessidade localizada neste mercado, que pode ser vendida futuramente como uma ferramenta profissional do mercado crypto. O desenvolvimento da aplicação está sendo feita com o ElectronJS, que facilita muito nas requisições de segurança da API da Binance, já que estas estão sendo feitas pelo servidor Node por trás da aplicação.",
+                "imageAlt": "Tela de criação de uma nova ordem.",
+                "createdAt": "Trabalhando no momento...",
+                "features": [
+                    "Aplicação nativa com ElectronJS",
+                    "Requisições feitas pelo servidor Node através do IPC Renderer",
+                    "Conexão com a API da Binance",
+                    "Criação de ordens múltiplas em cascata percentual",
+                    "Visualização de posições e ordens, além do total de ambos"
+                  ]
+            },
             "springRestApi": {
                 "title": "Spring Rest API",
                 "description": "Uma aplicação de API Rest para cinco classes de entidade utilizando Java Spring Boot. Além disso, tudo foi documentado através do Swagger. ",

@@ -1,3 +1,4 @@
+import { ZodIcon } from '@/components/icons/zod'
 import type { TechConfig as TechConfigType } from '@/types'
 import { BiLogoJava } from 'react-icons/bi'
 import { BsDatabase } from 'react-icons/bs'
@@ -8,6 +9,7 @@ import {
   SiAdobepremierepro,
   SiBootstrap,
   SiDjango,
+  SiElectron,
   SiFigma,
   SiGraphql,
   SiJavascript,
@@ -28,7 +30,6 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiVercel,
-  SiZod,
 } from 'react-icons/si'
 
 export const techConfig = {
@@ -142,7 +143,11 @@ export const techConfig = {
   },
   zod: {
     title: 'Zod',
-    icon: SiZod,
+    icon: ZodIcon,
+  },
+  electron: {
+    title: 'Electron',
+    icon: SiElectron,
   },
 } satisfies TechConfigType
 
