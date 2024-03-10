@@ -1,7 +1,5 @@
 # 🎨 <a href="https://lorenzoaceti.com/">My Portfolio</a></h1>
 
-
-
 <div style="display: inline_block">
   <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"/>
   <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
@@ -11,7 +9,7 @@
   
 </div>
 
-![Portfolio Demo](https://github.com/lorenzoa7/ai-chatbot/blob/master/public/github/demo_portfolio.gif)
+![Portfolio Demo](public/github/demo_portfolio.gif)
 
 
 ## 📑 About
@@ -56,7 +54,7 @@
 
 ## 🔧 Credits
 <a href="https://github.com/lorenzoa7" style='display: flex; flex-direction: column; align-items: center;'>
-    <img style='border-radius: 50%; object-fit: cover;' src="https://media.discordapp.net/attachments/630201208270749696/1138261712332668988/foto_profissional_quadrada.jpg" width="100px;" height="100px;" alt="Foto do Lorenzo Aceti"/><br>
+    <img style='border-radius: 50%; object-fit: cover;' src="https://media.discordapp.net/attachments/630201208270749696/1138261712332668988/foto_profissional_quadrada.jpg?ex=65f8d6d4&is=65e661d4&hm=8caf58da86eabe7344faa8909a290dab8f63228cbbbddce82e89977de0daba65&=&format=webp" width="100px;" height="100px;" alt="Foto do Lorenzo Aceti"/><br>
     <sub>
         <b>Lorenzo Aceti</b>
     </sub>
