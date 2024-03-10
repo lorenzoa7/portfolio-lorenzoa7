@@ -24,7 +24,7 @@ export default function ProjectModal({
     const IconComponent = techConfig[key as keyof TechConfig].icon
 
     if (!IconComponent) return null
-    return <IconComponent size={size} />
+    return <IconComponent size={size} width={size} height={size} />
   }
 
   return (
