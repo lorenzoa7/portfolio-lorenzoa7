@@ -88,17 +88,17 @@
                   ]
             },
             "pocketTrader": {
-                "title": "Future's Pocket Trader (W.I.P.)",
-                "description": "A desktop application that connects to your Binance account to assist the user in performing various tasks in the futures market, such as creating multiple percentage-based cascade orders (split orders) and viewing total positions.",
-                "about": "Future's Pocket Trader is a project I am developing to address a specific need in this market, which could potentially be sold in the future as a professional tool for the crypto market. The application is being developed with ElectronJS, which greatly facilitates security requests to the Binance API, as these are being made by the Node server behind the application.",
-                "imageAlt": "Interface of create a new order screen.",
-                "createdAt": "Work in progress...",
+                "title": "Future's Pocket Trader",
+                "description": "A desktop application built with Electron that simplifies creating new orders, viewing information about positions and orders, and the ability to create multiple orders at different prices. All this using Binance Future's API!",
+                "about": "Future's Pocket Trader is a project I developed to address a specific need in this market, which could potentially be sold in the future as a professional tool for the crypto market. The application is being developed with ElectronJS, which greatly facilitates security requests to the Binance API, as these are being made by the Node server behind the application.",
+                "imageAlt": "Interface of create a new split order screen.",
+                "createdAt": "March 10, 2024",
                 "features": [
                     "Native application with ElectronJS",
                     "Requests made by the Node server through IPC Renderer",
-                    "Connection to the Binance API",
-                    "Creation of multiple orders in percentage-based cascade",
-                    "Visualization of positions and orders, as well as their total"
+                    "Possibility to connect to a testnet account",
+                    "Creation of up to 20 orders at once, defining the total size and percentage of price drop that will be divided by the number of orders",
+                    "Visualization of open positions and open orders, as well as their total"
                   ]
             },
             "springRestApi": {

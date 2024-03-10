@@ -88,16 +88,16 @@
                   ]
             },
             "pocketTrader": {
-                "title": "Future's Pocket Trader (W.I.P.)",
-                "description": "Uma aplicação desktop que conecta à sua conta da Binance para auxiliar o usuário à realizar mais tarefas no mercado de futuros, como a criação de múltiplas ordens em cascata percentual (ordens divididas) e a visualização do total posicionado.",
-                "about": "O Future's Pocket Trader é um projeto que eu estou desenvolvendo para suprir uma necessidade localizada neste mercado, que pode ser vendida futuramente como uma ferramenta profissional do mercado crypto. O desenvolvimento da aplicação está sendo feita com o ElectronJS, que facilita muito nas requisições de segurança da API da Binance, já que estas estão sendo feitas pelo servidor Node por trás da aplicação.",
-                "imageAlt": "Tela de criação de uma nova ordem.",
-                "createdAt": "Trabalhando no momento...",
+                "title": "Future's Pocket Trader",
+                "description": "Uma aplicação desktop desenvolvida com Electron que simplifica a criação de novas ordens, a visualização de informações sobre posições e ordens e a capacidade de criar várias ordens com preços diferentes. Tudo isso usando a API da Binance Futures!",
+                "about": "O Future's Pocket Trader é um projeto que eu desenvolvi para suprir uma necessidade localizada neste mercado, que pode ser vendida futuramente como uma ferramenta profissional do mercado crypto. O desenvolvimento da aplicação está sendo feita com o ElectronJS, que facilita muito nas requisições de segurança da API da Binance, já que estas estão sendo feitas pelo servidor Node por trás da aplicação.",
+                "imageAlt": "Tela de criação de uma nova ordem split.",
+                "createdAt": "10 de março de 2024",
                 "features": [
                     "Aplicação nativa com ElectronJS",
                     "Requisições feitas pelo servidor Node através do IPC Renderer",
-                    "Conexão com a API da Binance",
-                    "Criação de ordens múltiplas em cascata percentual",
+                    "Possibilidade de conectar-se a uma conta testnet",
+                    "Criação de até 20 ordens de uma só vez, definindo o tamanho total e o percentual de queda de preço que será dividido pela quantidade de ordens",
                     "Visualização de posições e ordens, além do total de ambos"
                   ]
             },
