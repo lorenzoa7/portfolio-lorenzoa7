@@ -24,6 +24,8 @@ export const generateSkillsConfig = async ({ lang }: { lang: Locale }) => {
       {
         title: skillsSection.levels.competent,
         skills: [
+          techConfig.nodejs,
+          techConfig.prisma,
           techConfig.databaseSql,
           techConfig.java,
           techConfig.figma,
@@ -33,12 +35,7 @@ export const generateSkillsConfig = async ({ lang }: { lang: Locale }) => {
       },
       {
         title: skillsSection.levels.learning,
-        skills: [
-          techConfig.nodejs,
-          techConfig.nestjs,
-          techConfig.graphql,
-          techConfig.prisma,
-        ],
+        skills: [techConfig.nestjs, techConfig.graphql],
       },
     ] satisfies Level[],
   }
