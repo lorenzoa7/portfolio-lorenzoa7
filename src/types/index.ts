@@ -10,7 +10,7 @@ export type NavItem = {
 export type FloatingMenuItem = {
   title: string
   icon: ElementType
-  href: string
+  href: string | Record<Locale, string>
 }
 
 export type Skill = {

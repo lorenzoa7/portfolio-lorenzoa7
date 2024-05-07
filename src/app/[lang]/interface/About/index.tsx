@@ -32,7 +32,11 @@ export default async function About({ lang }: AboutProps) {
 
       <FloatingMenu.Root>
         {floatingMenuConfig?.map((item) => (
-          <FloatingMenu.Item key={item.title} href={item.href} icon={item.icon}>
+          <FloatingMenu.Item
+            key={item.title}
+            href={typeof item.href === 'string' ? item.href : item.href[lang]}
+            icon={item.icon}
+          >
             {item.title}
           </FloatingMenu.Item>
         ))}

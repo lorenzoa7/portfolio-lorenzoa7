@@ -41,7 +41,10 @@ export const floatingMenuConfig = [
   {
     title: 'CV',
     icon: AiFillFilePdf,
-    href: '/docs/lorenzo_aceti_cv.pdf',
+    href: {
+      en: '/docs/lorenzo_aceti_cv_en.pdf',
+      pt: '/docs/lorenzo_aceti_cv_pt.pdf',
+    },
   },
 ] satisfies FloatingMenuItem[]
 
