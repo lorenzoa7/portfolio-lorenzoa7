@@ -167,6 +167,20 @@
                     "Input com redimensionamento automático",
                     "Estado de loading para prevenir o envio de requests durante o streaming de mensagens"
                 ]
+            },
+            "abrigosRs": {
+                "title": "Abrigos RS",
+                "description": "Abrigos RS é uma aplicação de ajuda e resgate voltada aos abrigos na tragédia que aconteceu no Rio Grande do Sul em maio de 2024. É possível cadastrar abrigos, gerenciar famílias, encontrar voluntários, divulgar pedidos de doações, e mais!",
+                "about": "A tragédia das enchentes no Rio Grande do Sul foi uma dos maiores desastres naturais da história do Brasil e desenvolver o front-end desta aplicação em uma semana para que mais vidas pudessem ser salvas foi algo engrandecedor, não só pelo lado profissional, mas pelo lado humano. Nós, desenvolvedores, resolvemos problemas, e esse foi o problemas mais nobre que eu pude colaborar para ajudar a resolver.",
+                "imageAlt": "A interface principal da aplicação do Abrigos RS.",
+                "createdAt": "15 de maio de 2024",
+                "features": [
+                    "Geolocalização para listar os abrigos mais próximos",
+                    "Scroll infinito para listagem das doações, voluntários e famílias",
+                    "Suporte à PWA com prompt personalizado",
+                    "Formulários avançados para cadastro, atualização e exclusão de famílias de um abrigo",
+                    "Gerenciamento de estado utilizando HTTP state para otimização de requisições"
+                ]
             }
         }
     },

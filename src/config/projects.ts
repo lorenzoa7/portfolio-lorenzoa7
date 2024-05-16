@@ -10,6 +10,26 @@ export const generateProjectsConfig = async ({ lang }: { lang: Locale }) => {
     maxFeaturedProjects: 3,
     projects: [
       {
+        title: projectsSection.projects.abrigosRs.title,
+        description: projectsSection.projects.abrigosRs.description,
+        about: projectsSection.projects.abrigosRs.about,
+        imageHref: '/images/project_abrigosrs.png',
+        imageAlt: projectsSection.projects.abrigosRs.imageAlt,
+        appHref: 'https://abrigosrs.app.br/',
+        repositoryHref: 'https://github.com/ResgateRS/RegisterRescueRS-Front',
+        createdAt: projectsSection.projects.abrigosRs.createdAt,
+        features: projectsSection.projects.abrigosRs.features,
+        techKeys: [
+          'typescript',
+          'nextjs',
+          'react',
+          'tailwindcss',
+          'reactHookForm',
+          'zod',
+          'tanstackQuery',
+        ],
+      },
+      {
         title: projectsSection.projects.pocketTrader.title,
         description: projectsSection.projects.pocketTrader.description,
         about: projectsSection.projects.pocketTrader.about,
@@ -25,6 +45,7 @@ export const generateProjectsConfig = async ({ lang }: { lang: Locale }) => {
           'tailwindcss',
           'reactHookForm',
           'zod',
+          'tanstackQuery',
         ],
       },
       {

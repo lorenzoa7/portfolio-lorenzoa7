@@ -167,6 +167,20 @@
                     "Auto resizable input",
                     "Loading state to prevent request submission while streaming messages"
                 ]
+            },
+            "abrigosRs": {
+                "title": "Abrigos RS",
+                "description": "Abrigos RS is a rescue and assistance application designed to support shelters in the aftermath of the tragedy that occurred in Rio Grande do Sul in May 2024. Users can register shelters, manage families, find volunteers, publicize donation requests, and more!",
+                "about": "The flooding tragedy in Rio Grande do Sul was one of the biggest natural disasters in Brazil's history. Developing the front end of this application in a week to help save more lives was incredibly rewarding, not just professionally but also on a human level. As developers, we solve problems, and this was the most noble problem I have had the privilege to help address.",
+                "imageAlt": "The main interface of Abrigos RS app.",
+                "createdAt": "May 15, 2024",
+                "features": [
+                    "Geolocation to list the nearest shelters",
+                    "Infinite scroll for listing donations, volunteers, and families",
+                    "PWA support with a custom prompt",
+                    "Advanced forms for registering, updating, and deleting families from a shelter",
+                    "State management using HTTP state for request optimization"
+                ]
             }
         }
     },

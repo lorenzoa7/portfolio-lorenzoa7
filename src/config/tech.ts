@@ -25,6 +25,7 @@ import {
   SiPython,
   SiReact,
   SiReacthookform,
+  SiReactquery,
   SiSpringboot,
   SiSwagger,
   SiTailwindcss,
@@ -148,6 +149,10 @@ export const techConfig = {
   electron: {
     title: 'Electron',
     icon: SiElectron,
+  },
+  tanstackQuery: {
+    title: 'Tanstack Query (React Query)',
+    icon: SiReactquery,
   },
 } satisfies TechConfigType
 
