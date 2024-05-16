@@ -41,6 +41,7 @@ export type Project = {
   about?: string
   features?: string[]
   techKeys?: TechKeys[]
+  hide?: boolean
 }
 
 export type PersonalInfo = {

@@ -7,7 +7,7 @@ export const generateProjectsConfig = async ({ lang }: { lang: Locale }) => {
   const config = {
     title: projectsSection.title,
     labels: projectsSection.labels,
-    maxFeaturedProjects: 3,
+    maxFeaturedProjects: 4,
     projects: [
       {
         title: projectsSection.projects.abrigosRs.title,
@@ -137,6 +137,7 @@ export const generateProjectsConfig = async ({ lang }: { lang: Locale }) => {
         createdAt: projectsSection.projects.compraVenda.createdAt,
         features: projectsSection.projects.compraVenda.features,
         techKeys: ['java', 'bootstrap', 'jquery', 'mysql'],
+        hide: true,
       },
       {
         title: projectsSection.projects.getChemComponentsScript.title,

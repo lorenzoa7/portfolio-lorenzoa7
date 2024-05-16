@@ -27,6 +27,10 @@ export default function ProjectModal({
     return <IconComponent size={size} width={size} height={size} />
   }
 
+  if (project.hide) {
+    return null
+  }
+
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>{children}</Dialog.Trigger>
