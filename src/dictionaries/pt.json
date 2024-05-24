@@ -181,6 +181,20 @@
                     "Formulários avançados para cadastro, atualização e exclusão de famílias de um abrigo",
                     "Gerenciamento de estado utilizando HTTP state para otimização de requisições"
                 ]
+            },
+            "pesquisaFipe": {
+                "title": "Pesquisa Fipe",
+                "description": "Pesquisa Fipe é um aplicativo criado para auxiliar a pesquisa pelo valor atual de um veículo. A aplicação consome uma API pública que traz dados atualizados da tabela criada pela Fundação Instituto de Pesquisas Econômicas e organiza na tela de maneira agradável e intuitva pro usuário.",
+                "about": "Este aplicativo facilita a busca por um veículo para comprar, além de permitir que o usuário salve informações de preço de uma certa data para que possa ajudá-lo a comparar e tomar decisões.",
+                "imageAlt": "A interface principal da aplicação do Pesquisa Fipe.",
+                "createdAt": "23 de maio de 2024",
+                "features": [
+                    "Consumo de API pública",
+                    "Gerenciamento de estado utilizando Tanstack Query",
+                    "Opções de mudança de tema e aplicativo responsivo",
+                    "Persistência de estado em Local Storage com auxílio do Zustand",
+                    "Testes end-to-end com Playwright"
+                ]
             }
         }
     },

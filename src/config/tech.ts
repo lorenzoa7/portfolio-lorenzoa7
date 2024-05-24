@@ -21,6 +21,7 @@ import {
   SiNpm,
   SiOpenai,
   SiPandas,
+  SiPlaywright,
   SiPrisma,
   SiPython,
   SiReact,
@@ -153,6 +154,10 @@ export const techConfig = {
   tanstackQuery: {
     title: 'Tanstack Query (React Query)',
     icon: SiReactquery,
+  },
+  playwright: {
+    title: 'Playwright',
+    icon: SiPlaywright,
   },
 } satisfies TechConfigType
 

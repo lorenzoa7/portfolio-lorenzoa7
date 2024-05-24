@@ -181,6 +181,20 @@
                     "Advanced forms for registering, updating, and deleting families from a shelter",
                     "State management using HTTP state for request optimization"
                 ]
+            },
+            "pesquisaFipe": {
+                "title": "Pesquisa Fipe",
+                "description": "Pesquisa Fipe is an app designed to assist in researching the current value of a vehicle. The application consumes a public API that provides updated data from the table created by the Economic Research Institute Foundation and displays it on the screen in an appealing and intuitive manner for the user.",
+                "about": "This app makes it easier to search for a vehicle to buy, and it also allows the user to save price information from a certain date to help with comparisons and decision-making.",
+                "imageAlt": "The main interface of Pesquisa Fipe app.",
+                "createdAt": "May 23, 2024",
+                "features": [
+                    "Consumption of public API",
+                    "State management using Tanstack Query",
+                    "Theme switching options and responsive design",
+                    "State persistence in Local Storage with the help of Zustand",
+                    "End-to-end tests with Playwright"
+                ]
             }
         }
     },
