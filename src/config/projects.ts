@@ -7,7 +7,7 @@ export const generateProjectsConfig = async ({ lang }: { lang: Locale }) => {
   const config = {
     title: projectsSection.title,
     labels: projectsSection.labels,
-    maxFeaturedProjects: 4,
+    maxFeaturedProjects: 5,
     projects: [
       {
         title: projectsSection.projects.abrigosRs.title,
