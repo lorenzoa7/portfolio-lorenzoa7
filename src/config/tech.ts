@@ -30,6 +30,7 @@ import {
   SiSpringboot,
   SiSwagger,
   SiTailwindcss,
+  SiTrpc,
   SiTypescript,
   SiVercel,
 } from 'react-icons/si'
@@ -158,6 +159,10 @@ export const techConfig = {
   playwright: {
     title: 'Playwright',
     icon: SiPlaywright,
+  },
+  trpc: {
+    title: 'tRPC',
+    icon: SiTrpc,
   },
 } satisfies TechConfigType
 

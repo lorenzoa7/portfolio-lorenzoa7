@@ -87,10 +87,25 @@
                     "Capture of code variables to assist in association with dataset attributes"
                   ]
             },
-            "pocketTrader": {
-                "title": "Future's Pocket Trader",
+            "futuresPocketTrader": {
+                "title": "Futures Pocket Trader",
+                "description": "An application that simplifies creating new orders, checking on information about positions and orders, and the ability to create multiple orders at different prices. All this using Binance Future's API!",
+                "about": "Futures Pocket Trader is a project I developed to address a specific need in this market. It's being used by a group of professional traders and may be sold in the future as a professional tool for the crypto market.",
+                "imageAlt": "Interface of create a new split order page.",
+                "createdAt": "June 02, 2024",
+                "features": [
+                    "Create up to 20 orders at once for a symbol, defining the total size and percentage of price drop that will be divided by the number of orders",
+                    "Create single order with few steps",
+                    "Set your pockets (list of favorite symbols) and create split orders to all of them at the same time",
+                    "Possibility to connect to a testnet account",
+                    "Check your list of open positions, being able to filter by symbol and close them in a simple way",
+                    "Check your list of open orders, being able to filter by symbol and cancel them simply"
+                  ]
+            },
+            "futuresPocketTraderNative": {
+                "title": "Futures Pocket Trader (Native)",
                 "description": "A desktop application built with Electron that simplifies creating new orders, viewing information about positions and orders, and the ability to create multiple orders at different prices. All this using Binance Future's API!",
-                "about": "Future's Pocket Trader is a project I developed to address a specific need in this market, which could potentially be sold in the future as a professional tool for the crypto market. The application is being developed with ElectronJS, which greatly facilitates security requests to the Binance API, as these are being made by the Node server behind the application.",
+                "about": "Futures Pocket Trader is a project I developed to address a specific need in this market, which could potentially be sold in the future as a professional tool for the crypto market. The application is being developed with ElectronJS, which greatly facilitates security requests to the Binance API, as these are being made by the Node server behind the application.",
                 "imageAlt": "Interface of create a new split order screen.",
                 "createdAt": "March 10, 2024",
                 "features": [
