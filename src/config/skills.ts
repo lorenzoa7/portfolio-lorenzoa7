@@ -11,12 +11,9 @@ export const generateSkillsConfig = async ({ lang }: { lang: Locale }) => {
       {
         title: skillsSection.levels.expert,
         skills: [
-          techConfig.typescript,
-          techConfig.javascript,
-          techConfig.python,
           techConfig.react,
           techConfig.nextjs,
-          techConfig.django,
+          techConfig.typescript,
           techConfig.tailwindcss,
           techConfig.photoshop,
         ],
@@ -25,9 +22,10 @@ export const generateSkillsConfig = async ({ lang }: { lang: Locale }) => {
         title: skillsSection.levels.competent,
         skills: [
           techConfig.nodejs,
+          techConfig.python,
+          techConfig.django,
           techConfig.prisma,
           techConfig.databaseSql,
-          techConfig.java,
           techConfig.figma,
           techConfig.premiere,
           techConfig.afterEffects,
