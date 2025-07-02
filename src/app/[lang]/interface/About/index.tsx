@@ -25,7 +25,7 @@ export default async function About({ lang }: AboutProps) {
         </Profile.Info.Root>
 
         <Profile.Photo
-          imageUrl="/images/profile_photo.jpg"
+          imageUrl="/images/profile_photo.jpg?v=2"
           imageAlt={aboutSection.profilePhotoAlt}
         />
       </Profile.Root>
