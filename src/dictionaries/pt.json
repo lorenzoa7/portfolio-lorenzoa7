@@ -219,9 +219,9 @@
     },
     "skillsSection": {
         "levels": {
-            "competent": "Competente",
-            "expert": "Experiente",
-            "learning": "Aprendendo"
+            "competent": "Experiência Sólida",
+            "expert": "Principais",
+            "learning": "Já Trabalhei Com"
         },
         "title": "Habilidades"
     }
