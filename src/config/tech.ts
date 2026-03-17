@@ -33,8 +33,12 @@ import {
   SiTypescript,
   SiVercel,
 } from 'react-icons/si'
-import { TbBrandAdobeAfterEffect, TbBrandAdobePhotoshop, TbBrandAdobePremier } from 'react-icons/tb'
-import { GiArtificialIntelligence  } from 'react-icons/gi'
+import {
+  TbBrandAdobeAfterEffect,
+  TbBrandAdobePhotoshop,
+  TbBrandAdobePremier,
+} from 'react-icons/tb'
+import { GiArtificialIntelligence } from 'react-icons/gi'
 
 export const techConfig = {
   typescript: {
@@ -167,16 +171,16 @@ export const techConfig = {
   },
   msw: {
     title: 'msw',
-    icon: SiMockserviceworker
+    icon: SiMockserviceworker,
   },
   claude: {
     title: 'Claude Code',
-    icon: SiClaude
+    icon: SiClaude,
   },
   llmAgents: {
     title: 'LLM Agents',
-    icon: GiArtificialIntelligence
-  }
+    icon: GiArtificialIntelligence,
+  },
 } satisfies TechConfigType
 
 export type TechConfig = typeof techConfig

@@ -15,7 +15,7 @@ export const generateSkillsConfig = async ({ lang }: { lang: Locale }) => {
           techConfig.nextjs,
           techConfig.typescript,
           techConfig.tailwindcss,
-          techConfig.nodejs
+          techConfig.nodejs,
         ],
       },
       {
@@ -29,12 +29,21 @@ export const generateSkillsConfig = async ({ lang }: { lang: Locale }) => {
           techConfig.figma,
           techConfig.premiere,
           techConfig.afterEffects,
-          techConfig.claude, techConfig.tanstackQuery, techConfig.zod, techConfig.reactHookForm
+          techConfig.claude,
+          techConfig.tanstackQuery,
+          techConfig.zod,
+          techConfig.reactHookForm,
         ],
       },
       {
         title: skillsSection.levels.learning,
-        skills: [techConfig.graphql, techConfig.playwright, techConfig.pandas, techConfig.llmAgents, techConfig.trpc],
+        skills: [
+          techConfig.graphql,
+          techConfig.playwright,
+          techConfig.pandas,
+          techConfig.llmAgents,
+          techConfig.trpc,
+        ],
       },
     ] satisfies Level[],
   }
