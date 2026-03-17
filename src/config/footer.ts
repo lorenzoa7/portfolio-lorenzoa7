@@ -14,7 +14,7 @@ export const footerConfig = {
     },
   ] satisfies PersonalInfo[],
   credits: {
-    title: '© 2025 - Portfolio - Lorenzo Aceti',
+    title: '© 2026 - Portfolio - Lorenzo Aceti',
     hasLogo: true,
   },
   usefulLinks: [

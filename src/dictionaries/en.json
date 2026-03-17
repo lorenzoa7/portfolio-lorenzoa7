@@ -1,53 +1,96 @@
 {
-    "nav": {
-        "about": "About",
-        "skills": "Skills",
-        "projects": "Projects",
-        "contact": "Contact"
+    "aboutSection": {
+        "profileInfoButton": "scroll down",
+        "profileInfoHeading": "Software Engineer",
+        "profileInfoText": "Hi, I’m Lorenzo Aceti! I build complex systems and care deeply about how engineering connects to real product value. My focus is on solving challenging problems, creating scalable solutions, and turning ideas into things people actually use.",
+        "profilePhotoAlt": "A picture of Lorenzo Aceti."
+    },
+    "contactSection": {
+        "description": "I'm open to get your feedback or just to have a chat.",
+        "form": {
+            "email": "E-mail",
+            "fullName": "Full Name",
+            "message": "Type your message...",
+            "submit": "Send Message",
+            "submitting": "Submitting..."
+        },
+        "letsTalk": "Let's have a talk",
+        "question": "Do you like my work?"
     },
     "languages": {
         "en": {
-            "name": "English",
-            "alt": "English language"
+            "alt": "English language",
+            "name": "English"
         },
         "pt": {
-            "name": "Portuguese",
-            "alt": "Portuguese language"
+            "alt": "Portuguese language",
+            "name": "Portuguese"
         }
     },
-    "aboutSection": {
-        "profileInfoHeading": "Full-Stack Developer and Designer",
-        "profileInfoText": "Hello, my name is Lorenzo Aceti and I work developing front-end and back-end applications, as well as prototyping intuitive interfaces with my design knowledge. My main goal is to add value through programming creativity.",
-        "profileInfoButton": "scroll down",
-        "profilePhotoAlt": "A picture of Lorenzo Aceti."
-    },
-    "skillsSection": {
-        "title": "Skills",
-        "levels": {
-            "expert": "Expert",
-            "competent": "Competent",
-            "learning": "Learning"
-        }
+    "nav": {
+        "about": "About",
+        "contact": "Contact",
+        "projects": "Projects",
+        "skills": "Skills"
     },
     "projectsSection": {
-        "title": "Projects",
         "labels": {
-            "featured": "Featured",
-            "moreProjects": "More Projects",
-            "description": "Description",
             "about": "About the project",
-            "features": "Features",
-            "seeMore": "See more",
             "app": "App",
-            "repository": "Repository"
+            "description": "Description",
+            "featured": "Featured",
+            "features": "Features",
+            "moreProjects": "More Projects",
+            "repository": "Repository",
+            "seeMore": "See more"
         },
         "projects": {
+            "abrigosRs": {
+                "about": "The flooding tragedy in Rio Grande do Sul was one of the biggest natural disasters in Brazil's history. Developing the front end of this application in a week to help save more lives was incredibly rewarding, not just professionally but also on a human level. As developers, we solve problems, and this was the most noble problem I have had the privilege to help address.",
+                "createdAt": "May 15, 2024",
+                "description": "Abrigos RS is a rescue and assistance application designed to support shelters in the aftermath of the tragedy that occurred in Rio Grande do Sul in May 2024. Users can register shelters, manage families, find volunteers, publicize donation requests, and more!",
+                "features": [
+                    "Geolocation to list the nearest shelters",
+                    "Infinite scroll for listing donations, volunteers, and families",
+                    "PWA support with a custom prompt",
+                    "Advanced forms for registering, updating, and deleting families from a shelter",
+                    "State management using HTTP state for request optimization"
+                ],
+                "imageAlt": "The main interface of Abrigos RS app.",
+                "title": "Abrigos RS"
+            },
+            "aiChatbot": {
+                "about": "I've always been a very curious person about artificial intelligence and, since the ChatGPT boom, I thought about studying a little more about this topic that is so popular. So, using the OpenAI paid API and the Vercel AI SDK library, I built this simple experiment that opened my horizons to thinking about even more complex products with the help of AI.",
+                "createdAt": "August 21, 2023",
+                "description": "AI Chatbot is a simple, but effective, AI-powered companion that talks to you about anything, using the power of OpenAI API and Vercel SDK!",
+                "features": [
+                    "Built with the help of shadcn/ui components",
+                    "Streaming messages",
+                    "Route handler for OpenAI API",
+                    "Auto resizable input",
+                    "Loading state to prevent request submission while streaming messages"
+                ],
+                "imageAlt": "The main interface of AI Chatbot app.",
+                "title": "AI Chatbot"
+            },
+            "compraVenda": {
+                "about": "It is an application created basically to explore Servlets and Java Server Pages (JSP), as well as their importance for the evolution of the web, in addition to improving my development of CRUD systems.",
+                "createdAt": "August 04, 2022",
+                "description": "A web application that allows a store to have total control over the registration and monitoring of its products, customers, suppliers and employees.",
+                "features": [
+                    "Complete CRUD system with MySQL database",
+                    "Use case diagram",
+                    "Auth system",
+                    "Four entity classes",
+                    "Admin functions"
+                ],
+                "imageAlt": "The main interface of Compra/Venda app.",
+                "title": "Compra/Venda"
+            },
             "coupleWheel": {
-                "title": "Couple Wheel",
-                "description": "Couple Wheel is a game to be played in pairs, where both players select activities they would like to do together and spin the wheel to randomly choose one. It's a great game for indecisive couples!",
                 "about": "I had the idea to create this project as a Valentine's Day gift for my girlfriend. But, as development progressed, I thought about expanding and making a real game for couples to enjoy. It was a great learning experience to build this application and I hope to evolve it even more in the future!",
-                "imageAlt": "The main interface of Couple Wheel app.",
                 "createdAt": "June 12, 2023",
+                "description": "Couple Wheel is a game to be played in pairs, where both players select activities they would like to do together and spin the wheel to randomly choose one. It's a great game for indecisive couples!",
                 "features": [
                     "Add activities to a list and sort them",
                     "Coin system to reroll the drawn activity",
@@ -57,42 +100,28 @@
                     "Theme selection for each player",
                     "Export and open a game (local storage)",
                     "Game configuration (play with the default values)"
-                  ]
-            },
-            "myPortfolio": {
-                "title": "My Portfolio",
-                "description": "Using the latest features of Next.JS 13 and TypeScript, I built my portfolio to show what I've made and what I can do to. I recommend you look at the repository for studying the way I like to code!",
-                "about": "I built my portfolio using my knowledge in UI/UX design and using a clean and maintainable architecture, as it is an application that will be updated quite often.",
-                "imageAlt": "The main interface of my portfolio app.",
-                "createdAt": "August 18, 2023",
-                "features": [
-                    "Built using latest features of Next.JS 13",
-                    "Dialogs and Popovers using Radix UI component",
-                    "Composition Pattern",
-                    "App design using Figma and Photoshop",
-                    "English and portuguese languages support"
-                  ]
+                ],
+                "imageAlt": "The main interface of Couple Wheel app.",
+                "title": "Couple Wheel"
             },
             "dfParser": {
-                "title": "DfParser",
-                "description": "A web application that helps the user to instrument a script for the Df-Analyzer tool, which is used to capture provenance in dataflow, in the context of scientific applications. The user is guided through a flow of steps until the final code is generated.",
                 "about": "The DfParser: Script Instrumentation for DfAnalyzer is an ambitious project, which is being used by computer scientists to facilitate the use of the Df-Analyzer tool. In this application, I used the most robust frontend tools to build a consistent, secure and user-friendly software.",
-                "imageAlt": "The main interface of DfParser app.",
                 "createdAt": "October 31, 2023",
+                "description": "A web application that helps the user to instrument a script for the Df-Analyzer tool, which is used to capture provenance in dataflow, in the context of scientific applications. The user is guided through a flow of steps until the final code is generated.",
                 "features": [
                     "Generation of instrumented Python code for DfAnalyzer",
                     "Complex forms created with react-hook-form and zod",
                     "Well-defined flow of steps to assist the user",
                     "Possibility to download the instrumented script at the end",
                     "Capture of code variables to assist in association with dataset attributes"
-                  ]
+                ],
+                "imageAlt": "The main interface of DfParser app.",
+                "title": "DfParser"
             },
             "futuresPocketTrader": {
-                "title": "Futures Pocket Trader",
-                "description": "An application that simplifies creating new orders, checking on information about positions and orders, and the ability to create multiple orders at different prices. All this using Binance Future's API!",
                 "about": "Futures Pocket Trader is a project I developed to address a specific need in this market. It's being used by a group of professional traders and may be sold in the future as a professional tool for the crypto market.",
-                "imageAlt": "Interface of create a new split order page.",
                 "createdAt": "June 02, 2024",
+                "description": "An application that simplifies creating new orders, checking on information about positions and orders, and the ability to create multiple orders at different prices. All this using Binance Future's API!",
                 "features": [
                     "Create up to 20 orders at once for a symbol, defining the total size and percentage of price drop that will be divided by the number of orders",
                     "Create single order with few steps",
@@ -100,129 +129,100 @@
                     "Possibility to connect to a testnet account",
                     "Check your list of open positions, being able to filter by symbol and close them in a simple way",
                     "Check your list of open orders, being able to filter by symbol and cancel them simply"
-                  ]
+                ],
+                "imageAlt": "Interface of create a new split order page.",
+                "title": "Futures Pocket Trader"
             },
             "futuresPocketTraderNative": {
-                "title": "Futures Pocket Trader (Native)",
-                "description": "A desktop application built with Electron that simplifies creating new orders, viewing information about positions and orders, and the ability to create multiple orders at different prices. All this using Binance Future's API!",
                 "about": "Futures Pocket Trader is a project I developed to address a specific need in this market, which could potentially be sold in the future as a professional tool for the crypto market. The application is being developed with ElectronJS, which greatly facilitates security requests to the Binance API, as these are being made by the Node server behind the application.",
-                "imageAlt": "Interface of create a new split order screen.",
                 "createdAt": "March 10, 2024",
+                "description": "A desktop application built with Electron that simplifies creating new orders, viewing information about positions and orders, and the ability to create multiple orders at different prices. All this using Binance Future's API!",
                 "features": [
                     "Native application with ElectronJS",
                     "Requests made by the Node server through IPC Renderer",
                     "Possibility to connect to a testnet account",
                     "Creation of up to 20 orders at once, defining the total size and percentage of price drop that will be divided by the number of orders",
                     "Visualization of open positions and open orders, as well as their total"
-                  ]
-            },
-            "springRestApi": {
-                "title": "Spring Rest API",
-                "description": "A Rest API for five entity classes using Java Spring Boot. Furthermore, everything was documented using Swagger.",
-                "about": "It's a very simple CRUD project, built using Spring Boot and the most modern libraries available. I created more to test Swagger's documentation generation.",
-                "imageAlt": "A small piece of API code.",
-                "createdAt": "July 13, 2023",
-                "features": [
-                    "Usage of Project Lombok library",
-                    "Five entity classes",
-                    "Complete CRUD (including PATCH method)",
-                    "H2 inmemory database"
-                  ]
-            },
-            "compraVenda": {
-                "title": "Compra/Venda",
-                "description": "A web application that allows a store to have total control over the registration and monitoring of its products, customers, suppliers and employees.",
-                "about": "It is an application created basically to explore Servlets and Java Server Pages (JSP), as well as their importance for the evolution of the web, in addition to improving my development of CRUD systems.",
-                "imageAlt": "The main interface of Compra/Venda app.",
-                "createdAt": "August 04, 2022",
-                "features": [
-                    "Complete CRUD system with MySQL database",
-                    "Use case diagram",
-                    "Auth system",
-                    "Four entity classes",
-                    "Admin functions"
-                  ]
+                ],
+                "imageAlt": "Interface of create a new split order screen.",
+                "title": "Futures Pocket Trader (Native)"
             },
             "getChemComponentsScript": {
-                "title": "Get Chem Components Script",
-                "description": "A script for dynamically collecting public chemical compound data from NIST and exporting such data formatted into text files.",
                 "about": "It's a script for a very specific use, but it helped me understand how to create and use python scripts to automate long and repetitive tasks. The readAll.py script ran for around 4 hours on my computer to generate more than 3000 formatted text files.",
-                "imageAlt": "A demonstration of the script running.",
                 "createdAt": "June 15, 2023",
+                "description": "A script for dynamically collecting public chemical compound data from NIST and exporting such data formatted into text files.",
                 "features": [
                     "Consumption of data from an external website",
                     "HTML file formatting",
                     "File generation",
                     "Data manipulation with Pandas"
-                  ]
+                ],
+                "imageAlt": "A demonstration of the script running.",
+                "title": "Get Chem Components Script"
             },
             "myEslintConfig": {
-                "title": "My ESLint Config",
-                "description": "A personal ESLint setup package with plugins that I consider essential for my projects.",
                 "about": "After testing projects a few times and needing to configure ESLint and the plugins I use from scratch, I found myself faced with the need to create a package of my own to facilitate this process.",
-                "imageAlt": "A small piece of the package config code.",
                 "createdAt": "July 18, 2023",
+                "description": "A personal ESLint setup package with plugins that I consider essential for my projects.",
                 "features": [
                     "Standard config",
-                    "React plugin", 
+                    "React plugin",
                     "Prettier for ESLint",
                     "Tailwind for ESLint"
-                ]
+                ],
+                "imageAlt": "A small piece of the package config code.",
+                "title": "My ESLint Config"
             },
-            "aiChatbot": {
-                "title": "AI Chatbot",
-                "description": "AI Chatbot is a simple, but effective, AI-powered companion that talks to you about anything, using the power of OpenAI API and Vercel SDK!",
-                "about": "I've always been a very curious person about artificial intelligence and, since the ChatGPT boom, I thought about studying a little more about this topic that is so popular. So, using the OpenAI paid API and the Vercel AI SDK library, I built this simple experiment that opened my horizons to thinking about even more complex products with the help of AI.",
-                "imageAlt": "The main interface of AI Chatbot app.",
-                "createdAt": "August 21, 2023",
+            "myPortfolio": {
+                "about": "I built my portfolio using my knowledge in UI/UX design and using a clean and maintainable architecture, as it is an application that will be updated quite often.",
+                "createdAt": "August 18, 2023",
+                "description": "Using the latest features of Next.JS 13 and TypeScript, I built my portfolio to show what I've made and what I can do to. I recommend you look at the repository for studying the way I like to code!",
                 "features": [
-                    "Built with the help of shadcn/ui components",
-                    "Streaming messages",
-                    "Route handler for OpenAI API",
-                    "Auto resizable input",
-                    "Loading state to prevent request submission while streaming messages"
-                ]
-            },
-            "abrigosRs": {
-                "title": "Abrigos RS",
-                "description": "Abrigos RS is a rescue and assistance application designed to support shelters in the aftermath of the tragedy that occurred in Rio Grande do Sul in May 2024. Users can register shelters, manage families, find volunteers, publicize donation requests, and more!",
-                "about": "The flooding tragedy in Rio Grande do Sul was one of the biggest natural disasters in Brazil's history. Developing the front end of this application in a week to help save more lives was incredibly rewarding, not just professionally but also on a human level. As developers, we solve problems, and this was the most noble problem I have had the privilege to help address.",
-                "imageAlt": "The main interface of Abrigos RS app.",
-                "createdAt": "May 15, 2024",
-                "features": [
-                    "Geolocation to list the nearest shelters",
-                    "Infinite scroll for listing donations, volunteers, and families",
-                    "PWA support with a custom prompt",
-                    "Advanced forms for registering, updating, and deleting families from a shelter",
-                    "State management using HTTP state for request optimization"
-                ]
+                    "Built using latest features of Next.JS 13",
+                    "Dialogs and Popovers using Radix UI component",
+                    "Composition Pattern",
+                    "App design using Figma and Photoshop",
+                    "English and portuguese languages support"
+                ],
+                "imageAlt": "The main interface of my portfolio app.",
+                "title": "My Portfolio"
             },
             "pesquisaFipe": {
-                "title": "Pesquisa Fipe",
-                "description": "Pesquisa Fipe is an app designed to assist in researching the current value of a vehicle. The application consumes a public API that provides updated data from the table created by the Economic Research Institute Foundation and displays it on the screen in an appealing and intuitive manner for the user.",
                 "about": "This app makes it easier to search for a vehicle to buy, and it also allows the user to save price information from a certain date to help with comparisons and decision-making.",
-                "imageAlt": "The main interface of Pesquisa Fipe app.",
                 "createdAt": "May 23, 2024",
+                "description": "Pesquisa Fipe is an app designed to assist in researching the current value of a vehicle. The application consumes a public API that provides updated data from the table created by the Economic Research Institute Foundation and displays it on the screen in an appealing and intuitive manner for the user.",
                 "features": [
                     "Consumption of public API",
                     "State management using Tanstack Query",
                     "Theme switching options and responsive design",
                     "State persistence in Local Storage with the help of Zustand",
                     "End-to-end tests with Playwright"
-                ]
+                ],
+                "imageAlt": "The main interface of Pesquisa Fipe app.",
+                "title": "Pesquisa Fipe"
+            },
+            "springRestApi": {
+                "about": "It's a very simple CRUD project, built using Spring Boot and the most modern libraries available. I created more to test Swagger's documentation generation.",
+                "createdAt": "July 13, 2023",
+                "description": "A Rest API for five entity classes using Java Spring Boot. Furthermore, everything was documented using Swagger.",
+                "features": [
+                    "Usage of Project Lombok library",
+                    "Five entity classes",
+                    "Complete CRUD (including PATCH method)",
+                    "H2 inmemory database"
+                ],
+                "imageAlt": "A small piece of API code.",
+                "title": "Spring Rest API"
             }
-        }
+        },
+        "title": "Projects"
     },
-    "contactSection": {
-        "question": "Do you like my work?",
-        "letsTalk": "Let's have a talk",
-        "description": "I'm open to get your feedback or just to have a chat.",
-        "form": {
-            "fullName": "Full Name",
-            "email": "E-mail",
-            "message": "Type your message...",
-            "submit": "Send Message",
-            "submitting": "Submitting..."
-        }
+    "skillsSection": {
+        "levels": {
+            "competent": "Strong Experience",
+            "expert": "Core",
+            "learning": "Also Worked With"
+        },
+        "title": "Skills"
     }
 }

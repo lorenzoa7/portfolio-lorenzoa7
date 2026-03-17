@@ -2,18 +2,18 @@ import { ZodIcon } from '@/components/icons/zod'
 import type { TechConfig as TechConfigType } from '@/types'
 import { BiLogoJava } from 'react-icons/bi'
 import { BsDatabase } from 'react-icons/bs'
+import { FaTheaterMasks } from 'react-icons/fa'
 
 import {
-  SiAdobeaftereffects,
-  SiAdobephotoshop,
-  SiAdobepremierepro,
   SiBootstrap,
+  SiClaude,
   SiDjango,
   SiElectron,
   SiFigma,
   SiGraphql,
   SiJavascript,
   SiJquery,
+  SiMockserviceworker,
   SiMysql,
   SiNestjs,
   SiNextdotjs,
@@ -21,7 +21,6 @@ import {
   SiNpm,
   SiOpenai,
   SiPandas,
-  SiPlaywright,
   SiPrisma,
   SiPython,
   SiReact,
@@ -34,6 +33,8 @@ import {
   SiTypescript,
   SiVercel,
 } from 'react-icons/si'
+import { TbBrandAdobeAfterEffect, TbBrandAdobePhotoshop, TbBrandAdobePremier } from 'react-icons/tb'
+import { GiArtificialIntelligence  } from 'react-icons/gi'
 
 export const techConfig = {
   typescript: {
@@ -66,10 +67,10 @@ export const techConfig = {
   },
   photoshop: {
     title: 'Photoshop',
-    icon: SiAdobephotoshop,
+    icon: TbBrandAdobePhotoshop,
   },
   databaseSql: {
-    title: 'DB - SQL',
+    title: 'SQL',
     icon: BsDatabase,
   },
   java: {
@@ -82,11 +83,11 @@ export const techConfig = {
   },
   premiere: {
     title: 'Premiere',
-    icon: SiAdobepremierepro,
+    icon: TbBrandAdobePremier,
   },
   afterEffects: {
     title: 'After Effects',
-    icon: SiAdobeaftereffects,
+    icon: TbBrandAdobeAfterEffect,
   },
   nodejs: {
     title: 'Node.JS',
@@ -153,17 +154,29 @@ export const techConfig = {
     icon: SiElectron,
   },
   tanstackQuery: {
-    title: 'Tanstack Query (React Query)',
+    title: 'Tanstack Query',
     icon: SiReactquery,
   },
   playwright: {
     title: 'Playwright',
-    icon: SiPlaywright,
+    icon: FaTheaterMasks,
   },
   trpc: {
     title: 'tRPC',
     icon: SiTrpc,
   },
+  msw: {
+    title: 'msw',
+    icon: SiMockserviceworker
+  },
+  claude: {
+    title: 'Claude Code',
+    icon: SiClaude
+  },
+  llmAgents: {
+    title: 'LLM Agents',
+    icon: GiArtificialIntelligence
+  }
 } satisfies TechConfigType
 
 export type TechConfig = typeof techConfig

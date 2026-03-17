@@ -1,53 +1,96 @@
 {
-    "nav": {
-        "about": "Sobre",
-        "skills": "Habilidades",
-        "projects": "Projetos",
-        "contact": "Contato"
+    "aboutSection": {
+        "profileInfoButton": "rolar pra baixo",
+        "profileInfoHeading": "Engenheiro de Software",
+        "profileInfoText": "Oi, meu nome é Lorenzo Aceti! Eu construo sistemas complexos e me importo profundamente com como a engenharia se conecta ao valor real de produto. Meu foco é resolver problemas desafiadores, criar soluções escaláveis e transformar ideias em coisas que as pessoas realmente usam.",
+        "profilePhotoAlt": "Uma foto de Lorenzo Aceti."
+    },
+    "contactSection": {
+        "description": "Estou aberto para receber seu feedback ou apenas ter um bate-papo.",
+        "form": {
+            "email": "E-mail",
+            "fullName": "Nome Completo",
+            "message": "Escreva sua mensagem...",
+            "submit": "Enviar Mensagem",
+            "submitting": "Enviando..."
+        },
+        "letsTalk": "Vamos conversar",
+        "question": "Gosta do meu trabalho?"
     },
     "languages": {
         "en": {
-            "name": "Inglês",
-            "alt": "Idioma inglês"
+            "alt": "Idioma inglês",
+            "name": "Inglês"
         },
         "pt": {
-            "name": "Português",
-            "alt": "Idioma português"
+            "alt": "Idioma português",
+            "name": "Português"
         }
     },
-    "aboutSection": {
-        "profileInfoHeading": "Desenvolvedor Full-Stack e Designer",
-        "profileInfoText": "Olá, meu nome é Lorenzo Aceti e trabalho desenvolvendo aplicações front-end e back-end, bem como prototipando interfaces intuitivas com meus conhecimentos de design. Meu principal objetivo é gerar valor através da criatividade em programação.",
-        "profileInfoButton": "rolar pra baixo",
-        "profilePhotoAlt": "Uma foto de Lorenzo Aceti."
-    },
-    "skillsSection": {
-        "title": "Habilidades",
-        "levels": {
-            "expert": "Experiente",
-            "competent": "Competente",
-            "learning": "Aprendendo"
-        }
+    "nav": {
+        "about": "Sobre",
+        "contact": "Contato",
+        "projects": "Projetos",
+        "skills": "Habilidades"
     },
     "projectsSection": {
-        "title": "Projetos",
         "labels": {
-            "featured": "Em destaque",
-            "moreProjects": "Mais projetos",
-            "description": "Descrição",
             "about": "Sobre o projeto",
-            "features": "Funcionalidades",
-            "seeMore": "Veja mais",
             "app": "App",
-            "repository": "Repositório"
+            "description": "Descrição",
+            "featured": "Em destaque",
+            "features": "Funcionalidades",
+            "moreProjects": "Mais projetos",
+            "repository": "Repositório",
+            "seeMore": "Veja mais"
         },
         "projects": {
+            "abrigosRs": {
+                "about": "A tragédia das enchentes no Rio Grande do Sul foi uma dos maiores desastres naturais da história do Brasil e desenvolver o front-end desta aplicação em uma semana para que mais vidas pudessem ser salvas foi algo engrandecedor, não só pelo lado profissional, mas pelo lado humano. Nós, desenvolvedores, resolvemos problemas, e esse foi o problemas mais nobre que eu pude colaborar para ajudar a resolver.",
+                "createdAt": "15 de maio de 2024",
+                "description": "Abrigos RS é uma aplicação de ajuda e resgate voltada aos abrigos na tragédia que aconteceu no Rio Grande do Sul em maio de 2024. É possível cadastrar abrigos, gerenciar famílias, encontrar voluntários, divulgar pedidos de doações, e mais!",
+                "features": [
+                    "Geolocalização para listar os abrigos mais próximos",
+                    "Scroll infinito para listagem das doações, voluntários e famílias",
+                    "Suporte à PWA com prompt personalizado",
+                    "Formulários avançados para cadastro, atualização e exclusão de famílias de um abrigo",
+                    "Gerenciamento de estado utilizando HTTP state para otimização de requisições"
+                ],
+                "imageAlt": "A interface principal da aplicação do Abrigos RS.",
+                "title": "Abrigos RS"
+            },
+            "aiChatbot": {
+                "about": "Sempre fui uma pessoa muito curiosa acerca das inteligências artificiais e, desde o boom do ChatGPT, pensava em estudar um pouco mais sobre esse tema que está tão em alta. Então, utilizando a API paga do OpenAI e a biblioteca da Vercel AI SDK, construí esse simples experimento que abriu meus horizontes para pensar em produtos ainda mais complexos com a ajuda da AI.",
+                "createdAt": "21 de agosto de 2023",
+                "description": "O AI Chatbot é um companheiro inteligente simples, mas eficaz, que fala com você sobre qualquer coisa, usando o poder da OpenAI API e Vercel SDK!",
+                "features": [
+                    "Construído com a ajuda dos componentes do shadcn/ui",
+                    "Streaming messages",
+                    "Route handler para a API da OpenAI",
+                    "Input com redimensionamento automático",
+                    "Estado de loading para prevenir o envio de requests durante o streaming de mensagens"
+                ],
+                "imageAlt": "A interface principal da aplicação do AI Chatbot.",
+                "title": "AI Chatbot"
+            },
+            "compraVenda": {
+                "about": "É uma aplicação criada basicamente para explorar os Servlets e Java Server Pages (JSP), e também sua importância para a evolução da web, aprimorando assim meu desenvolvimento de sistemas CRUD.",
+                "createdAt": "04 de agosto de 2022",
+                "description": "Uma aplicação web que permite uma loja ter controle total do registro e monitoramente dos seus produtos, clientes, fornecedores e funcionários.",
+                "features": [
+                    "Sistema CRUD completo com banco de dados MySQL",
+                    "Diagrama de casos de uso",
+                    "Sistema de autenticação",
+                    "Quatro classes de entidade",
+                    "Funcionalidades administrativas"
+                ],
+                "imageAlt": "A interface principal da aplicação do Compra/Venda.",
+                "title": "Compra/Venda"
+            },
             "coupleWheel": {
-                "title": "Roleta do Casal",
-                "description": "A Roleta do Casal é um jogo para ser jogado em duplas, onde ambos os jogadores selecionam as atividades que gostariam de fazer juntos e giram a roleta para escolher aleatoriamente uma. É um ótimo jogo para casais indecisos!",
                 "about": "Tive a ideia de criar esse projeto como presente de dia dos namorados para minha namorada. Mas, à medida que o desenvolvimento avançava, pensei em expandir e fazer um jogo real para os casais se divertirem. Foi um grande aprendizado construir esse aplicativo e espero evoluí-lo ainda mais no futuro!",
-                "imageAlt": "A interface principal do Roleta do Casal.",
                 "createdAt": "12 de junho de 2023",
+                "description": "A Roleta do Casal é um jogo para ser jogado em duplas, onde ambos os jogadores selecionam as atividades que gostariam de fazer juntos e giram a roleta para escolher aleatoriamente uma. É um ótimo jogo para casais indecisos!",
                 "features": [
                     "Adicionar atividades a uma lista e sorteá-las",
                     "Sistema de moedas para rerolar a atividade sorteada",
@@ -57,42 +100,28 @@
                     "Seleção de tema para cada jogador",
                     "Exportar e abrir um jogo (local storage)",
                     "Configuração de jogo (brinque com os valores padrões)"
-                  ]
-            },
-            "myPortfolio": {
-                "title": "Meu Portfólio",
-                "description": "Usando as últimas novidades do Next.JS 13 e TypeScript, eu construí meu portfólio para mostrar o que eu já fiz e o que eu consigo fazer. Eu recomendo que olhe o repositório do projeto para estudar a maneira que eu gosto de programar!",
-                "about": "Eu construí meu portfólio usando meu conhecimento em UI/UX design e usando uma arquitetura limpa e de de fácil manutenabilidade, já que é uma aplicação que será atualizada constantemente.",
-                "imageAlt": "A interface principal da aplicação do meu portfólio.",
-                "createdAt": "18 de agosto de 2023",
-                "features": [
-                    "Construído utilizando as últimas novidades do Next.JS 13",
-                    "Dialogs e Popovers utilizando componentes do Radix UI",
-                    "Composition Pattern",
-                    "Design da aplicação utilizando Figma e Photoshop",
-                    "Suporte aos idiomas inglês e português"
-                  ]
+                ],
+                "imageAlt": "A interface principal do Roleta do Casal.",
+                "title": "Roleta do Casal"
             },
             "dfParser": {
-                "title": "DfParser",
-                "description": "Uma aplicação web que auxilia o usuário a instrumentar um script para a ferramenta Df-Analyzer, que é utilizada para capturar proveniência em dataflow, no contexto de aplicações científicas. O usuário é guiado através de um fluxo de etapas até a geração do código final.",
                 "about": "A DfParser: Instrumentação de Scripts para DfAnalyzer é um ambicioso projeto, o qual está sendo utilizado por cientistas da computação para facilitar o uso da ferramenta Df-Analyzer. Nessa aplicação, eu utilizo as ferramentas de frontend mais robustas para construir um consistente, seguro e amigável software.",
-                "imageAlt": "A interface principal da aplicação DfParser.",
                 "createdAt": "31 de outubro de 2023",
+                "description": "Uma aplicação web que auxilia o usuário a instrumentar um script para a ferramenta Df-Analyzer, que é utilizada para capturar proveniência em dataflow, no contexto de aplicações científicas. O usuário é guiado através de um fluxo de etapas até a geração do código final.",
                 "features": [
                     "Geração de código Python instrumentado para DfAnalyzer",
                     "Formulários complexos criados com react-hook-form e zod",
                     "Fluxo de etapas bem definido para auxiliar o usuário",
                     "Possibilidade de baixar o script instrumentado ao final",
                     "Captura de variáveis de código para auxiliar na associação com atributos dos conjuntos de dados"
-                  ]
+                ],
+                "imageAlt": "A interface principal da aplicação DfParser.",
+                "title": "DfParser"
             },
             "futuresPocketTrader": {
-                "title": "Futures Pocket Trader",
-                "description": "Uma aplicação que simplifica a criação de novas ordens, verificando informações sobre posições e ordens, além da possibilidade de criar múltiplas ordens com preços diferentes. Tudo isso usando a API da Binance Future!",
                 "about": "O Futures Pocket Trader é um projeto que eu desenvolvi para suprir uma necessidade localizada neste mercado. Está sendo utilizado por um grupo de traders profissionais e poderá ser vendido no futuro como uma ferramenta profissional para o mercado crypto. ",
-                "imageAlt": "Página de criação de uma nova ordem split.",
                 "createdAt": "02 de junho de 2024",
+                "description": "Uma aplicação que simplifica a criação de novas ordens, verificando informações sobre posições e ordens, além da possibilidade de criar múltiplas ordens com preços diferentes. Tudo isso usando a API da Binance Future!",
                 "features": [
                     "Criação de até 20 ordens de uma só vez, definindo o tamanho total e o percentual de queda de preço que será dividido pela quantidade de ordens",
                     "Criação de uma única ordem em poucos passos",
@@ -100,129 +129,100 @@
                     "Possibilidade de conectar-se a uma conta testnet",
                     "Consulte sua lista de posições abertas, podendo filtrar por símbolo e fechá-las de forma simples",
                     "Consulte sua lista de ordens abertas, podendo filtrar por símbolo e cancelá-las de forma simples"
-                  ]
+                ],
+                "imageAlt": "Página de criação de uma nova ordem split.",
+                "title": "Futures Pocket Trader"
             },
             "futuresPocketTraderNative": {
-                "title": "Futures Pocket Trader (Nativo)",
-                "description": "Uma aplicação desktop desenvolvida com Electron que simplifica a criação de novas ordens, a visualização de informações sobre posições e ordens e a capacidade de criar várias ordens com preços diferentes. Tudo isso usando a API da Binance Futures!",
                 "about": "O Futures Pocket Trader é um projeto que eu desenvolvi para suprir uma necessidade localizada neste mercado, que pode ser vendida futuramente como uma ferramenta profissional do mercado crypto. O desenvolvimento da aplicação está sendo feita com o ElectronJS, que facilita muito nas requisições de segurança da API da Binance, já que estas estão sendo feitas pelo servidor Node por trás da aplicação.",
-                "imageAlt": "Tela de criação de uma nova ordem split.",
                 "createdAt": "10 de março de 2024",
+                "description": "Uma aplicação desktop desenvolvida com Electron que simplifica a criação de novas ordens, a visualização de informações sobre posições e ordens e a capacidade de criar várias ordens com preços diferentes. Tudo isso usando a API da Binance Futures!",
                 "features": [
                     "Aplicação nativa com ElectronJS",
                     "Requisições feitas pelo servidor Node através do IPC Renderer",
                     "Possibilidade de conectar-se a uma conta testnet",
                     "Criação de até 20 ordens de uma só vez, definindo o tamanho total e o percentual de queda de preço que será dividido pela quantidade de ordens",
                     "Visualização de posições e ordens, além do total de ambos"
-                  ]
-            },
-            "springRestApi": {
-                "title": "Spring Rest API",
-                "description": "Uma aplicação de API Rest para cinco classes de entidade utilizando Java Spring Boot. Além disso, tudo foi documentado através do Swagger. ",
-                "about": "É um projeto CRUD bem simples, construído com Spring Boot e com as bibliotecas mais modernas disponíveis. Eu criei mais para testar a geração de documentação do Swagger.",
-                "imageAlt": "Um pequeno pedaço de código da API.",
-                "createdAt": "13 de julho de 2023",
-                "features": [
-                    "Uso da biblioteca Project Lombok",
-                    "Cinco classes de entidade",
-                    "CRUD completo (incluindo método PATCH)",
-                    "Banco de dados em memória H2"
-                  ]
-            },
-            "compraVenda": {
-                "title": "Compra/Venda",
-                "description": "Uma aplicação web que permite uma loja ter controle total do registro e monitoramente dos seus produtos, clientes, fornecedores e funcionários.",
-                "about": "É uma aplicação criada basicamente para explorar os Servlets e Java Server Pages (JSP), e também sua importância para a evolução da web, aprimorando assim meu desenvolvimento de sistemas CRUD.",
-                "imageAlt": "A interface principal da aplicação do Compra/Venda.",
-                "createdAt": "04 de agosto de 2022",
-                "features": [
-                    "Sistema CRUD completo com banco de dados MySQL",
-                    "Diagrama de casos de uso",
-                    "Sistema de autenticação",
-                    "Quatro classes de entidade",
-                    "Funcionalidades administrativas"
-                  ]
+                ],
+                "imageAlt": "Tela de criação de uma nova ordem split.",
+                "title": "Futures Pocket Trader (Nativo)"
             },
             "getChemComponentsScript": {
-                "title": "Script de Componentes Químicos",
-                "description": "Um script para coletar dinamicamente dados públicos de componentes químicos do NIST e exportar tais dados formatados em arquivos de texto.",
                 "about": "É um script para um uso bem específico, mas me ajudou a entender como criar e usar scripts python para automatizar tarefas longas e repetitivas. O script readAll.py rodou por volta de 4 horas no meu computador para gerar mais de 3000 arquivos de texto formatados.",
-                "imageAlt": "Uma demonstração do script rodando.",
                 "createdAt": "15 de junho de 2023",
+                "description": "Um script para coletar dinamicamente dados públicos de componentes químicos do NIST e exportar tais dados formatados em arquivos de texto.",
                 "features": [
                     "Consumo de dados de um website externo",
                     "Formatação de arquivo HTML",
                     "Geração de arquivos",
                     "Manipulação de dados com Pandas"
-                  ]
+                ],
+                "imageAlt": "Uma demonstração do script rodando.",
+                "title": "Script de Componentes Químicos"
             },
             "myEslintConfig": {
-                "title": "Minha configuração ESLint",
-                "description": "Um pacote pessoal de configuração do ESLint com os plugins que considero essenciais pros meus projetos.",
                 "about": "Depois de algumas vezes testando projetos e necessitando configurar o ESLint e os plugins que eu uso do zero, eu me encontrei enfrentando a necessidade de criar o meu próprio pacote para facilitar esse processo.",
-                "imageAlt": "Um pequeno pedaço do código do pacote de configuração.",
                 "createdAt": "18 de julho de 2023",
+                "description": "Um pacote pessoal de configuração do ESLint com os plugins que considero essenciais pros meus projetos.",
                 "features": [
                     "Configuração do standard",
-                    "Plugin do react", 
+                    "Plugin do react",
                     "Prettier para ESLint",
                     "Tailwind para ESLint"
-                ]
+                ],
+                "imageAlt": "Um pequeno pedaço do código do pacote de configuração.",
+                "title": "Minha configuração ESLint"
             },
-            "aiChatbot": {
-                "title": "AI Chatbot",
-                "description": "O AI Chatbot é um companheiro inteligente simples, mas eficaz, que fala com você sobre qualquer coisa, usando o poder da OpenAI API e Vercel SDK!",
-                "about": "Sempre fui uma pessoa muito curiosa acerca das inteligências artificiais e, desde o boom do ChatGPT, pensava em estudar um pouco mais sobre esse tema que está tão em alta. Então, utilizando a API paga do OpenAI e a biblioteca da Vercel AI SDK, construí esse simples experimento que abriu meus horizontes para pensar em produtos ainda mais complexos com a ajuda da AI.",
-                "imageAlt": "A interface principal da aplicação do AI Chatbot.",
-                "createdAt": "21 de agosto de 2023",
+            "myPortfolio": {
+                "about": "Eu construí meu portfólio usando meu conhecimento em UI/UX design e usando uma arquitetura limpa e de de fácil manutenabilidade, já que é uma aplicação que será atualizada constantemente.",
+                "createdAt": "18 de agosto de 2023",
+                "description": "Usando as últimas novidades do Next.JS 13 e TypeScript, eu construí meu portfólio para mostrar o que eu já fiz e o que eu consigo fazer. Eu recomendo que olhe o repositório do projeto para estudar a maneira que eu gosto de programar!",
                 "features": [
-                    "Construído com a ajuda dos componentes do shadcn/ui",
-                    "Streaming messages",
-                    "Route handler para a API da OpenAI",
-                    "Input com redimensionamento automático",
-                    "Estado de loading para prevenir o envio de requests durante o streaming de mensagens"
-                ]
-            },
-            "abrigosRs": {
-                "title": "Abrigos RS",
-                "description": "Abrigos RS é uma aplicação de ajuda e resgate voltada aos abrigos na tragédia que aconteceu no Rio Grande do Sul em maio de 2024. É possível cadastrar abrigos, gerenciar famílias, encontrar voluntários, divulgar pedidos de doações, e mais!",
-                "about": "A tragédia das enchentes no Rio Grande do Sul foi uma dos maiores desastres naturais da história do Brasil e desenvolver o front-end desta aplicação em uma semana para que mais vidas pudessem ser salvas foi algo engrandecedor, não só pelo lado profissional, mas pelo lado humano. Nós, desenvolvedores, resolvemos problemas, e esse foi o problemas mais nobre que eu pude colaborar para ajudar a resolver.",
-                "imageAlt": "A interface principal da aplicação do Abrigos RS.",
-                "createdAt": "15 de maio de 2024",
-                "features": [
-                    "Geolocalização para listar os abrigos mais próximos",
-                    "Scroll infinito para listagem das doações, voluntários e famílias",
-                    "Suporte à PWA com prompt personalizado",
-                    "Formulários avançados para cadastro, atualização e exclusão de famílias de um abrigo",
-                    "Gerenciamento de estado utilizando HTTP state para otimização de requisições"
-                ]
+                    "Construído utilizando as últimas novidades do Next.JS 13",
+                    "Dialogs e Popovers utilizando componentes do Radix UI",
+                    "Composition Pattern",
+                    "Design da aplicação utilizando Figma e Photoshop",
+                    "Suporte aos idiomas inglês e português"
+                ],
+                "imageAlt": "A interface principal da aplicação do meu portfólio.",
+                "title": "Meu Portfólio"
             },
             "pesquisaFipe": {
-                "title": "Pesquisa Fipe",
-                "description": "Pesquisa Fipe é um aplicativo criado para auxiliar a pesquisa pelo valor atual de um veículo. A aplicação consome uma API pública que traz dados atualizados da tabela criada pela Fundação Instituto de Pesquisas Econômicas e organiza na tela de maneira agradável e intuitva pro usuário.",
                 "about": "Este aplicativo facilita a busca por um veículo para comprar, além de permitir que o usuário salve informações de preço de uma certa data para que possa ajudá-lo a comparar e tomar decisões.",
-                "imageAlt": "A interface principal da aplicação do Pesquisa Fipe.",
                 "createdAt": "23 de maio de 2024",
+                "description": "Pesquisa Fipe é um aplicativo criado para auxiliar a pesquisa pelo valor atual de um veículo. A aplicação consome uma API pública que traz dados atualizados da tabela criada pela Fundação Instituto de Pesquisas Econômicas e organiza na tela de maneira agradável e intuitva pro usuário.",
                 "features": [
                     "Consumo de API pública",
                     "Gerenciamento de estado utilizando Tanstack Query",
                     "Opções de mudança de tema e aplicativo responsivo",
                     "Persistência de estado em Local Storage com auxílio do Zustand",
                     "Testes end-to-end com Playwright"
-                ]
+                ],
+                "imageAlt": "A interface principal da aplicação do Pesquisa Fipe.",
+                "title": "Pesquisa Fipe"
+            },
+            "springRestApi": {
+                "about": "É um projeto CRUD bem simples, construído com Spring Boot e com as bibliotecas mais modernas disponíveis. Eu criei mais para testar a geração de documentação do Swagger.",
+                "createdAt": "13 de julho de 2023",
+                "description": "Uma aplicação de API Rest para cinco classes de entidade utilizando Java Spring Boot. Além disso, tudo foi documentado através do Swagger. ",
+                "features": [
+                    "Uso da biblioteca Project Lombok",
+                    "Cinco classes de entidade",
+                    "CRUD completo (incluindo método PATCH)",
+                    "Banco de dados em memória H2"
+                ],
+                "imageAlt": "Um pequeno pedaço de código da API.",
+                "title": "Spring Rest API"
             }
-        }
+        },
+        "title": "Projetos"
     },
-    "contactSection": {
-        "question": "Gosta do meu trabalho?",
-        "letsTalk": "Vamos conversar",
-        "description": "Estou aberto para receber seu feedback ou apenas ter um bate-papo.",
-        "form": {
-            "fullName": "Nome Completo",
-            "email": "E-mail",
-            "message": "Escreva sua mensagem...",
-            "submit": "Enviar Mensagem",
-            "submitting": "Enviando..."
-        }
+    "skillsSection": {
+        "levels": {
+            "competent": "Competente",
+            "expert": "Experiente",
+            "learning": "Aprendendo"
+        },
+        "title": "Habilidades"
     }
 }
